@@ -104,16 +104,18 @@
       <script>
         $(function () {
           loadContent($("#loadTool"), "allvoucher.html");
+          
+          $("#allvoucher").click(function () {
+            loadContent($("#loadTool"), "allvoucher.html");
+          });
+          $("#shopee").click(function () {
+            loadContent($("#loadTool"), "shopee.html");
+          });
+          $("#tiki").click(function () {
+            loadContent($("#loadTool"), "tiki.html");
+          });
         });
-        $("#allvoucher").click(function () {
-          loadContent($("#loadTool"), "allvoucher.html");
-        });
-        $("#shopee").click(function () {
-          loadContent($("#loadTool"), "shopee.html");
-        });
-        $("#tiki").click(function () {
-          loadContent($("#loadTool"), "tiki.html");
-        });
+
       </script>
       <div class="keyword">
         <h3>Mã Giảm Giá Shopee, Mã Giảm Giá Tiki, Mã Giảm Giá Lazada, voucher, conpon, ma giam gia shopee, ma giam gia
