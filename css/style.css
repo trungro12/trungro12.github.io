@@ -17,11 +17,11 @@ h2 {
   vertical-align: text-top;
 }
 
-#loadTool {
+#loadTool, .voucher-content {
   margin: 20px auto;
 }
 
-#loadTool h3 {
+#loadTool h3, .voucher-content h3 {
   margin: 10px auto;
 }
 

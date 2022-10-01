@@ -63,7 +63,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <div id="loadTool" class="voucher-content">
+            <div id="loadAll" class="voucher-content">
               <!-- voucher  -->
               <!-- <div id="layout-wrapper">
                 <main class="atEQPOIVFSDFSDG-voucher-main">
@@ -98,24 +98,27 @@
                 src="https://static.accesstrade.vn/coupon/v2/js/main_at_v3.js"></script> -->
               <!-- voucher  -->
             </div>
+            <div id="loadShopee" class="voucher-content"></div>
+            <div id="loadTiki" class="voucher-content"></div>
           </div>
         </div>
       </div>
       <script>
         $(function () {
-          loadContent($("#loadTool"), "allvoucher.html");
+          $(".voucher-content").html("");
+          loadContent($("#loadAll"), "allvoucher.html");
         });
         $("#allvoucher").click(function () {
-          $("#loadTool").html("");
-          loadContent($("#loadTool"), "allvoucher.html");
+          $(".voucher-content").html("");
+          loadContent($("#loadAll"), "allvoucher.html");
         });
         $("#shopee").click(function () {
-          $("#loadTool").html("");
-          loadContent($("#loadTool"), "shopee.html");
+          $(".voucher-content").html("");
+          loadContent($("#loadShopee"), "shopee.html");
         });
         $("#tiki").click(function () {
-          $("#loadTool").html("");
-          loadContent($("#loadTool"), "tiki.html");
+          $(".voucher-content").html("");
+          loadContent($("#loadTiki"), "tiki.html");
         });
       </script>
       <div class="keyword">
