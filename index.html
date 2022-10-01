@@ -63,9 +63,11 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <div id="loadAll" class="voucher-content"></div>
-            <div id="loadShopee" class="voucher-content"></div>
-            <div id="loadTiki" class="voucher-content"></div>
+            <div id="loadVoucher">
+              <div id="loadAll" class="voucher-content"></div>
+              <div id="loadShopee" class="voucher-content"></div>
+              <div id="loadTiki" class="voucher-content"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -75,14 +77,17 @@
         });
         $("#allvoucher").click(function () {
           $(".voucher-content").remove();
+          $("#loadVoucher").append('<div id="loadAll" class="voucher-content"></div>');
           loadContent($("#loadAll"), "allvoucher.html");
         });
         $("#shopee").click(function () {
           $(".voucher-content").remove();
+          $("#loadVoucher").append('<div id="loadShopee" class="voucher-content"></div>');
           loadContent($("#loadShopee"), "shopee.html");
         });
         $("#tiki").click(function () {
           $(".voucher-content").remove();
+          $("#loadVoucher").append('<div id="loadTiki" class="voucher-content"></div>');
           loadContent($("#loadTiki"), "tiki.html");
         });
       </script>
