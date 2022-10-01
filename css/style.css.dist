@@ -170,7 +170,7 @@ input[type="file"]::file-selector-button {
 }
 
 [class$="-search-title"]::after {
-  content: " (Sau khi bạn nhấn tìm kiếm, hãy chờ khoảng 2 đến 3 giây để hệ thông tải dữ liệu nhé ^.^)";
+  content: " (Sau khi bạn nhấn tìm kiếm, hãy chờ khoảng 2 đến 3 giây để hệ thống tải dữ liệu nhé ^.^)";
 }
 
 /* game  */
