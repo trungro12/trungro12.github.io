@@ -137,7 +137,9 @@ input[type="file"]::file-selector-button {
 [class$="-btn-search"],
 .btn-copy,
 [class$="-line--content"],
-[class$="-nav-item"] a.active {
+[class$="-nav-item"] a.active,
+[class$="-btn-keyword"]:hover,
+[class$="-btn-keyword"] a:hover {
   background-color: #f00 !important;
   color: #fff !important;
   text-decoration: none;
