@@ -12,6 +12,9 @@ a{
 .entry-title{
   text-align: center;
 }
+.entry-title h1{
+  padding: 18px;
+}
 .item h1,
 h2 {
   display: inline;
@@ -94,6 +97,7 @@ input[type="file"]::file-selector-button {
 }
 
 .keyword {
+  margin-top: 25px;
   color: #fff;
 }
 .keyword h3{
