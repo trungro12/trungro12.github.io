@@ -149,7 +149,7 @@ input[type="file"]::file-selector-button {
   margin: 10% auto;
 }
 
-.atEQPOIVFSDFSDG-remain .atEQPOIVFSDFSDG-item-label {
+[class$="-remain"] [class$="-item-label"] {
   background: #0400ff;
   color: #ffffff;
 }
