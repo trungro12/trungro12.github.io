@@ -24,8 +24,8 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
   <!-- voucher -->
-  <script async type="text/javascript" src="https://static.accesstrade.vn/coupon/v2/js/popper.min.js"></script>
-  <script async type="text/javascript" src="https://static.accesstrade.vn/coupon/v2/js/bootstrap.min.js"></script>
+  <script async type="text/javascript" src="js/accesstrade/popper.min.js"></script>
+  <script async type="text/javascript" src="js/accesstrade/bootstrap.min.js"></script>
 
   <script src="js/custom.js"></script>
 
@@ -79,7 +79,39 @@
         </div>
       </div>
       <!-- load -->
-      <script lazy data-src="js/load.js"></script>
+      <div id="loadScripts"></div>
+      <script>
+        var currenturl = location.href.split('?')[0];
+        $("#allvoucher").click(function () {
+          location.href = currenturl;
+        });
+        $("#shopee").click(function () {
+          location.href = currenturl + "?type=shopee";
+        });
+        $("#tiki").click(function () {
+          location.href = currenturl + "?type=tiki";
+        });
+        $("#game").click(function () {
+          location.href = currenturl + "?type=game";
+        });
+
+        let urlParams = getUrlParams(location.search);
+        console.log(urlParams);
+        var loadscript = document.createElement('script');
+        loadscript.type = 'text/javascript';
+
+        if (urlParams['type']) {
+          $("#" + urlParams['type'] + "").addClass("btn-active");
+          loadscript.src = 'js/load.js';
+        }
+        else {
+          $("#allvoucher").addClass("btn-active");
+          loadscript.setAttribute('lazy');
+          loadscript.setAttribute('data-src', 'js/load.js');
+        }
+        $("#loadScripts").append(loadscript);
+      </script>
+      <!-- end load  -->
       <div class="keyword">
         <h3>Mã Giảm Giá Shopee, Mã Giảm Giá Tiki, Mã Giảm Giá Lazada, voucher, conpon, ma giam gia shopee, ma giam gia
           tiki, ma giam gia lazada, voucher shopee, voucher tiki, voucher lazada, coupon shopee, coupon tiki, coupon
