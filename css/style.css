@@ -6,15 +6,19 @@ body {
   width: 100%;
   /* text-align: center; */
 }
-a{
-  text-decoration: none!important;
+
+a {
+  text-decoration: none !important;
 }
-.entry-title{
+
+.entry-title {
   text-align: center;
 }
-.entry-title h1{
+
+.entry-title h1 {
   padding: 18px;
 }
+
 .item h1,
 h2 {
   display: inline;
@@ -23,11 +27,13 @@ h2 {
   vertical-align: text-top;
 }
 
-#loadTool, .voucher-content {
+#loadTool,
+.voucher-content {
   margin: 20px auto;
 }
 
-#loadTool h3, .voucher-content h3 {
+#loadTool h3,
+.voucher-content h3 {
   margin: 10px auto;
 }
 
@@ -100,9 +106,17 @@ input[type="file"]::file-selector-button {
   margin-top: 25px;
   color: #fff;
 }
-.keyword h3{
+
+.keyword h3 {
   font-size: 12px;
 }
+
+.btn-active {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+}
+
 /* remove modal boostrap */
 .modal-backdrop.show {
   display: none;
@@ -113,21 +127,27 @@ input[type="file"]::file-selector-button {
 .voucher-content button label {
   color: #000;
 }
-[class$="-code-coupon"]{
+
+[class$="-code-coupon"] {
   user-select: all;
 }
-.atEQPOIVFSDFSDG-btn, .btn-copy, [class$="-line--content"], [class$="-nav-item"] a.active{
-  background-color: #f00!important;
-  color: #fff!important;
+
+.atEQPOIVFSDFSDG-btn,
+.btn-copy,
+[class$="-line--content"],
+[class$="-nav-item"] a.active {
+  background-color: #f00 !important;
+  color: #fff !important;
   text-decoration: none;
 }
-[class$="-at-modal-content"]{
+
+[class$="-at-modal-content"] {
   margin: 10% auto;
 }
 
 
 /* game  */
-.game-content{
+.game-content {
   text-align: center;
   width: 100%;
 
@@ -144,6 +164,7 @@ input[type="file"]::file-selector-button {
   border-radius: 4px;
   color: #fff;
 }
-.game-content h3{
+
+.game-content h3 {
   color: #fff;
 }
