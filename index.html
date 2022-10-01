@@ -63,8 +63,8 @@
         $(function () {
           let urlParams = getUrlParams(location.search); // Assume location.search = "?a=1&b=2b2"
           console.log(urlParams);
-          if(urlParams['type'] == 'shopee') loadContent($("#loadShopee"), "allvoucher.html");
-          else if(urlParams['type'] == 'tiki') loadContent($("#loadTiki"), "allvoucher.html");
+          if(urlParams['type'] == 'shopee') loadContent($("#loadShopee"), "tiki.html");
+          else if(urlParams['type'] == 'tiki') loadContent($("#loadTiki"), "shopee.html");
           else loadContent($("#loadAll"), "allvoucher.html");
         });
         var current = location.href.split('?')[0];
