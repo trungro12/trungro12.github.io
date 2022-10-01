@@ -60,6 +60,12 @@ a {
 .textcolor {
   animation: textcolor 5s infinite alternate;
 }
+.textcolor-1s {
+  animation: textcolor 1s infinite alternate;
+}
+.textcolor-2s {
+  animation: textcolor 2s infinite alternate;
+}
 
 @keyframes textcolor {
   0% {
