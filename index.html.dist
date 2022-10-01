@@ -1,0 +1,148 @@
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mã Giảm Giá Shopee, Tiki, Lazada</title>
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="description"
+    content="Chia Sẻ Mã Giảm Giá Shopee, Mã Giảm Giá Tiki, Mã Giảm Giá Lazada Hot Nhất, Mới Nhất." />
+  <meta name="keywords"
+    content="Mã Giảm Giá Shopee, Mã Giảm Giá Tiki, Mã Giảm Giá Lazada, voucher, conpon, ma giam gia shopee, ma giam gia tiki, ma giam gia lazada, voucher shopee, voucher tiki, voucher lazada, coupon shopee, coupon tiki, coupon lazada" />
+  <meta name="robots" content="index,follow" />
+  <!-- open graph -->
+  <meta property="og:url" content="https://trungpham99.com" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Mã Giảm Giá Shopee, Mã Giảm Giá Tiki, Mã Giảm Giá Lazada" />
+  <meta property="og:description"
+    content="Chia Sẻ Mã Giảm Giá Shopee, Mã Giảm Giá Tiki, Mã Giảm Giá Lazada Hot Nhất, Mới Nhất." />
+  <meta property="og:image" content="https://cdn.akamai.steamstatic.com/steam/apps/349040/header.jpg" />
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- voucher -->
+  <script async type="text/javascript" src="js/accesstrade/popper.min.js"></script>
+  <script async type="text/javascript" src="js/accesstrade/bootstrap.min.js"></script>
+
+  <script src="js/custom.js"></script>
+
+</head>
+
+<body>
+  <div class="d-flex flex-column justify-content-center">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <div class="content-tool">
+        <div class="entry-title">
+          <h1 class="fw-light text-white m-0">Mã Giảm Giá Shopee, Tiki, Lazada</h1>
+          <div class="social">
+            <a href="https://www.tiktok.com/@trungpham0809" rel="noopener" id="tiktok" target="_blank"
+              class="btn btn-outline-light">
+              <span><i class="fa-brands fa-tiktok"></i></span>
+            </a>
+          </div>
+          <div class="btn-group my-5 item">
+            <a id="allvoucher" href="#" class="btn btn-outline-light" aria-current="page">
+              <span><i class="fa-solid fa-tags"></i>
+                <h2>Mã Giảm giá Shopee, Tiki</h2>
+              </span>
+            </a>
+            <a id="shopee" href="#" class="btn btn-outline-light" aria-current="page">
+              <span><i class="fa-solid fa-tag"></i>
+                <h2>Mã Giảm giá Shopee</h2>
+              </span>
+            </a>
+            <a id="tiki" href="#" class="btn btn-outline-light" aria-current="page">
+              <span><i class="fa-solid fa-tag"></i>
+                <h2>Mã Giảm giá Tiki</h2>
+              </span>
+            </a>
+            <a id="game" href="#" class="btn btn-outline-light" aria-current="page">
+              <span><i class="fa-solid fa-gamepad"></i>
+                <h2>Game</h2>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div id="loadContents">
+              <div style="display:flex;">
+                <span class="textcolor-1s" style="color:#fff;font-size: 30px;">Đang Tải Dữ Liệu ... </span>
+                <div class="btn btn-primary" style="display:flex;align-items: center;">Nhận Mã Khuyến Mãi Nhanh Hơn
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- load -->
+      <div id="loadScripts"></div>
+      <script>
+        $(function () {
+          $("#allvoucher").click(function () {
+            location.href = currenturl;
+          });
+          $("#shopee").click(function () {
+            location.href = currenturl + "?type=shopee";
+          });
+          $("#tiki").click(function () {
+            location.href = currenturl + "?type=tiki";
+          });
+          $("#game").click(function () {
+            location.href = currenturl + "?type=game";
+          });
+        });
+        // var currenturl = location.href.split('?')[0];
+        var currenturl = location.href.replace("#", "");
+        currenturl = currenturl.split('?')[0];
+        let urlParams = getUrlParams(location.search);
+        console.log(urlParams);
+        var loadscript = document.createElement('script');
+        loadscript.type = 'text/javascript';
+
+
+        if (urlParams['type']) {
+          $("#" + urlParams['type'] + "").addClass("btn-active");
+          loadscript.src = 'js/load.js';
+        }
+        else {
+          $("#allvoucher").addClass("btn-active");
+          loadscript.setAttribute('lazy', '');
+          loadscript.setAttribute('data-src', 'js/load.js');
+        }
+        $("#loadScripts").append(loadscript);
+      </script>
+      <!-- end load  -->
+
+      <div class="keyword">
+        <h3>Mã Giảm Giá Shopee, Mã Giảm Giá Tiki, Mã Giảm Giá Lazada</h3>
+        <h3>voucher, conpon, ma giam gia shopee, ma giam gia
+          tiki, ma giam gia lazada, voucher shopee, voucher tiki, voucher lazada, coupon shopee, coupon tiki, coupon
+          lazada</h3>
+      </div>
+      <a href="#" class="text-decoration-none">
+        <span style="padding: 20px" class="h3 fw-light text-white m-0">Code by Trung Pham</span>
+      </a>
+    </div>
+  </div>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98174184-8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-98174184-8');
+  </script>
+</body>
+
+</html>
