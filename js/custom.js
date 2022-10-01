@@ -45,7 +45,7 @@ function _mapUrlParams(queryString) {
 }
 // lazy 
 const autoLoadDuration = 5; //In Seconds
-const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+const eventList = ["click", "keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
 
 const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
 
@@ -62,7 +62,7 @@ function triggerScripts() {
 }
 
 function runScripts() {
-    document.querySelectorAll("script[lazy]").forEach(function(scriptTag) {
-        scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
-    });
+  document.querySelectorAll("script[lazy]").forEach(function (scriptTag) {
+    scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
+  });
 }
