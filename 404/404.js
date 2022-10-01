@@ -1,4 +1,3 @@
-var home = document.getElementById('home');
-home.onclick = function () {
+function home() {
     location.href = "/";
-};
+}
