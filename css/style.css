@@ -130,7 +130,7 @@ input[type="file"]::file-selector-button {
 }
 
 [class$="-code-coupon"] {
-  user-select: all;
+  /* user-select: all; */
 }
 
 .atEQPOIVFSDFSDG-btn,
