@@ -44,7 +44,7 @@ function _mapUrlParams(queryString) {
     }, {});
 }
 // lazy 
-const autoLoadDuration = 5; //In Seconds
+const autoLoadDuration = 3; //In Seconds
 const eventList = ["click", "keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
 
 const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
