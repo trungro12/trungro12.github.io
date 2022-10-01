@@ -116,6 +116,7 @@ input[type="file"]::file-selector-button {
 
 .keyword h3 {
   font-size: 12px;
+  text-align: center;
 }
 
 .btn-active {
