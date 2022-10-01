@@ -1,0 +1,130 @@
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-height: 500px;
+  width: 100%;
+  text-align: center;
+}
+.item h1,
+h2 {
+  display: inline;
+  font-size: 15px;
+  padding-left: 4px;
+  vertical-align: text-top;
+}
+#loadTool {
+  margin: 20px auto;
+}
+#loadTool h3 {
+  margin: 10px auto;
+}
+.content-tool {
+  background: rgb(0 0 0 / 25%);
+  box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  min-height: 100px;
+  min-width: 500px;
+  padding: 20px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 4px;
+  color: #fff;
+}
+.border-top {
+  border-top: 1px solid #fff;
+  padding: 20px;
+}
+.textcolor {
+  animation: textcolor 5s infinite alternate;
+}
+@keyframes textcolor {
+  0% {
+    color: #6ee4c8;
+  }
+  25% {
+    color: #63bfe0;
+  }
+  50% {
+    color: #eb92b4;
+  }
+  75% {
+    color: #ecaa95;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* base64image */
+#b64,
+#content-result {
+  max-width: 500px;
+  height: 100px;
+  background: #fff;
+  /* display: none; */
+  overflow: auto;
+  word-wrap: break-word;
+  margin: auto;
+  -webkit-user-select: all;
+  user-select: all;
+  color: #000 !important;
+}
+#b64 {
+  display: none;
+}
+#img {
+  margin: auto;
+}
+#inp,
+input,
+input[type="file"] {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  border: 3px dashed #fff;
+  vertical-align: text-bottom;
+  padding: 100px 0 100px 120px;
+  border-radius: 3px;
+  background: rgb(0 0 0 / 25%);
+  box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+input[type="text"] {
+  padding: 30px !important;
+}
+#inp:hover {
+  background: rgb(0 0 0 / 59%);
+}
+input[type="file"]::before {
+  position: absolute;
+  display: block;
+  margin: auto;
+  content: " (or) Drag and Drop file here. ";
+  color: #fff;
+  font-weight: 900;
+  bottom: 30px;
+  left: 22%;
+}
+input[type="file"]::file-selector-button {
+  font-weight: bold;
+  padding: 0.5em;
+  border: 1px;
+  background: rgb(0 0 0 / 25%);
+  box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+.keyword{
+  color: #fff;
+}

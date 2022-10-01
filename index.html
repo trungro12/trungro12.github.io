@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Tool Base64 Image Encoder, Convert Image to Base64, Online generator md5 hash of string. Checksum md5. "
+    />
+    <meta
+      name="keywords"
+      content="base64 image encoder, image to base64 converter, convert image to base64, base64 converter, online generator md5 hash of a string, md5 generator online, md5 decryption, php, function, md5, function md5, generator, md5 generator, md5 online, md5 check, md5 checksum"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <title>Tool</title>
+  </head>
+
+  <body>
+    <div class="d-flex flex-column justify-content-center">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="content-tool">
+          <h1 class="fw-light text-white m-0">Tool</h1>
+          <div class="btn-group my-5 item">
+            <a href="#" class="btn btn-outline-light" aria-current="page">
+              <span id="base64image"
+                ><i class="fa-solid fa-image"></i>
+                <h2>Base64 Image Encoder</h2></span
+              >
+            </a>
+            <a href="#" class="btn btn-outline-light" aria-current="page">
+              <span id="md5"
+                ><i class="fa-sharp fa-solid fa-bolt"></i>
+                <h2>MD5 Generator Online</h2></span
+              >
+            </a>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div id="loadTool">
+                <!-- base64 image encoder  -->
+                <h3 class="textcolor">
+                  Base64 Image Encoder, Convert Image to Base64
+                </h3>
+                <input id="inp" type="file" />
+                <span id="result"></span>
+                <p id="b64"></p>
+                <span id="preview"></span>
+                <img id="img" style="margin: 20px auto" height="150" />
+                <script>
+                  document
+                    .querySelector("#inp")
+                    .addEventListener("change", readFile);
+                </script>
+                <!-- end base64 image encoder  -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          $("#base64image").click(function () {
+            loadContent($("#loadTool"), "inc/base64image.html");
+          });
+          $("#md5").click(function () {
+            loadContent($("#loadTool"), "inc/md5.html");
+          });
+        </script>
+        <div class="keyword">
+          <h3>
+            Base64 Image Encoder, Image To Base64 Converter, Convert Image to
+            Base64, Base64 Converter
+          </h3>
+          <h3>
+            Online Generator MD5 Hash Of A String, MD5 Generator Online, MD5
+            Decryption
+          </h3>
+        </div>
+        <a href="#" class="text-decoration-none">
+          <h3 style="padding: 20px" class="fw-light text-white m-0">
+            — Code by Trung Pham —
+          </h3>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
