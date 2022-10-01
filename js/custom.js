@@ -61,8 +61,8 @@ function triggerScripts() {
   });
 }
 
-// function runScripts() {
-//     document.querySelectorAll("script[delay]").forEach(function(scriptTag) {
-//         scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
-//     });
-// }
+function runScripts() {
+    document.querySelectorAll("script[lazy]").forEach(function(scriptTag) {
+        scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
+    });
+}
