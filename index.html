@@ -57,31 +57,39 @@
         <div class="row">
           <div class="col-12">
             <div id="loadContents">
+              <span>Đang Tải Dữ Liệu ...</span>
             </div>
           </div>
         </div>
       </div>
       <script>
         var currenturl = location.href.split('?')[0];
-          $("#allvoucher").click(function () {
-            location.href = currenturl;
-          });
-          $("#shopee").click(function () {
-            location.href = currenturl + "?type=shopee";
-          });
-          $("#tiki").click(function () {
-            location.href = currenturl + "?type=tiki";
-          });
-          $("#game").click(function () {
-            location.href = currenturl + "?type=game";
-          });
+        $("#allvoucher").click(function () {
+          location.href = currenturl;
+        });
+        $("#shopee").click(function () {
+          location.href = currenturl + "?type=shopee";
+        });
+        $("#tiki").click(function () {
+          location.href = currenturl + "?type=tiki";
+        });
+        $("#game").click(function () {
+          location.href = currenturl + "?type=game";
+        });
         $(function () {
-          let urlParams = getUrlParams(location.search); // Assume location.search = "?a=1&b=2b2"
-          console.log(urlParams);
-          if (urlParams['type'] == 'shopee') loadContent($("#loadContents"), "shopee.html");
-          else if (urlParams['type'] == 'tiki') loadContent($("#loadContents"), "tiki.html");
-          else if (urlParams['type'] == 'game') loadContent($("#loadContents"), "game.html");
-          else loadContent($("#loadContents"), "allvoucher.html");
+          var loaded = false;
+          var loadContents = $("#loadContents");
+          $(window).on('scroll', function () {
+            if (!loaded && $(window).scrollTop() + $(window).height() >= loadContents.offset().top) {
+              loaded = true;
+              let urlParams = getUrlParams(location.search); // Assume location.search = "?a=1&b=2b2"
+              console.log(urlParams);
+              if (urlParams['type'] == 'shopee') loadContent($("#loadContents"), "shopee.html");
+              else if (urlParams['type'] == 'tiki') loadContent($("#loadContents"), "tiki.html");
+              else if (urlParams['type'] == 'game') loadContent($("#loadContents"), "game.html");
+              else loadContent($("#loadContents"), "allvoucher.html");
+            }
+          });
         });
       </script>
       <div class="keyword">
