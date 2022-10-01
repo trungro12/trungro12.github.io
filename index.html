@@ -83,7 +83,7 @@
         </div>
       </div>
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        function runScripts() {
           var currenturl = location.href.split('?')[0];
           $("#allvoucher").click(function () {
             location.href = currenturl;
@@ -102,14 +102,13 @@
           console.log(urlParams);
           if (urlParams['type']) $("#" + urlParams['type'] + "").addClass("btn-active");
           else $("#allvoucher").addClass("btn-active");
-          $(function () {
-            var loadContents = $("#loadContents");
-            if (urlParams['type'] == 'shopee') loadContent(loadContents, "shopee.html");
-            else if (urlParams['type'] == 'tiki') loadContent(loadContents, "tiki.html");
-            else if (urlParams['type'] == 'game') loadContent(loadContents, "game.html");
-            else loadContent(loadContents, "allvoucher.html");
-          });
-        });
+
+          var loadContents = $("#loadContents");
+          if (urlParams['type'] == 'shopee') loadContent(loadContents, "shopee.html");
+          else if (urlParams['type'] == 'tiki') loadContent(loadContents, "tiki.html");
+          else if (urlParams['type'] == 'game') loadContent(loadContents, "game.html");
+          else loadContent(loadContents, "allvoucher.html");
+        }
 
       </script>
       <div class="keyword">

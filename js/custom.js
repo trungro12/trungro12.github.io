@@ -13,14 +13,14 @@ function loadContent(element, url) {
  *
  * Returns an empty object if no querystring parameters found.
  */
- function getUrlParams(urlOrQueryString) {
+function getUrlParams(urlOrQueryString) {
   if ((i = urlOrQueryString.indexOf('?')) >= 0) {
-    const queryString = urlOrQueryString.substring(i+1);
+    const queryString = urlOrQueryString.substring(i + 1);
     if (queryString) {
       return _mapUrlParams(queryString);
-    } 
+    }
   }
-  
+
   return {};
 }
 
@@ -31,10 +31,10 @@ function loadContent(element, url) {
  * @param queryString {string} - The full querystring, without the leading '?'.
  */
 function _mapUrlParams(queryString) {
-  return queryString    
-    .split('&') 
-    .map(function(keyValueString) { return keyValueString.split('=') })
-    .reduce(function(urlParams, [key, value]) {
+  return queryString
+    .split('&')
+    .map(function (keyValueString) { return keyValueString.split('=') })
+    .reduce(function (urlParams, [key, value]) {
       if (Number.isInteger(parseInt(value)) && parseInt(value) == value) {
         urlParams[key] = parseInt(value);
       } else {
@@ -43,3 +43,26 @@ function _mapUrlParams(queryString) {
       return urlParams;
     }, {});
 }
+// lazy 
+const autoLoadDuration = 5; //In Seconds
+const eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+
+const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+
+eventList.forEach(function (event) {
+  window.addEventListener(event, triggerScripts, { passive: true })
+});
+
+function triggerScripts() {
+  runScripts();
+  clearTimeout(autoLoadTimeout);
+  eventList.forEach(function (event) {
+    window.removeEventListener(event, triggerScripts, { passive: true });
+  });
+}
+
+// function runScripts() {
+//     document.querySelectorAll("script[delay]").forEach(function(scriptTag) {
+//         scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
+//     });
+// }
