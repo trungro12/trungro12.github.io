@@ -19,7 +19,8 @@ a {
   padding: 18px;
 }
 
-.item h1,.item h2 {
+.item h1,
+.item h2 {
   display: inline;
   font-size: 15px;
   padding-left: 4px;
@@ -133,6 +134,7 @@ input[type="file"]::file-selector-button {
 }
 
 .atEQPOIVFSDFSDG-btn,
+[class$="-btn-search"],
 .btn-copy,
 [class$="-line--content"],
 [class$="-nav-item"] a.active {
