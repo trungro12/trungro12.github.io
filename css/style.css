@@ -114,7 +114,7 @@ input[type="file"]::file-selector-button {
   color: #fff;
 }
 
-.keyword h3 {
+.keyword h3,.keyword span {
   font-size: 12px;
   text-align: center;
 }
