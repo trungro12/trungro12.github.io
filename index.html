@@ -79,8 +79,8 @@
         $(function () {
           var loaded = false;
           var loadContents = $("#loadContents");
-          $(window).on('scroll', function () {
-            if (!loaded && $(window).scrollTop() + $(window).height() >= loadContents.offset().top) {
+          $(window).on('click', function () {
+            if (!loaded) {
               loaded = true;
               let urlParams = getUrlParams(location.search); // Assume location.search = "?a=1&b=2b2"
               console.log(urlParams);
