@@ -84,10 +84,10 @@
               loaded = true;
               let urlParams = getUrlParams(location.search); // Assume location.search = "?a=1&b=2b2"
               console.log(urlParams);
-              if (urlParams['type'] == 'shopee') loadContent($("#loadContents"), "shopee.html");
-              else if (urlParams['type'] == 'tiki') loadContent($("#loadContents"), "tiki.html");
-              else if (urlParams['type'] == 'game') loadContent($("#loadContents"), "game.html");
-              else loadContent($("#loadContents"), "allvoucher.html");
+              if (urlParams['type'] == 'shopee') loadContent(loadContents, "shopee.html");
+              else if (urlParams['type'] == 'tiki') loadContent(loadContents, "tiki.html");
+              else if (urlParams['type'] == 'game') loadContent(loadContents, "game.html");
+              else loadContent($(loadContents, "allvoucher.html");
             }
           });
         });
