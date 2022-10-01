@@ -47,21 +47,22 @@
                 <h2>Mã Giảm giá Tiki</h2>
               </span>
             </a>
+            <a href="#" class="btn btn-outline-light" aria-current="page">
+              <span id="game"><i class="fa-solid fa-gamepad"></i>
+                <h2>Game</h2>
+              </span>
+            </a>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <div id="loadVoucher">
-              <div id="loadAll" class="voucher-content"></div>
-              <div id="loadShopee" class="voucher-content"></div>
-              <div id="loadTiki" class="voucher-content"></div>
+            <div id="loadContents">
             </div>
           </div>
         </div>
       </div>
       <script>
-        $(function () {
-          var currenturl = location.href.split('?')[0];
+        var currenturl = location.href.split('?')[0];
           $("#allvoucher").click(function () {
             location.href = currenturl;
           });
@@ -69,14 +70,18 @@
             location.href = currenturl + "?type=shopee";
           });
           $("#tiki").click(function () {
-            location.href = currenturl + "?type=tiki"
+            location.href = currenturl + "?type=tiki";
           });
-
+          $("#game").click(function () {
+            location.href = currenturl + "?type=game";
+          });
+        $(function () {
           let urlParams = getUrlParams(location.search); // Assume location.search = "?a=1&b=2b2"
           console.log(urlParams);
-          if (urlParams['type'] == 'shopee') loadContent($("#loadShopee"), "shopee.html");
-          else if (urlParams['type'] == 'tiki') loadContent($("#loadTiki"), "tiki.html");
-          else loadContent($("#loadAll"), "allvoucher.html");
+          if (urlParams['type'] == 'shopee') loadContent($("#loadContents"), "shopee.html");
+          else if (urlParams['type'] == 'tiki') loadContent($("#loadContents"), "tiki.html");
+          else if (urlParams['type'] == 'game') loadContent($("#loadContents"), "game.html");
+          else loadContent($("#loadContents"), "allvoucher.html");
         });
       </script>
       <div class="keyword">
