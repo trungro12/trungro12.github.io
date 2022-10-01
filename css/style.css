@@ -153,6 +153,9 @@ input[type="file"]::file-selector-button {
   background: #0400ff;
   color: #ffffff;
 }
+[class$="-search-title"]::after{
+  content: " (Sau khi bạn nhấn tìm kiếm, hãy chờ khoảng 2 đến 3 giây để hệ thông tải dữ liệu nhé ^.^)";
+}
 
 /* game  */
 .game-content {
