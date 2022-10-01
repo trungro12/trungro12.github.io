@@ -4,6 +4,9 @@ body {
   animation: gradient 15s ease infinite;
   min-height: 500px;
   width: 100%;
+  /* text-align: center; */
+}
+.entry-title{
   text-align: center;
 }
 .item h1,
@@ -13,12 +16,15 @@ h2 {
   padding-left: 4px;
   vertical-align: text-top;
 }
+
 #loadTool {
   margin: 20px auto;
 }
+
 #loadTool h3 {
   margin: 10px auto;
 }
+
 /* .content-tool {
   background: rgb(0 0 0 / 25%);
   box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
@@ -37,30 +43,38 @@ h2 {
   border-top: 1px solid #fff;
   padding: 20px;
 }
+
 .textcolor {
   animation: textcolor 5s infinite alternate;
 }
+
 @keyframes textcolor {
   0% {
     color: #6ee4c8;
   }
+
   25% {
     color: #63bfe0;
   }
+
   50% {
     color: #eb92b4;
   }
+
   75% {
     color: #ecaa95;
   }
 }
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -75,10 +89,28 @@ input[type="file"]::file-selector-button {
   color: #fff;
   backdrop-filter: blur(6px);
 }
-.keyword{
+
+.keyword {
   color: #fff;
 }
+/* remove modal boostrap */
+.modal-backdrop.show {
+  display: none;
+}
 
-.voucher-content button span, .voucher-content button label{
-  color:#000;
+/* voucher  */
+.voucher-content button span,
+.voucher-content button label {
+  color: #000;
+}
+[class$="-code-coupon"]{
+  user-select: all;
+}
+.atEQPOIVFSDFSDG-btn, .btn-copy, [class$="-line--content"], [class$="-nav-item"] a.active{
+  background-color: #f00!important;
+  color: #fff!important;
+  text-decoration: none;
+}
+[class$="-at-modal-content"]{
+  margin: 10% auto;
 }

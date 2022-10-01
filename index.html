@@ -21,6 +21,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="js/custom.js"></script>
+  <!-- <script type="text/javascript">
+    var __atsmarttag = {
+      pub_id: '4623985471069886807'
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//static.accesstrade.vn/js/atsmarttag.min.js?v=1.1.0';
+      script.type = 'text/javascript';
+      script.async = true;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    })();
+  </script> -->
 
   <title>Mã Giảm Giá Shopee, Tiki, Lazada</title>
 </head>
@@ -29,29 +41,31 @@
   <div class="d-flex flex-column justify-content-center">
     <div class="d-flex flex-column justify-content-center align-items-center">
       <div class="content-tool">
-        <h1 class="fw-light text-white m-0">Mã Giảm Giá Shopee, Tiki, Lazada</h1>
-        <div class="btn-group my-5 item">
-          <a href="#" class="btn btn-outline-light" aria-current="page">
-            <span id="allvoucher"><i class="fa-solid fa-image"></i>
-              <h2>Mã Giảm giá Shopee, Tiki</h2>
-            </span>
-          </a>
-          <a href="#" class="btn btn-outline-light" aria-current="page">
-            <span id="shopee"><i class="fa-sharp fa-solid fa-bolt"></i>
-              <h2>Mã Giảm giá Shopee</h2>
-            </span>
-          </a>
-          <a href="#" class="btn btn-outline-light" aria-current="page">
-            <span id="tiki"><i class="fa-sharp fa-solid fa-bolt"></i>
-              <h2>Mã Giảm giá Tiki</h2>
-            </span>
-          </a>
+        <div class="entry-title">
+          <h1 class="fw-light text-white m-0">Mã Giảm Giá Shopee, Tiki, Lazada</h1>
+          <div class="btn-group my-5 item">
+            <a href="#" class="btn btn-outline-light" aria-current="page">
+              <span id="allvoucher"><i class="fa-solid fa-image"></i>
+                <h2>Mã Giảm giá Shopee, Tiki</h2>
+              </span>
+            </a>
+            <a href="#" class="btn btn-outline-light" aria-current="page">
+              <span id="shopee"><i class="fa-sharp fa-solid fa-bolt"></i>
+                <h2>Mã Giảm giá Shopee</h2>
+              </span>
+            </a>
+            <a href="#" class="btn btn-outline-light" aria-current="page">
+              <span id="tiki"><i class="fa-sharp fa-solid fa-bolt"></i>
+                <h2>Mã Giảm giá Tiki</h2>
+              </span>
+            </a>
+          </div>
         </div>
         <div class="row">
           <div class="col-12">
             <div id="loadTool" class="voucher-content">
               <!-- voucher  -->
-              <div id="layout-wrapper">
+              <!-- <div id="layout-wrapper">
                 <main class="atEQPOIVFSDFSDG-voucher-main">
                   <div class="fa-3x">
                     <i class="fas fa-spinner fa-spin"></i>
@@ -81,13 +95,16 @@
                 data-style-color="#fff" data-limit="10" data-row="2"
                 data-filters='{"merchant":"4742147753565840242,4348611690224153209,","category":"E-COMMERCE,","campaign":"4751584435713464237,4348614231480407268,"}'
                 data-accesskey="4623985471069886807"
-                src="https://static.accesstrade.vn/coupon/v2/js/main_at_v3.js"></script>
+                src="https://static.accesstrade.vn/coupon/v2/js/main_at_v3.js"></script> -->
               <!-- voucher  -->
             </div>
           </div>
         </div>
       </div>
       <script>
+        $(function () {
+          loadContent($("#loadTool"), "allvoucher.html");
+        });
         $("#allvoucher").click(function () {
           loadContent($("#loadTool"), "allvoucher.html");
         });
@@ -111,6 +128,7 @@
     </div>
   </div>
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/footer.js"></script>
 </body>
 
 </html>
