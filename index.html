@@ -60,7 +60,8 @@
         <div class="row">
           <div class="col-12">
             <div id="loadContents">
-              <span class="textcolor-1s" style="color:#fff;font-size: 30px;">Đang Tải Dữ Liệu ...</span><div class="btn btn-primary">Load Nhanh Hơn</div>
+              <span class="textcolor-1s" style="color:#fff;font-size: 30px;">Đang Tải Dữ Liệu ...</span>
+              <div class="btn btn-primary">Load Nhanh Hơn</div>
             </div>
           </div>
         </div>
@@ -68,20 +69,21 @@
       <!-- load -->
       <div id="loadScripts"></div>
       <script>
+        $(function () {
+          $("#allvoucher").click(function () {
+            location.href = currenturl;
+          });
+          $("#shopee").click(function () {
+            location.href = currenturl + "?type=shopee";
+          });
+          $("#tiki").click(function () {
+            location.href = currenturl + "?type=tiki";
+          });
+          $("#game").click(function () {
+            location.href = currenturl + "?type=game";
+          });
+        });
         var currenturl = location.href.split('?')[0];
-        $("#allvoucher").click(function () {
-          location.href = currenturl;
-        });
-        $("#shopee").click(function () {
-          location.href = currenturl + "?type=shopee";
-        });
-        $("#tiki").click(function () {
-          location.href = currenturl + "?type=tiki";
-        });
-        $("#game").click(function () {
-          location.href = currenturl + "?type=game";
-        });
-
         let urlParams = getUrlParams(location.search);
         console.log(urlParams);
         var loadscript = document.createElement('script');
