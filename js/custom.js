@@ -1,1 +1,151 @@
-var _0x3014e1=_0x29a5;(function(_0x1412b2,_0x4ca1e2){var _0x224f9a=_0x29a5,_0x58ed0f=_0x1412b2();while(!![]){try{var _0xf6276f=parseInt(_0x224f9a(0xdf))/0x1+parseInt(_0x224f9a(0xd1))/0x2*(parseInt(_0x224f9a(0xfb))/0x3)+-parseInt(_0x224f9a(0xef))/0x4+parseInt(_0x224f9a(0xf2))/0x5*(parseInt(_0x224f9a(0xcf))/0x6)+-parseInt(_0x224f9a(0xd7))/0x7+-parseInt(_0x224f9a(0x100))/0x8*(-parseInt(_0x224f9a(0x10d))/0x9)+parseInt(_0x224f9a(0x105))/0xa*(-parseInt(_0x224f9a(0xf1))/0xb);if(_0xf6276f===_0x4ca1e2)break;else _0x58ed0f['push'](_0x58ed0f['shift']());}catch(_0x2b5b33){_0x58ed0f['push'](_0x58ed0f['shift']());}}}(_0x17fd,0x66aef));var _0x1531fb=(function(){var _0x2ae585=!![];return function(_0x422d66,_0x44529c){var _0x1aa7fd=_0x2ae585?function(){var _0x576968=_0x29a5;if(_0x44529c){var _0x35c7e6=_0x44529c[_0x576968(0x102)](_0x422d66,arguments);return _0x44529c=null,_0x35c7e6;}}:function(){};return _0x2ae585=![],_0x1aa7fd;};}()),_0x48d3ca=_0x1531fb(this,function(){var _0xbbd4f1=_0x29a5,_0x3d42f6;try{var _0x52e018=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x3d42f6=_0x52e018();}catch(_0x47012d){_0x3d42f6=window;}var _0x325ddf=new RegExp(_0xbbd4f1(0xde),'g'),_0x2c4c89=_0xbbd4f1(0xd8)[_0xbbd4f1(0xdb)](_0x325ddf,'')[_0xbbd4f1(0xe0)](';'),_0x1096e2,_0x423e09,_0x3f3959,_0x383cb2,_0x1b821b=function(_0x1bfc92,_0x11059c,_0x1490a7){var _0x5b4b28=_0xbbd4f1;if(_0x1bfc92[_0x5b4b28(0xd5)]!=_0x11059c)return![];for(var _0x165183=0x0;_0x165183<_0x11059c;_0x165183++){for(var _0x422bc4=0x0;_0x422bc4<_0x1490a7['length'];_0x422bc4+=0x2){if(_0x165183==_0x1490a7[_0x422bc4]&&_0x1bfc92['charCodeAt'](_0x165183)!=_0x1490a7[_0x422bc4+0x1])return![];}}return!![];},_0x507a71=function(_0x5abcb2,_0x501ba0,_0x4c762a){return _0x1b821b(_0x501ba0,_0x4c762a,_0x5abcb2);},_0x50d274=function(_0x289e51,_0x38a4c5,_0x519017){return _0x507a71(_0x38a4c5,_0x289e51,_0x519017);},_0x9caba5=function(_0x17bb4d,_0x45de62,_0x2cbcc5){return _0x50d274(_0x45de62,_0x2cbcc5,_0x17bb4d);};for(var _0x328d96 in _0x3d42f6){if(_0x1b821b(_0x328d96,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){_0x1096e2=_0x328d96;break;}}for(var _0x4b8bc7 in _0x3d42f6[_0x1096e2]){if(_0x9caba5(0x6,_0x4b8bc7,[0x5,0x6e,0x0,0x64])){_0x423e09=_0x4b8bc7;break;}}for(var _0x579afa in _0x3d42f6[_0x1096e2]){if(_0x50d274(_0x579afa,[0x7,0x6e,0x0,0x6c],0x8)){_0x3f3959=_0x579afa;break;}}if(!('~'>_0x423e09))for(var _0x33352a in _0x3d42f6[_0x1096e2][_0x3f3959]){if(_0x507a71([0x7,0x65,0x0,0x68],_0x33352a,0x8)){_0x383cb2=_0x33352a;break;}}if(!_0x1096e2||!_0x3d42f6[_0x1096e2])return;var _0x547be2=_0x3d42f6[_0x1096e2][_0x423e09],_0x35f94c=!!_0x3d42f6[_0x1096e2][_0x3f3959]&&_0x3d42f6[_0x1096e2][_0x3f3959][_0x383cb2],_0x3d95ee=_0x547be2||_0x35f94c;if(!_0x3d95ee)return;var _0x3779a9=![];for(var _0x45b030=0x0;_0x45b030<_0x2c4c89[_0xbbd4f1(0xd5)];_0x45b030++){var _0x423e09=_0x2c4c89[_0x45b030],_0x356a6f=_0x423e09[0x0]===String[_0xbbd4f1(0x11a)](0x2e)?_0x423e09[_0xbbd4f1(0x10b)](0x1):_0x423e09,_0x2d70d7=_0x3d95ee[_0xbbd4f1(0xd5)]-_0x356a6f[_0xbbd4f1(0xd5)],_0x3d3594=_0x3d95ee['indexOf'](_0x356a6f,_0x2d70d7),_0xfb067a=_0x3d3594!==-0x1&&_0x3d3594===_0x2d70d7;_0xfb067a&&((_0x3d95ee[_0xbbd4f1(0xd5)]==_0x423e09[_0xbbd4f1(0xd5)]||_0x423e09[_0xbbd4f1(0x10e)]('.')===0x0)&&(_0x3779a9=!![]));}if(!_0x3779a9){var _0x504f9c=new RegExp(_0xbbd4f1(0x119),'g'),_0x2bfecc=_0xbbd4f1(0x121)[_0xbbd4f1(0xdb)](_0x504f9c,'');_0x3d42f6[_0x1096e2][_0x3f3959]=_0x2bfecc;}});function _0x17fd(){var _0x3ada24=['</p>','body','json','Token\x20','https://api.accesstrade.vn/v1/offers_informations?scope=&status=1','sort','1560396sHKGSn','&merchant=','11NPdyOQ','35tsDbNl','data','Loop\x20has\x20ended','(Nhấn\x20để\x20copy\x20mã)','substring','data-src','touchstart','.coupon-label','coupons','3UPLvAz','<div\x20class=\x27coupon-content\x27>','ajax','.coupon-content','search','8KFkvHQ','tikivn','apply','type','querySelectorAll','9339080URKuDu','image','merchant','coupon_code','\x27\x20target=\x27_blank\x27\x20rel=\x27noopener\x20noreferrer\x20nofollow\x27>','mousemove','slice','textarea','6957207IOvkdm','indexOf','<div\x20class=\x27col-lg-3\x27>','setAttribute','querySelector','coupon_desc','<p\x20class=\x27coupon-label\x27>','application/json','log','img[lazy]','click','copy','[PYGyYYXAJlLfMLzWJRAWHUlJfNyXWqPUXxdVWfHfLixQKyjJOq]','fromCharCode','removeChild','\x27\x20lazy\x20data-src=\x27','keydown','addEventListener','<img\x20alt=\x27loading\x27\x20style=\x27max-width:70px\x27\x20src=\x27https://i.imgur.com/BsLJBhG.gif\x27\x20/>','script[lazy]','PhYGytYYtXApJslLf:ML//tzWruJRAWHUnglJphafNymX99.WqcPoUm/XxdVWfHfLixQKyjJOq','aff_link','.coupon-copy','tiki','273138YoHNHb','removeEventListener','578134UUIemT','BSlThjyssppl-1bbVJDKRiOBxK9rakro','\x27)\x22\x20href=\x27','load','length','<p\x20class=\x27coupon-text\x27>','2996525tpfVUR','trlIungpBYHhZvam99NF.DcATComXJyG;FwWlwsw.VbitDOrTKuvngphEamV9Z9S.covmjqKTTWeeOCsSvSHFHWDxeQiGNdRPeyvTjROLjIxTNik','touchmove','html','replace','GET','getAttribute','[lIBYHZvNFDATCXJyGFWlsVbiDOTKvEVZSvjqKTTWeeOCsSvSHFHWDxeQiGNdRPeyvTjROLjIxTNik]','791922wwSDOO','split','src','forEach','<a\x20onclick=\x22copyCoupon(this,\x27','</div>','innerHTML','reduce','<span\x20style=\x27color:red\x27>(Đã\x20Copy)</span>','insertBefore'];_0x17fd=function(){return _0x3ada24;};return _0x17fd();}_0x48d3ca();function loadContent(_0x5789a5,_0x498df1){var _0x13d5ad=_0x29a5;_0x5789a5[_0x13d5ad(0xda)](_0x13d5ad(0x11f))[_0x13d5ad(0xd4)](_0x498df1);}function getUrlParams(_0x554c8d){var _0x297bb6=_0x29a5;if((i=_0x554c8d[_0x297bb6(0x10e)]('?'))>=0x0){const _0x342586=_0x554c8d[_0x297bb6(0xf6)](i+0x1);if(_0x342586)return _mapUrlParams(_0x342586);}return{};}function _0x29a5(_0x1dd4ed,_0x1568ba){var _0x490fb3=_0x17fd();return _0x29a5=function(_0x48d3ca,_0x1531fb){_0x48d3ca=_0x48d3ca-0xcf;var _0x15b80e=_0x490fb3[_0x48d3ca];return _0x15b80e;},_0x29a5(_0x1dd4ed,_0x1568ba);}function _mapUrlParams(_0x10f65a){var _0x534611=_0x29a5;return _0x10f65a['split']('&')['map'](function(_0x586d44){return _0x586d44['split']('=');})[_0x534611(0xe6)](function(_0x106e7b,[_0x239ad8,_0x23123e]){return Number['isInteger'](parseInt(_0x23123e))&&parseInt(_0x23123e)==_0x23123e?_0x106e7b[_0x239ad8]=parseInt(_0x23123e):_0x106e7b[_0x239ad8]=decodeURI(_0x23123e),_0x106e7b;},{});}const autoLoadDuration=0x5,eventList=[_0x3014e1(0x117),_0x3014e1(0x11d),_0x3014e1(0x10a),'wheel',_0x3014e1(0xd9),_0x3014e1(0xf8),'touchend'];eventList[_0x3014e1(0xe2)](function(_0x11ab4c){var _0x31f527=_0x3014e1;window[_0x31f527(0x11e)](_0x11ab4c,triggerScripts,{'passive':!![]});});function triggerScripts(){var _0x2bf1aa=_0x3014e1;runScripts(),eventList[_0x2bf1aa(0xe2)](function(_0x1d8287){var _0x20a1c3=_0x2bf1aa;window[_0x20a1c3(0xd0)](_0x1d8287,triggerScripts,{'passive':!![]});});}function runScripts(){var _0x7ad3d3=_0x3014e1;document[_0x7ad3d3(0x104)](_0x7ad3d3(0x116))['forEach'](function(_0x4e202e){var _0x1865e4=_0x7ad3d3;_0x4e202e[_0x1865e4(0x110)](_0x1865e4(0xe1),_0x4e202e[_0x1865e4(0xdd)](_0x1865e4(0xf7)));}),document[_0x7ad3d3(0x104)](_0x7ad3d3(0x120))['forEach'](function(_0x5f439c){var _0x18dd9e=_0x7ad3d3;_0x5f439c[_0x18dd9e(0x110)](_0x18dd9e(0xe1),_0x5f439c[_0x18dd9e(0xdd)](_0x18dd9e(0xf7)));});}function copyCoupon(_0x470467,_0x97ae6a){var _0x12eb1b=_0x3014e1,_0x2c090b=document['createElement'](_0x12eb1b(0x10c));_0x2c090b[_0x12eb1b(0xe5)]=_0x97ae6a,document[_0x12eb1b(0xea)]['appendChild'](_0x2c090b),_0x2c090b['select']();var _0x37d86b=document['execCommand'](_0x12eb1b(0x118));document[_0x12eb1b(0xea)][_0x12eb1b(0x11b)](_0x2c090b);var _0x51c655=_0x470467[_0x12eb1b(0x111)](_0x12eb1b(0xfe))['querySelector'](_0x12eb1b(0xf9))['querySelector'](_0x12eb1b(0x123)),_0x2a24af=_0x12eb1b(0xf5),_0x2261d1=_0x12eb1b(0xe7);return $(_0x12eb1b(0x123))[_0x12eb1b(0xda)](_0x2a24af),_0x51c655[_0x12eb1b(0xe5)]=_0x51c655[_0x12eb1b(0xe5)][_0x12eb1b(0xdb)](_0x2a24af,_0x2261d1),_0x37d86b;}function coupon(_0x8df30b,_0x340fce=null){var _0x58200d=_0x3014e1,_0x3bbfdc='';if(_0x340fce==null&&getUrlParams(location['search'])[_0x58200d(0x103)]){_0x340fce=getUrlParams(location[_0x58200d(0xff)])[_0x58200d(0x103)];if(_0x340fce==_0x58200d(0x124))_0x340fce=_0x58200d(0x101);_0x3bbfdc=_0x58200d(0xf0)+_0x340fce+'';}console[_0x58200d(0x115)](_0x3bbfdc);var _0x48a019=_0x58200d(0xed)+_0x3bbfdc+'',_0x5128a0=_0x58200d(0xd2),_0x44f626='';$[_0x58200d(0xfd)]({'type':_0x58200d(0xdc),'url':_0x48a019,'dataType':_0x58200d(0xeb),'async':![],'contentType':_0x58200d(0x114),'headers':{'Authorization':_0x58200d(0xec)+_0x5128a0+''},'success':function(_0x364035){var _0x3230f9=_0x58200d,_0x4f4ec1=_0x364035[_0x3230f9(0xf3)];_0x4f4ec1=_0x4f4ec1[_0x3230f9(0xee)]((_0x2226a7,_0x1b4ce8)=>0.5-Math['random']());try{_0x4f4ec1[_0x3230f9(0xe2)](function(_0x26090f,_0x2160f9){var _0x128513=_0x3230f9;_0x44f626+=_0x128513(0x10f),_0x44f626+=_0x128513(0xe3)+_0x26090f[_0x128513(0xfa)][0x0][_0x128513(0x108)]+_0x128513(0xd3)+_0x26090f[_0x128513(0x122)]+_0x128513(0x109),_0x44f626+=_0x128513(0xfc),_0x44f626+='<img\x20height=\x27200\x27\x20width=\x27200\x27\x20alt=\x27'+_0x26090f['name']+_0x128513(0x11c)+_0x26090f[_0x128513(0x106)]+'\x27>',_0x44f626+=_0x128513(0xd6)+_0x26090f[_0x128513(0xfa)][0x0][_0x128513(0x112)]+_0x128513(0xe9),_0x44f626+=_0x128513(0x113)+_0x26090f[_0x128513(0x107)]+'\x20-\x20'+_0x26090f[_0x128513(0xfa)][0x0][_0x128513(0x108)]+'<br><span\x20class=\x27coupon-copy\x27>(Nhấn\x20để\x20copy\x20mã)</span></p>',_0x44f626+=_0x128513(0xe4),_0x44f626+='</div>',_0x44f626+='</a>';if(_0x2160f9==0x3)throw new Exception('Time\x20to\x20end\x20the\x20loop');});}catch(_0x2974d4){console['log'](_0x3230f9(0xf4));}$(_0x44f626)[_0x3230f9(0xe8)](_0x8df30b),console[_0x3230f9(0x115)](_0x4f4ec1);},'error':function(_0x312f43){console['log'](_0x312f43['statusText']);}});}
+// load content with jquery
+function loadContent(element, url) {
+    element
+        .html(
+            "<img alt='loading' style='max-width:70px' src='https://i.imgur.com/BsLJBhG.gif' />"
+        )
+        .load(url);
+}
+
+/**
+ * Accepts either a URL or querystring and returns an object associating 
+ * each querystring parameter to its value. 
+ *
+ * Returns an empty object if no querystring parameters found.
+ */
+function getUrlParams(urlOrQueryString) {
+    if ((i = urlOrQueryString.indexOf('?')) >= 0) {
+        const queryString = urlOrQueryString.substring(i + 1);
+        if (queryString) {
+            return _mapUrlParams(queryString);
+        }
+    }
+
+    return {};
+}
+
+/**
+ * Helper function for `getUrlParams()`
+ * Builds the querystring parameter to value object map.
+ *
+ * @param queryString {string} - The full querystring, without the leading '?'.
+ */
+function _mapUrlParams(queryString) {
+    return queryString
+        .split('&')
+        .map(function (keyValueString) { return keyValueString.split('=') })
+        .reduce(function (urlParams, [key, value]) {
+            if (Number.isInteger(parseInt(value)) && parseInt(value) == value) {
+                urlParams[key] = parseInt(value);
+            } else {
+                urlParams[key] = decodeURI(value);
+            }
+            return urlParams;
+        }, {});
+}
+// lazy 
+const autoLoadDuration = 5; //In Seconds
+const eventList = ["click", "keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
+
+// const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+
+eventList.forEach(function (event) {
+    window.addEventListener(event, triggerScripts, { passive: true })
+});
+
+function triggerScripts() {
+    runScripts();
+    // clearTimeout(autoLoadTimeout);
+    eventList.forEach(function (event) {
+        window.removeEventListener(event, triggerScripts, { passive: true });
+    });
+}
+
+function runScripts() {
+    document.querySelectorAll("img[lazy]").forEach(function (scriptTag) {
+        scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
+    });
+    document.querySelectorAll("script[lazy]").forEach(function (scriptTag) {
+        scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
+    });
+}
+
+function copyCoupon(coupon, text) {
+    var input = document.createElement('textarea');
+    input.innerHTML = text;
+    document.body.appendChild(input);
+    input.select();
+    var result = document.execCommand('copy');
+    document.body.removeChild(input);
+
+    var couponCopyBlock = coupon.querySelector('.coupon-content').querySelector('.coupon-label').querySelector('.coupon-copy');
+    var couponCopy = "(Nhấn để copy mã)";
+    var couponCopied = "<span style='color:red'>(Đã Copy)</span>";
+    document.querySelectorAll(".coupon-copy").forEach(node => node.innerHTML = couponCopy);
+    couponCopyBlock.innerHTML = couponCopyBlock.innerHTML.replace(couponCopy, couponCopied);
+
+    // console.log(couponCopyBlock.innerHTML);
+    // alert("Đã Copy mã " + text + " vào bộ nhớ đệm!");
+    return result;
+}
+
+// coupon accesstrade
+function coupon(element, merchantID = null) {
+    var merchant = "";
+    if (merchantID == null && getUrlParams(location.search)["type"]) {
+        merchantID = getUrlParams(location.search)["type"];
+        if (merchantID == "tiki") merchantID = "tikivn";
+        merchant = "&merchant=" + merchantID + "";
+    }
+    console.log(merchant);
+    var api = "https://api.accesstrade.vn/v1/offers_informations?scope=&status=1" + merchant + "";
+    var key = "BSlThjyssppl-1bbVJDKRiOBxK9rakro";
+    var contentHTML = "";
+    $.ajax
+        ({
+            type: "GET",
+            url: api,
+            dataType: 'json',
+            async: false,
+            contentType: "application/json",
+            headers: {
+                "Authorization": "Token " + key + ""
+
+            },
+            success: function (data) {
+                var dataCoupon = data.data;
+                dataCoupon = dataCoupon.sort((a, b) => 0.5 - Math.random());
+                try {
+                    dataCoupon.forEach(function (voucher, index) {
+                        contentHTML += "<div class='col-lg-3'>";
+
+                        contentHTML += "<a onclick=\"copyCoupon(this,'" + voucher.coupons[0].coupon_code + "')\" href='" + voucher.aff_link + "' target='_blank' rel='noopener noreferrer nofollow'>";
+
+
+                        contentHTML += "<div class='coupon-content'>";
+                        contentHTML += "<img height='200' width='200' alt='" + voucher.name + "' lazy data-src='" + voucher.image + "'>";
+                        contentHTML += "<p class='coupon-text'>" + voucher.coupons[0].coupon_desc + "</p>";
+                        // contentHTML += "<p class='coupon-text'>" + voucher.content + "</p>";
+                        contentHTML += "<p class='coupon-label'>" + voucher.merchant + " - " + voucher.coupons[0].coupon_code + "<br><span class='coupon-copy'>(Nhấn để copy mã)</span></p>";
+                        contentHTML += "</div>";
+                        contentHTML += "</div>";
+
+                        contentHTML += "</a>";
+
+                        if (index == 3) throw new Exception("Time to end the loop");
+                    });
+                }
+                catch (e) {
+                    console.log("Loop has ended");
+                }
+
+                $(contentHTML).insertBefore(element);
+                console.log(dataCoupon);
+
+            },
+            error: function (error) {
+                console.log(error.statusText);
+            }
+        });
+
+}

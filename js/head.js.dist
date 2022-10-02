@@ -81,7 +81,7 @@ function copyCoupon(coupon, text) {
     var couponCopyBlock = coupon.querySelector('.coupon-content').querySelector('.coupon-label').querySelector('.coupon-copy');
     var couponCopy = "(Nhấn để copy mã)";
     var couponCopied = "<span style='color:red'>(Đã Copy)</span>";
-    $(".coupon-copy").html(couponCopy);
+    document.querySelectorAll(".coupon-copy").forEach(node => node.innerHTML = couponCopy);
     couponCopyBlock.innerHTML = couponCopyBlock.innerHTML.replace(couponCopy, couponCopied);
 
     // console.log(couponCopyBlock.innerHTML);
