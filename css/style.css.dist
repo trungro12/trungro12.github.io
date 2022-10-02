@@ -208,6 +208,10 @@ input[type="file"]::file-selector-button {
     height: 70px;
     overflow: hidden;
     padding: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
 }
 
 /* game  */
@@ -242,6 +246,8 @@ input[type="file"]::file-selector-button {
     border-radius: 4px;
     color: #f00 !important;
     font-weight: bold;
+    height: 410px;
+    overflow: hidden;
 }
 
 .coupon-label {
