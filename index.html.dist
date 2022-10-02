@@ -28,8 +28,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- voucher -->
-    <script async type="text/javascript" src="js/accesstrade/popper.min.js"></script>
-    <script async type="text/javascript" src="js/accesstrade/bootstrap.min.js"></script>
+    <script async type="text/javascript" src="https://static.accesstrade.vn/coupon/v2/js/popper.min.js"></script>
+    <script async type="text/javascript" src="https://static.accesstrade.vn/coupon/v2/js/bootstrap.min.js"></script>
 
     <script src="js/custom.js"></script>
 
