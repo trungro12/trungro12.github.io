@@ -70,14 +70,23 @@ function runScripts() {
     });
 }
 
-function copyCoupon(text) {
+function copyCoupon(coupon, text) {
     var input = document.createElement('textarea');
     input.innerHTML = text;
     document.body.appendChild(input);
     input.select();
     var result = document.execCommand('copy');
     document.body.removeChild(input);
-    alert("Đã Copy mã " + text + " vào bộ nhớ đệm!");
+
+    var couponBlock = coupon.innerHTML;
+    var couponCopy = "(Nhấn để copy mã)";
+    var couponCopied = "<span style='color:red'>(Đã Copy)</span>";
+    $(".coupon-copy").html(couponCopy);
+    couponBlock = couponBlock.replace(couponCopy, couponCopied);
+    coupon.innerHTML = couponBlock;
+
+    // console.log(couponBlock);
+    // alert("Đã Copy mã " + text + " vào bộ nhớ đệm!");
     return result;
 }
 
@@ -111,14 +120,14 @@ function coupon(element, merchantID = null) {
                     dataCoupon.forEach(function (voucher, index) {
                         contentHTML += "<div class='col-lg-3'>";
 
-                        contentHTML += "<a onclick=\"copyCoupon('" + voucher.coupons[0].coupon_code + "')\" href='" + voucher.aff_link + "' target='_blank' rel='noopener noreferrer nofollow'>";
+                        contentHTML += "<a onclick=\"copyCoupon(this,'" + voucher.coupons[0].coupon_code + "')\" href='" + voucher.aff_link + "' target='_blank' rel='noopener noreferrer nofollow'>";
 
 
                         contentHTML += "<div class='coupon-content'>";
-                        contentHTML += "<img height='200' width='200' lazy data-src='" + voucher.image + "'>";
+                        contentHTML += "<img height='200' width='200' alt='" + voucher.name + "' lazy data-src='" + voucher.image + "'>";
                         contentHTML += "<p class='coupon-text'>" + voucher.coupons[0].coupon_desc + "</p>";
                         // contentHTML += "<p class='coupon-text'>" + voucher.content + "</p>";
-                        contentHTML += "<p class='coupon-label'>" + voucher.merchant + " - " + voucher.coupons[0].coupon_code + "<br>(Nhấn để copy mã)</p>";
+                        contentHTML += "<p class='coupon-label'>" + voucher.merchant + " - " + voucher.coupons[0].coupon_code + "<br><span class='coupon-copy'>(Nhấn để copy mã)</span></p>";
                         contentHTML += "</div>";
                         contentHTML += "</div>";
 
