@@ -206,12 +206,12 @@ input[type="file"]::file-selector-button {
 
 .coupon-text {
     height: 70px;
-    overflow: auto;
+    overflow: hidden;
+    padding: 15px;
 }
 
 /* game  */
-.game-content,
-.coupon-content {
+.game-content {
     text-align: center;
     width: 100%;
 
@@ -231,6 +231,21 @@ input[type="file"]::file-selector-button {
 
 .coupon-content {
     min-width: unset;
+    text-align: center;
+    width: 100%;
+    background: rgb(255 243 243);
+    border-radius: 10px;
+    min-height: 100px;
+    padding: 20px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 4px;
+    color: #f00 !important;
+    font-weight: bold;
+}
+
+.coupon-label {
+    color: #000 !important;
 }
 
 .game-content h3 {
