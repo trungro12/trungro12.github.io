@@ -44,7 +44,7 @@ function _mapUrlParams(queryString) {
         }, {});
 }
 // lazy 
-const autoLoadDuration = 3; //In Seconds
+const autoLoadDuration = 5; //In Seconds
 const eventList = ["click", "keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
 
 const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
@@ -62,6 +62,9 @@ function triggerScripts() {
 }
 
 function runScripts() {
+    document.querySelectorAll("img[lazy]").forEach(function (scriptTag) {
+        scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
+    });
     document.querySelectorAll("script[lazy]").forEach(function (scriptTag) {
         scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
     });
@@ -112,7 +115,7 @@ function coupon(element, merchantID = null) {
 
 
                         contentHTML += "<div class='coupon-content'>";
-                        contentHTML += "<img width='200' src='" + voucher.image + "'>";
+                        contentHTML += "<img height='200' width='200' lazy data-src='" + voucher.image + "'>";
                         contentHTML += "<p class='coupon-text'>" + voucher.coupons[0].coupon_desc + "</p>";
                         // contentHTML += "<p class='coupon-text'>" + voucher.content + "</p>";
                         contentHTML += "<p class='coupon-label'>" + voucher.merchant + " - " + voucher.coupons[0].coupon_code + "<br>(Nhấn để copy mã)</p>";
