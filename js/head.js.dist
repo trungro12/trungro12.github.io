@@ -78,14 +78,13 @@ function copyCoupon(coupon, text) {
     var result = document.execCommand('copy');
     document.body.removeChild(input);
 
-    var couponBlock = coupon.innerHTML;
+    var couponCopyBlock = coupon.querySelector('.coupon-content').querySelector('.coupon-label').querySelector('.coupon-copy');
     var couponCopy = "(Nhấn để copy mã)";
     var couponCopied = "<span style='color:red'>(Đã Copy)</span>";
     $(".coupon-copy").html(couponCopy);
-    couponBlock = couponBlock.replace(couponCopy, couponCopied);
-    coupon.innerHTML = couponBlock;
+    couponCopyBlock.innerHTML = couponCopyBlock.innerHTML.replace(couponCopy, couponCopied);
 
-    // console.log(couponBlock);
+    // console.log(couponCopyBlock.innerHTML);
     // alert("Đã Copy mã " + text + " vào bộ nhớ đệm!");
     return result;
 }
