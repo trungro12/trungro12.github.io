@@ -11,7 +11,7 @@ function gameloader() {
   contentHTML += '<div class="row">';
   contentHTML += "<h3>Game có trong video trên Tiktok của mình</h3>";
   game.forEach(function (content, index) {
-    contentHTML += '<div class="col-lg-3">';
+    contentHTML += '<div class="col-lg-6">';
     contentHTML +=
       '<a target="_blank" rel="noopener" href="' + url[index] + '">';
 
