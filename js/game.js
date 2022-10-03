@@ -7,22 +7,34 @@ function gameloader() {
   var image = [
     "https://cdn.akamai.steamstatic.com/steam/apps/349040/header.jpg",
   ];
+  var video = ['https://cdn.akamai.steamstatic.com/steam/apps/256660477/movie_max.webm?t=1454603660'];
+
   var contentHTML = '<div class="coupon-section">';
   contentHTML += '<div class="row">';
   contentHTML += "<h3>Game có trong video trên Tiktok của mình</h3>";
   var style = '';
-  if (game.length == 1) style = 'style="margin:auto;"';
+  var gameNumber = game.length;
+  if (gameNumber == 1) style = 'style="margin:auto;"';
+
   game.forEach(function (content, index) {
     contentHTML += '<div ' + style + ' class="col-lg-6">';
     contentHTML +=
       '<a target="_blank" rel="noopener" href="' + url[index] + '">';
-
     contentHTML +=
-      '<div style="height: 310px;" class="coupon-content"><img width="450" height="200" alt="' +
-      content +
-      '" src="' +
-      image[index] +
-      '"><p class="coupon-text">' +
+      '<div style="height: 310px;" class="coupon-content">';
+    if (video[index]) {
+      var autoplay = "";
+      if (gameNumber == 1) autoplay = 'autoplay=""';
+      contentHTML += '<video loop controls="" ' + autoplay + ' name="media" __idm_id__="720897"><source src="' + video[index] + '" type="video/webm"></video>';
+    }
+    else {
+      contentHTML = '<img width="450" height="200" alt="' +
+        content +
+        '" src="' +
+        image[index] +
+        '">';
+    }
+    contentHTML += '<p class="coupon-text">' +
       content +
       "</p></div>";
 
