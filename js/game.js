@@ -17,6 +17,11 @@ function gameloader() {
   if (gameNumber == 1) style = 'style="margin:auto;"';
 
   game.forEach(function (content, index) {
+    var imageContent = '<img width="450" height="200" alt="' +
+      content +
+      '" src="' +
+      image[index] +
+      '">';
     contentHTML += '<div ' + style + ' class="col-lg-6">';
     contentHTML +=
       '<a target="_blank" rel="noopener" href="' + url[index] + '">';
@@ -25,14 +30,10 @@ function gameloader() {
     if (video[index]) {
       var autoplay = "";
       if (gameNumber == 1) autoplay = 'autoplay';
-      contentHTML += '<video poster="' + image[index] + '" style="width: auto;max-height: 220px;" loop controls="" name="media" __idm_id__="720897" ' + autoplay + '><source src="' + video[index] + '" type="video/webm">Your browser does not support the video tag.</video>';
+      contentHTML += '<video poster="' + image[index] + '" style="width: auto;max-height: 220px;" loop controls="" name="media" __idm_id__="720897" ' + autoplay + '><source src="' + video[index] + '" type="video/webm">' + imageContent + '</video>';
     }
     else {
-      contentHTML += '<img width="450" height="200" alt="' +
-        content +
-        '" src="' +
-        image[index] +
-        '">';
+      contentHTML += imageContent;
     }
     contentHTML += '<p class="coupon-text">' +
       content +
