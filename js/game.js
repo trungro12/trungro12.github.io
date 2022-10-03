@@ -10,8 +10,10 @@ function gameloader() {
   var contentHTML = '<div class="coupon-section">';
   contentHTML += '<div class="row">';
   contentHTML += "<h3>Game có trong video trên Tiktok của mình</h3>";
+  var style = "";
+  if (game.length == 1) style = "style='margin:auto;'";
   game.forEach(function (content, index) {
-    contentHTML += '<div class="col-lg-6">';
+    contentHTML += '<div ' + style + ' class="col-lg-6">';
     contentHTML +=
       '<a target="_blank" rel="noopener" href="' + url[index] + '">';
 
