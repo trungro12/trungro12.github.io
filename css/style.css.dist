@@ -58,7 +58,9 @@ a {
 .voucher-content h3 {
     margin: 10px auto;
 }
-
+.content-tool{
+    width: 100%;
+}
 /* .content-tool {
     background: rgb(0 0 0 / 25%);
     box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
