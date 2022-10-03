@@ -110,11 +110,11 @@
                         location.href = currenturl + "?type=game";
                     });
                 });
-                // var currenturl = location.href.split('?')[0];
+                /* var currenturl = location.href.split('?')[0]; */
                 var currenturl = location.href.replace("#", "");
                 currenturl = currenturl.split('?')[0];
                 let urlParams = getUrlParams(location.search);
-                console.log(urlParams);
+                /* console.log(urlParams);*/
                 var loadscript = document.createElement('script');
                 loadscript.type = 'text/javascript';
 
