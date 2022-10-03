@@ -1,5 +1,5 @@
 function gameloader() {
-  coupon();
+  coupon("#gameloader");
   var game = ["NARUTO SHIPPUDEN: Ultimate Ninja STORM 4"];
   var url = [
     "https://store.steampowered.com/app/349040/NARUTO_SHIPPUDEN_Ultimate_Ninja_STORM_4/",
