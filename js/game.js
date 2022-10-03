@@ -25,7 +25,15 @@ function gameloader() {
     if (video[index]) {
       var autoplay = "";
       if (gameNumber == 1) autoplay = 'autoplay=""';
-      contentHTML += '<video style="width: auto;max-height: 220px;" loop controls="" ' + autoplay + ' name="media" __idm_id__="720897"><source src="' + video[index] + '" type="video/webm">Your browser does not support the video tag.</video>';
+      contentHTML += '<video style="width: auto;max-height: 220px;" loop controls="" ' + autoplay + ' name="media" __idm_id__="720897"><source src="' + video[index] + '" type="video/webm">';
+
+      contentHTML = '<img width="450" height="200" alt="' +
+        content +
+        '" src="' +
+        image[index] +
+        '">';
+
+      contentHTML += '</video>';
     }
     else {
       contentHTML = '<img width="450" height="200" alt="' +
