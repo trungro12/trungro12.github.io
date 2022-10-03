@@ -25,7 +25,7 @@ function gameloader() {
     if (video[index]) {
       var autoplay = "";
       if (gameNumber == 1) autoplay = 'autoplay=""';
-      contentHTML += '<video loop controls="" ' + autoplay + ' name="media" __idm_id__="720897"><source src="' + video[index] + '" type="video/webm"></video>';
+      contentHTML += '<video loop controls="" ' + autoplay + ' name="media" __idm_id__="720897"><source src="' + video[index] + '" type="video/webm">Your browser does not support the video tag.</video>';
     }
     else {
       contentHTML = '<img width="450" height="200" alt="' +
