@@ -16,7 +16,7 @@ function gameloader() {
       '<a target="_blank" rel="noopener" href="' + url[index] + '">';
 
     contentHTML +=
-      '<div class="coupon-content"><img width="450" height="200" alt="' +
+      '<div style="height: 310px;" class="coupon-content"><img width="450" height="200" alt="' +
       content +
       '" src="' +
       image[index] +
