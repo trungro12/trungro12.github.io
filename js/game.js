@@ -28,7 +28,7 @@ function gameloader() {
       contentHTML += '<video poster="' + image[index] + '" style="width: auto;max-height: 220px;" loop controls="" name="media" __idm_id__="720897" ' + autoplay + '><source src="' + video[index] + '" type="video/webm">Your browser does not support the video tag.</video>';
     }
     else {
-      contentHTML = '<img width="450" height="200" alt="' +
+      contentHTML += '<img width="450" height="200" alt="' +
         content +
         '" src="' +
         image[index] +
