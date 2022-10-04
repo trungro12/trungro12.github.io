@@ -104,8 +104,5 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
     },
   });
 }
-
-$(document).ready(function () {
-  // show coupon at id show-coupon
-  coupon("#show-coupon", null, 8);
-});
+// show coupon at id show-coupon
+coupon("#show-coupon", null, 8);
