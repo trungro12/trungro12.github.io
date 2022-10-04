@@ -221,6 +221,10 @@ input[type="file"]::file-selector-button {
   height: 70px;
 }
 
+[class$="-dropdown-toggle"] span {
+  color: #000;
+}
+
 .atEQPOIVFSDFSDG-voucher-main {
   background: rgb(255 255 255);
 }
