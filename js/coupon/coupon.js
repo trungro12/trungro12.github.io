@@ -51,7 +51,6 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
       spinnerLoading(element);
     },
     success: function (data) {
-      spinnerLoading(element, false);
       var dataCoupon = data.data;
       var style = "";
       if (dataCoupon.length == 1) style = "style='margin:auto;'";
@@ -101,6 +100,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
       }
 
       $(contentHTML).insertBefore(element);
+      spinnerLoading(element, false);
       // console.log(dataCoupon);
     },
     error: function (error) {
