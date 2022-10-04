@@ -183,9 +183,13 @@ input[type="file"]::file-selector-button {
   text-decoration: none;
 }
 
-[class$="-item-loading-desk"],
-[class$="-heading--title"] p {
+[class$="-item-loading-desk"] {
   color: red;
+}
+
+[class$="-title"] a,
+[class$="-heading--title"] p {
+  color: #0400ff;
 }
 
 [class$="-at-modal-content"] {
