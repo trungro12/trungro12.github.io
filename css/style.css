@@ -191,7 +191,18 @@ input[type="file"]::file-selector-button {
 [class$="-search-title"]::after {
   content: " (Sau khi bạn nhấn tìm kiếm, hãy chờ khoảng 2 đến 3 giây để hệ thống tải dữ liệu nhé ^.^)";
 }
-
+[class$="-btn-search"],
+[class$="--input-search"],
+[class$="--input-search"] input {
+  border: 1px solid #f00;
+}
+[class$="--input-search"],
+[class$="--input-search"] input {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+[class$="-btn-search"] {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
 [class$="-promo-item"] {
   margin-left: 20px;
 }
