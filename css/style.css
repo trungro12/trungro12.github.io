@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    font-family: 'Quicksand', sans-serif;
     min-height: 500px;
     width: 100%;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #5e2392, #23d5ab);
