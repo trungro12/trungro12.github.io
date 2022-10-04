@@ -24,6 +24,7 @@ function copyCoupon(coupon, text) {
 }
 
 function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
+  $(element).html("<h3>Loading...</h3>");
   if (limit > 20) limit = 20;
   limit -= 1;
   var merchant = "";
@@ -95,7 +96,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
       } catch (e) {
         console.log("Loop has ended");
       }
-
+      $(element).html("");
       $(contentHTML).insertBefore(element);
       // console.log(dataCoupon);
     },
