@@ -101,6 +101,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
     },
     error: function (error) {
       console.log(error.statusText);
+      $(element).html("<h3 class='btn btn-danger'>Có Lỗi Khi Tải Dữ Liệu :( , <a href=''>Tải Lại Trang</a></h3>").fadeOut(2000);
     },
   });
 }
