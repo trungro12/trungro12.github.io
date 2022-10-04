@@ -210,7 +210,7 @@ input[type="file"]::file-selector-button {
   width: 70px;
   height: 70px;
 }
-[class$="-page-item"].active [class$="-page-link"] {
+a.[class$="-page-link"] {
   background-color: red;
 }
 
