@@ -79,3 +79,16 @@ function runScripts() {
     scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
   });
 }
+
+// spinner loading 
+function spinnerLoading(element) {
+  $('<div class="spinner-border text-primary"></div>')
+    .insertBefore(element).hide()
+    .ajaxStart(function () {
+      $(this).show();
+    })
+    .ajaxStop(function () {
+      $(this).hide();
+    })
+    ;
+}

@@ -24,6 +24,7 @@ function copyCoupon(coupon, text) {
 }
 
 function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
+  spinnerLoading(element);
   if (limit > 20) limit = 20;
   limit -= 1;
   var merchant = "";
