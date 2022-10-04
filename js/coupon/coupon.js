@@ -106,4 +106,4 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
 }
 
 // show coupon at id show-coupon
-coupon("#show-coupon", null, 8);
+coupon("#coupon", null, 8);
