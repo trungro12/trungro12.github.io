@@ -1,2 +1,2 @@
-// show coupon at id coupon-show
-coupon("#coupon-show", null, 8);
+// show coupon at id show-coupon
+coupon("#show-coupon", null, 8);
