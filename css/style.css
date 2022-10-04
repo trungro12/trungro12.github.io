@@ -183,11 +183,17 @@ input[type="file"]::file-selector-button {
   text-decoration: none;
 }
 
+[class$="-item-loading-desk"],
+[class$="-heading--title"] p {
+  color: red;
+}
+
 [class$="-at-modal-content"] {
   margin: 10% auto;
 }
 
-[class$="-remain"] [class$="-item-label"] {
+[class$="-remain"] [class$="-item-label"],
+[class$="-heading--label"] span {
   background: #0400ff;
   color: #ffffff;
 }
