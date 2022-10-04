@@ -77,12 +77,13 @@
         </div>
         <div class="row">
           <div class="col-12">
+            <div id="checkDevice"></div>
             <div class="coupon-section">
               <h3>Coupon, Voucher, Mã Khuyến Mãi Mới Nhất</h3>
               <div id="coupon-show"></div>
               <script>
                 if (isMobile()) {
-                  $("<div id='isMobile' onclick='loadingText(this)' class='text-center'><h3 class='btn btn-primary'>Hiện Mã Khuyến Mãi</h3></div>").insertBefore("#coupon-show");
+                  $("<div id='isMobile' onclick='loadingText(this)' class='text-center'><h3 class='btn btn-primary'>Hiện Mã Khuyến Mãi</h3></div>").insertBefore("#checkDevice");
                   function loadingText(element) {
                     element.innerHTML = "<h3 class='btn btn-success'>Đang Tải Dữ Liệu ...</h3>";
                   }
