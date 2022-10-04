@@ -82,7 +82,7 @@ function runScripts() {
 
 // spinner loading 
 function spinnerLoading(element, show = true, size = 2) {
-  var id = "spinner-" + element.replace("#", "").replace(".", "").trim();
+  var id = "spinner-" + element.replace("#", "").replace(".", "");
   var spinner = $("#" + id);
   if (spinner.length == 0) $('<div id="' + id + '" class="spinner-border text-primary" style="scale: ' + size + ';"></div>').insertBefore(element);
   if (show) spinner.show();
