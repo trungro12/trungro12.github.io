@@ -173,7 +173,7 @@ input[type="file"]::file-selector-button {
 [class$="-line--content"],
 [class$="-nav-item"] a.active,
 [class$="-btn-keyword"]:hover,
-[class$="-btn-keyword"] a:hover {
+[class$="-btn-keyword"] a:hover, [class$="-btn-keyword"], [class$="-btn-keyword"] a{
   background-color: #f00 !important;
   color: #fff !important;
   text-decoration: none;
