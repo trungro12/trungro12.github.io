@@ -24,7 +24,6 @@ function copyCoupon(coupon, text) {
 }
 
 function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
-  spinnerLoading(element);
   if (limit > 20) limit = 20;
   limit -= 1;
   var merchant = "";
@@ -48,7 +47,11 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
     headers: {
       Authorization: "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro",
     },
+    beforeSend: function () {
+      spinnerLoading(element);
+    },
     success: function (data) {
+      spinnerLoading(element, false);
       var dataCoupon = data.data;
       var style = "";
       if (dataCoupon.length == 1) style = "style='margin:auto;'";

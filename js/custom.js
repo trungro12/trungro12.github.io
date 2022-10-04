@@ -81,16 +81,10 @@ function runScripts() {
 }
 
 // spinner loading 
-function spinnerLoading(element) {
-  var id = "spinner-" + element.replace("#", "").replace(".", "") + element.length;
-  $('<div id="' + id + '" class="spinner-border text-primary"></div>')
-    .insertBefore(element);
-  $("#" + id).hide()
-    .ajaxStart(function () {
-      $(this).show();
-    })
-    .ajaxStop(function () {
-      $(this).hide();
-    })
-    ;
+function spinnerLoading(element, show = true) {
+  var id = "spinner-" + element.replace("#", "").replace(".", "") + Math.random().toString(36).slice(2, 7);
+  var spinner = $("#" + id);
+  if (spinner.length == 0) $('<div id="' + id + '" class="spinner-border text-primary"></div>').insertBefore(element);
+  if (show) spinner.show();
+  else spinner.hide();
 }
