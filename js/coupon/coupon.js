@@ -47,10 +47,8 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
     headers: {
       Authorization: "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro",
     },
-    beforeSend: function () {
-      if (isMobile()) $("#isMobile").html("<h3 class='btn btn-success'>Đang Tải Dữ Liệu ...</h3>");
-    },
     success: function (data) {
+      if (isMobile()) $("#isMobile").remove();
       var dataCoupon = data.data;
       var style = "";
       if (dataCoupon.length == 1) style = "style='margin:auto;'";
@@ -99,7 +97,6 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
         console.log("Loop has ended");
       }
       $(contentHTML).insertBefore(element);
-      if (isMobile()) $("#isMobile").remove();
       // console.log(dataCoupon);
     },
     error: function (error) {
