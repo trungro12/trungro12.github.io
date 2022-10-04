@@ -93,11 +93,13 @@ function spinnerLoading(element, size = 2) {
         ';"></div>'
     ).insertBefore(element);
 
-  $(document)
-    .ajaxStart(function () {
+  jQuery.ajaxSetup({
+    beforeSend: function () {
       spinner.show();
-    })
-    .ajaxStop(function () {
+    },
+    complete: function () {
       spinner.hide();
-    });
+    },
+    success: function () {},
+  });
 }
