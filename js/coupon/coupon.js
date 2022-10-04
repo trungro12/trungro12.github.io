@@ -48,6 +48,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
       Authorization: "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro",
     },
     success: function (data) {
+      if (isMobile()) $("#isMobile").remove();
       var dataCoupon = data.data;
       var style = "";
       if (dataCoupon.length == 1) style = "style='margin:auto;'";

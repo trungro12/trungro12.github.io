@@ -6,7 +6,10 @@ function loadContent(element, url) {
     )
     .load(url);
 }
-
+isMobile = function(){
+  var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+  return isMobile.matches ? true : false;
+}
 /**
  * Accepts either a URL or querystring and returns an object associating
  * each querystring parameter to its value.

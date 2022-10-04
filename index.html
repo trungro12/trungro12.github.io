@@ -140,6 +140,9 @@
               <div class="coupon-section">
                 <h3>Coupon, Voucher, Mã Khuyến Mãi Mới Nhất</h3>
                 <div id="coupon-show"></div>
+                <script>
+                  if (isMobile()) $("<div id='isMobile' class='text-center'><h3 class='btn btn-primary'>Hiện Mã Khuyến Mãi</h3></div>").insertBefore("#coupon-show");
+                </script>
               </div>
               <div id="loadContents"></div>
             </div>
