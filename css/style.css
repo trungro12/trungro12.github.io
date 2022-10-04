@@ -181,6 +181,7 @@ input[type="file"]::file-selector-button {
   background-color: #f00 !important;
   color: #fff !important;
   text-decoration: none;
+  white-space: unset;
 }
 
 [class$="-item-loading-desk"] {
