@@ -59,9 +59,11 @@ a {
 .voucher-content h3 {
   margin: 10px auto;
 }
+
 .content-tool {
   width: 100%;
 }
+
 /* .content-tool {
     background: rgb(0 0 0 / 25%);
     box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
@@ -173,7 +175,9 @@ input[type="file"]::file-selector-button {
 [class$="-line--content"],
 [class$="-nav-item"] a.active,
 [class$="-btn-keyword"]:hover,
-[class$="-btn-keyword"] a:hover, [class$="-btn-keyword"], [class$="-btn-keyword"] a{
+[class$="-btn-keyword"] a:hover,
+[class$="-btn-keyword"],
+[class$="-btn-keyword"] a {
   background-color: #f00 !important;
   color: #fff !important;
   text-decoration: none;
@@ -191,26 +195,32 @@ input[type="file"]::file-selector-button {
 [class$="-search-title"]::after {
   content: " (Sau khi bạn nhấn tìm kiếm, hãy chờ khoảng 2 đến 3 giây để hệ thống tải dữ liệu nhé ^.^)";
 }
+
 [class$="-btn-search"],
-[class$="--input-search"],
-[class$="--input-search"] input {
+.atEQPOIVFSDFSDG-input-search,
+.atEQPOIVFSDFSDG-input-search input {
   border: 1px solid #f00;
 }
-[class$="--input-search"],
-[class$="--input-search"] input {
+
+.atEQPOIVFSDFSDG-input-search,
+.atEQPOIVFSDFSDG-input-search input {
   border-radius: 0.25rem 0 0 0.25rem;
 }
+
 [class$="-btn-search"] {
   border-radius: 0 0.25rem 0.25rem 0;
 }
+
 [class$="-promo-item"] {
   margin-left: 20px;
 }
+
 [class$="-promo--img"] {
   width: 70px;
   height: 70px;
 }
-[class$="-page-item"].active a {
+
+.atEQPOIVFSDFSDG-coupon-pagination nav ul.atEQPOIVFSDFSDG-pagination li.active a {
   background-color: red;
 }
 
