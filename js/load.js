@@ -4,4 +4,6 @@ else if (urlParams['type'] == 'tiki') loadContent(loadContents, "tiki.html");
 else if (urlParams['type'] == 'game') loadContent(loadContents, "game.html");
 else loadContent(loadContents, "allvoucher.html");
 
-loadContent($("#coupon-show"), "coupon.html");
+var couponShow = $("#coupon-show");
+couponShow.addClass("row");
+loadContent(couponShow, "coupon.html");
