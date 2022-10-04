@@ -187,9 +187,9 @@ input[type="file"]::file-selector-button {
   color: red;
 }
 
-[class$="-title"] a,
+.atEQPOIVFSDFSDG-title a,
 [class$="-heading--title"] p {
-  color: #0400ff;
+  color: #0400ff !important;
 }
 
 [class$="-at-modal-content"] {
