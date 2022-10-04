@@ -23,7 +23,7 @@ function copyCoupon(coupon, text) {
   return result;
 }
 
-function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
+function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
   if (limit > 20) limit = 20;
   limit -= 1;
   var merchant = "";
@@ -53,9 +53,13 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
       if (dataCoupon.length == 1) style = "style='margin:auto;'";
       dataCoupon = dataCoupon.sort((a, b) => 0.5 - Math.random());
       try {
+        var loadImageDefault = false;
         dataCoupon.forEach(function (voucher, index) {
           voucher.merchant += " - ";
-          if (defaultImage) {
+          if (defaultImage == "auto") loadImageDefault = randomBool();
+          else if (defaultImage == "default") loadImageDefault = true;
+          else loadImageDefault = false;
+          if (loadImageDefault) {
             if (voucher.merchant.includes("tiki"))
               voucher.image = "/image/tiki.png";
             else voucher.image = "/image/shopee.png";

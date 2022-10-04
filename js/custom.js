@@ -10,6 +10,9 @@ isMobile = function(){
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   return isMobile.matches ? true : false;
 }
+randomBool = function(){
+  return (Math.random() < 0.5);
+}
 /**
  * Accepts either a URL or querystring and returns an object associating
  * each querystring parameter to its value.
