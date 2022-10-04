@@ -82,8 +82,10 @@ function runScripts() {
 
 // spinner loading 
 function spinnerLoading(element) {
-  $('<div class="spinner-border text-primary"></div>')
-    .insertBefore(element).hide()
+  var id = "spinner-" + element.replace("#", "").replace(".", "") + element.length;
+  $('<div id="' + id + '" class="spinner-border text-primary"></div>')
+    .insertBefore(element);
+  $("#" + id).hide()
     .ajaxStart(function () {
       $(this).show();
     })
