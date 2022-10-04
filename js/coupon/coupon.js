@@ -48,7 +48,6 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
       Authorization: "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro",
     },
     success: function (data) {
-      $("#isMobile").hide();
       var dataCoupon = data.data;
       var style = "";
       if (dataCoupon.length == 1) style = "style='margin:auto;'";
@@ -97,6 +96,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
         console.log("Loop has ended");
       }
       $(contentHTML).insertBefore(element);
+      $("#isMobile").html("<h3 class='btn btn-success'>Hiển Thị Mã Khuyến Mãi Thành Công !</h3>").fadeOut(2000);
       // console.log(dataCoupon);
     },
     error: function (error) {
