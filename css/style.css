@@ -198,7 +198,8 @@ input[type="file"]::file-selector-button {
 
 [class$="-btn-search"],
 .atEQPOIVFSDFSDG-input-search,
-.atEQPOIVFSDFSDG-input-search input, .atEQPOIVFSDFSDG-input-search input:focus {
+.atEQPOIVFSDFSDG-input-search input,
+.atEQPOIVFSDFSDG-input-search input:focus {
   border: 1px solid #f00;
 }
 
@@ -218,6 +219,10 @@ input[type="file"]::file-selector-button {
 [class$="-promo--img"] {
   width: 70px;
   height: 70px;
+}
+
+.atEQPOIVFSDFSDG-voucher-main {
+  background: rgb(255 255 255);
 }
 
 .atEQPOIVFSDFSDG-coupon-pagination nav ul.atEQPOIVFSDFSDG-pagination li.active a {

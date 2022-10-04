@@ -101,10 +101,10 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = true) {
     },
     error: function (error) {
       console.log(error.statusText);
-      $(element).html("<h3 class='btn btn-danger'>Có Lỗi Khi Tải Dữ Liệu :( , <a href=''>Tải Lại Trang</a></h3>").fadeOut(2000);
+      $(element).html("<h3>Có Lỗi Khi Tải Dữ Liệu :( , <a class='btn btn-danger' href=''>Tải Lại Trang</a></h3>");
     },
   });
 }
 
-// show coupon at id show-coupon
+// show coupon at id coupon
 coupon("#coupon", null, 8);
