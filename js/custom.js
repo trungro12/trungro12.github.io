@@ -79,27 +79,3 @@ function runScripts() {
     scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
   });
 }
-
-// spinner loading
-function spinnerLoading(element, size = 2) {
-  var id = "spinnerLoading-" + element.replace("#", "").replace(".", "");
-  var spinner = $("#" + id);
-  if (spinner.length == 0)
-    $(
-      '<div id="' +
-        id +
-        '" class="spinner-border text-primary" style="scale: ' +
-        size +
-        ';"></div>'
-    ).insertBefore(element);
-
-  jQuery.ajaxSetup({
-    beforeSend: function () {
-      spinner.show();
-    },
-    complete: function () {
-      spinner.hide();
-    },
-    success: function () {},
-  });
-}
