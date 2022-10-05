@@ -100,7 +100,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         console.log("Loop has ended");
       }
       $(contentHTML).insertBefore(element);
-      $("#isMobile").html("<h3 class='btn btn-success'>Hiển Thị Mã Khuyến Mãi Thành Công !</h3>").fadeOut(1000);
+      $("#isMobile").html("<h3 class='btn btn-success'>Hiển Thị Mã Giảm Giá Thành Công !</h3>").fadeOut(1000);
       // console.log(dataCoupon);
     },
     error: function (error) {
@@ -111,4 +111,5 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
 }
 
 // show coupon at id coupon
-coupon("#coupon", null, 8);
+if(isMobile()) coupon("#coupon", null, 4);
+else coupon("#coupon", null, 8);
