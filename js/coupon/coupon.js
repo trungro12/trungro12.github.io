@@ -105,7 +105,8 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
       }
       $(contentHTML).insertBefore(element);
       toast.change('Mã Giảm Giá Hiển Thị Thành Công ^.^' ,0);
-      $("#isMobile").hide();
+      $("#coupon-show-default").remove();
+      // $("#isMobile").hide();
       // console.log(dataCoupon);
     },
     error: function (error) {
