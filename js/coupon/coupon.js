@@ -118,7 +118,3 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
     },
   });
 }
-
-// show coupon at id coupon
-if (isMobile()) coupon("#coupon", null, 4);
-else coupon("#coupon", null, 8);
