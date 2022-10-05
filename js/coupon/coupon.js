@@ -66,15 +66,15 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
             if (voucher.merchant.includes("tiki"))
               voucher.image = "/image/tiki.png";
             else voucher.image = "/image/shopee.png";
-            voucher.merchant = "";
           }
+          voucher.merchant = "";
           contentHTML += "<div " + style + " class='col-lg-3'>";
 
           contentHTML +=
             "<a onclick=\"copyCoupon(this,'" +
             voucher.coupons[0].coupon_code +
             "')\" href='" +
-            voucher.aff_link +
+            voucher.aff_link.replace(/%26ref%3D[a-z]+/,"") +
             "' target='_blank' rel='noopener noreferrer nofollow'>";
 
           contentHTML += "<div class='coupon-content'>";
