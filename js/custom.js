@@ -52,7 +52,7 @@ function _mapUrlParams(queryString) {
     }, {});
 }
 // lazy
-const autoLoadDuration = 5; //In Seconds
+const autoLoadDuration = 3; //In Seconds
 const eventList = [
   "click",
   "keydown",
@@ -63,7 +63,7 @@ const eventList = [
   "touchend",
 ];
 
-// const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
 
 eventList.forEach(function (event) {
   window.addEventListener(event, triggerScripts, { passive: true });
@@ -71,7 +71,7 @@ eventList.forEach(function (event) {
 
 function triggerScripts() {
   runScripts();
-  // clearTimeout(autoLoadTimeout);
+  clearTimeout(autoLoadTimeout);
   eventList.forEach(function (event) {
     window.removeEventListener(event, triggerScripts, { passive: true });
   });
