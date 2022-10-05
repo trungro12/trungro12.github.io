@@ -105,6 +105,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         console.log("Loop has ended");
       }
       $(contentHTML).insertBefore(element);
+      $("#isMobile").hide();
       // console.log(dataCoupon);
     },
     error: function (error) {
