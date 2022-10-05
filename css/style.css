@@ -186,6 +186,7 @@ input[type="file"]::file-selector-button {
   justify-content: center;
   align-items: center;
   display: flex;
+  font-size: 17px!important;
 }
 
 [class$="-item-loading-desk"] {
