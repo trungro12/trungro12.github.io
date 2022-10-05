@@ -27,11 +27,14 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
   if (limit > 20) limit = 20;
   limit -= 1;
   var merchant = "";
-  if (merchantID == null && getUrlParams(location.search)["type"]) {
+  if (!merchantID && getUrlParams(location.search)["type"]) {
     merchantID = getUrlParams(location.search)["type"];
+  }
+  if (merchantID) {
     if (merchantID == "tiki") merchantID = "tikivn";
     merchant = "&merchant=" + merchantID + "";
   }
+
   // console.log(merchant);
   var api =
     "https://api.accesstrade.vn/v1/offers_informations?scope=&status=1" +
@@ -100,16 +103,22 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         console.log("Loop has ended");
       }
       $(contentHTML).insertBefore(element);
-      $("#isMobile").html("<h3 class='btn btn-success'>Hiển Thị Mã Giảm Giá Thành Công !</h3>").fadeOut(1000);
+      $("#isMobile")
+        .html(
+          "<h3 class='btn btn-success'>Hiển Thị Mã Giảm Giá Thành Công !</h3>"
+        )
+        .fadeOut(1000);
       // console.log(dataCoupon);
     },
     error: function (error) {
       console.log(error.statusText);
-      $(element).html("<h3>Có Lỗi Khi Tải Dữ Liệu :( , <a class='btn btn-danger' href=''>Tải Lại Trang</a></h3>");
+      $(element).html(
+        "<h3>Có Lỗi Khi Tải Dữ Liệu :( , <a class='btn btn-danger' href=''>Tải Lại Trang</a></h3>"
+      );
     },
   });
 }
 
 // show coupon at id coupon
-if(isMobile()) coupon("#coupon", null, 4);
+if (isMobile()) coupon("#coupon", null, 4);
 else coupon("#coupon", null, 8);
