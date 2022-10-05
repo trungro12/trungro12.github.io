@@ -53,7 +53,7 @@ function _mapUrlParams(queryString) {
 }
 // lazy
 $(function () {
-  const autoLoadDuration = 3;
+  const autoLoadDuration = 2;
   const eventList = [
     "click",
     "keydown",
@@ -86,4 +86,4 @@ $(function () {
       scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
     });
   }
-})
+});
