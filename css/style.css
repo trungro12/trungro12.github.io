@@ -188,6 +188,11 @@ input[type="file"]::file-selector-button {
   display: flex;
 }
 
+li.atEQPOIVFSDFSDG-btn-keyword.active a {
+  justify-content: center;
+  align-items: center;
+}
+
 [class$="-item-loading-desk"] {
   color: red;
 }
@@ -245,21 +250,19 @@ input[type="file"]::file-selector-button {
   background: rgb(255 255 255);
 }
 
-.atEQPOIVFSDFSDG-coupon-pagination
-  nav
-  ul.atEQPOIVFSDFSDG-pagination
-  li.active
-  a {
+.atEQPOIVFSDFSDG-coupon-pagination nav ul.atEQPOIVFSDFSDG-pagination li.active a {
   background-color: red;
 }
 
 .atEQPOIVFSDFSDG-container-btncopy .atEQPOIVFSDFSDG-dealact-copy {
   padding: 10px;
 }
+
 .atEQPOIVFSDFSDG-close {
   padding: 30px 50px;
   width: 100%;
 }
+
 .coupon-label {
   background: #b3b3b35f;
   color: #ffffff;
@@ -330,6 +333,7 @@ input[type="file"]::file-selector-button {
 }
 
 @media only screen and (min-width: 450px) {
+
   .atEQPOIVFSDFSDG-title a,
   [class$="-heading--title"] p {
     font-size: 17px !important;
@@ -337,6 +341,7 @@ input[type="file"]::file-selector-button {
 }
 
 @media only screen and (min-width: 1100px) {
+
   .atEQPOIVFSDFSDG-btn,
   [class$="-btn-search"],
   .btn-copy,
@@ -348,6 +353,7 @@ input[type="file"]::file-selector-button {
   [class$="-btn-keyword"] a {
     font-size: 17px !important;
   }
+
   .atEQPOIVFSDFSDG-voucher-main .atEQPOIVFSDFSDG-container {
     max-width: 1100px;
   }
