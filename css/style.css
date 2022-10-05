@@ -8,6 +8,7 @@ body {
   font-family: "Quicksand", sans-serif;
   min-height: 500px;
   width: 100%;
+  background-size: 120% 120%;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #5e2392, #23d5ab);
 }
 
@@ -16,13 +17,12 @@ body {
   margin: auto;
 }
 
-@media only screen and (min-width: 450px) {
+/* @media only screen and (min-width: 450px) {
   body {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    /* text-align: center; */
   }
-}
+} */
 
 a {
   text-decoration: none !important;
