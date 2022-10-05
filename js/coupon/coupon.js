@@ -24,7 +24,7 @@ function copyCoupon(coupon, text) {
 }
 
 function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
-  var toast = $.niceToast.info('Đang Tải Dữ Liệu ...');
+  var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
   if (limit > 20) limit = 20;
   limit -= 1;
   var merchant = "";
@@ -52,7 +52,6 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
       Authorization: "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro",
     },
     success: function (data) {
-      toast.change('Mã Giảm Giá Hiển Thị Thành Công ^.^' ,0);
       var dataCoupon = data.data;
       var style = "";
       if (dataCoupon.length == 1) style = "style='margin:auto;'";
@@ -105,6 +104,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         console.log("Loop has ended");
       }
       $(contentHTML).insertBefore(element);
+      toast.change('Mã Giảm Giá Hiển Thị Thành Công ^.^' ,0);
       $("#isMobile").hide();
       // console.log(dataCoupon);
     },
