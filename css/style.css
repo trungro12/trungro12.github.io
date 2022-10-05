@@ -186,6 +186,7 @@ input[type="file"]::file-selector-button {
 li.atEQPOIVFSDFSDG-btn-keyword.active a {
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 [class$="-item-loading-desk"] {
