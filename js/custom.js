@@ -52,7 +52,7 @@ function _mapUrlParams(queryString) {
     }, {});
 }
 // lazy
-  const autoLoadDuration = 4;
+  const autoLoadDuration = 5;
   const eventList = [
     "click",
     "keydown",
