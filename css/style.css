@@ -186,7 +186,6 @@ input[type="file"]::file-selector-button {
   justify-content: center;
   align-items: center;
   display: flex;
-  font-size: 17px!important;
 }
 
 [class$="-item-loading-desk"] {
@@ -327,5 +326,22 @@ input[type="file"]::file-selector-button {
   .atEQPOIVFSDFSDG-title a,
   [class$="-heading--title"] p {
     font-size: 17px !important;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .atEQPOIVFSDFSDG-btn,
+  [class$="-btn-search"],
+  .btn-copy,
+  [class$="-line--content"],
+  [class$="-nav-item"] a.active,
+  [class$="-btn-keyword"]:hover,
+  [class$="-btn-keyword"] a:hover,
+  [class$="-btn-keyword"],
+  [class$="-btn-keyword"] a {
+    font-size: 17px !important;
+  }
+  .atEQPOIVFSDFSDG-voucher-main .atEQPOIVFSDFSDG-container {
+    max-width: 1100px;
   }
 }
