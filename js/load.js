@@ -1,7 +1,7 @@
 // plugin toast 
 $.niceToast.setup({
     position: "top-right",
-    timeout: 2000
+    timeout: 1500
   });
 
 // coupon 
