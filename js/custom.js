@@ -6,11 +6,11 @@ function loadContent(element, url) {
     )
     .load(url);
 }
-isMobile = function(){
+isMobile = function () {
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   return isMobile.matches ? true : false;
 }
-randomBool = function(){
+randomBool = function () {
   return (Math.random() < 0.5);
 }
 /**
@@ -52,36 +52,38 @@ function _mapUrlParams(queryString) {
     }, {});
 }
 // lazy
-const autoLoadDuration = 3;
-const eventList = [
-  "click",
-  "keydown",
-  "mousemove",
-  "wheel",
-  "touchmove",
-  "touchstart",
-  "touchend",
-];
+$(function () {
+  const autoLoadDuration = 3;
+  const eventList = [
+    "click",
+    "keydown",
+    "mousemove",
+    "wheel",
+    "touchmove",
+    "touchstart",
+    "touchend",
+  ];
 
-const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+  const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
 
-eventList.forEach(function (event) {
-  window.addEventListener(event, triggerScripts, { passive: true });
-});
-
-function triggerScripts() {
-  runScripts();
-  clearTimeout(autoLoadTimeout);
   eventList.forEach(function (event) {
-    window.removeEventListener(event, triggerScripts, { passive: true });
+    window.addEventListener(event, triggerScripts, { passive: true });
   });
-}
 
-function runScripts() {
-  document.querySelectorAll("img[lazy]").forEach(function (scriptTag) {
-    scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
-  });
-  document.querySelectorAll("script[lazy]").forEach(function (scriptTag) {
-    scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
-  });
-}
+  function triggerScripts() {
+    runScripts();
+    clearTimeout(autoLoadTimeout);
+    eventList.forEach(function (event) {
+      window.removeEventListener(event, triggerScripts, { passive: true });
+    });
+  }
+
+  function runScripts() {
+    document.querySelectorAll("img[lazy]").forEach(function (scriptTag) {
+      scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
+    });
+    document.querySelectorAll("script[lazy]").forEach(function (scriptTag) {
+      scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
+    });
+  }
+})
