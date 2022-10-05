@@ -256,7 +256,10 @@ input[type="file"]::file-selector-button {
 .atEQPOIVFSDFSDG-container-btncopy .atEQPOIVFSDFSDG-dealact-copy {
   padding: 10px;
 }
-
+.atEQPOIVFSDFSDG-close {
+  padding: 30px 50px;
+  width: 100%;
+}
 .coupon-label {
   background: #b3b3b35f;
   color: #ffffff;
