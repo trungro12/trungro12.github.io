@@ -105,11 +105,6 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         console.log("Loop has ended");
       }
       $(contentHTML).insertBefore(element);
-      $("#isMobile")
-        .html(
-          "<h3 class='btn btn-success'>Hiển Thị Mã Giảm Giá Thành Công !</h3>"
-        )
-        .fadeOut(1000);
       // console.log(dataCoupon);
     },
     error: function (error) {

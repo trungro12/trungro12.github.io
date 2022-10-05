@@ -89,7 +89,10 @@
               <div id="coupon-show"></div>
               <script>
                 if (isMobile()) {
-                  $("<div id='isMobile' class='text-center'><h3 class='btn btn-primary'>Hiện Mã Giảm Giá</h3></div>").insertBefore("#checkDevice");
+                  $("<div id='isMobile' onclick='removeHere(this)' class='text-center'><h3 class='btn btn-primary'>Hiện Mã Giảm Giá</h3></div>").insertBefore("#checkDevice");
+                  function removeHere(button) {
+                    button.innerHTML = "";
+                  }
                 }
               </script>
             </div>
