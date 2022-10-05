@@ -1,7 +1,9 @@
 <div id="coupon"></div>
 <script src="js/coupon/coupon.js"></script>
 <script>
-  if (getUrlParams(location.search)["type"] && getUrlParams(location.search)["type"] != "game") {
+  if (getUrlParams(location.search)["type"] && getUrlParams(location.search)["type"] == "game") {
+  }
+  else {
     if (isMobile()) coupon("#coupon", null, 4, "originImage");
     else coupon("#coupon", null, 8, "originImage");
   }
