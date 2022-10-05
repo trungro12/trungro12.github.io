@@ -258,11 +258,6 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   padding: 10px;
 }
 
-.atEQPOIVFSDFSDG-close {
-  padding: 30px 50px;
-  width: 100%;
-}
-
 .coupon-label {
   background: #b3b3b35f;
   color: #ffffff;
@@ -332,7 +327,15 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   color: #fff;
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (max-width: 650px) {
+
+  .atEQPOIVFSDFSDG-close {
+    padding: 30px 50px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 650px) {
 
   .atEQPOIVFSDFSDG-title a,
   [class$="-heading--title"] p {
