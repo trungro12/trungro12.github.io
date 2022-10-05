@@ -52,7 +52,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
       Authorization: "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro",
     },
     success: function (data) {
-      toast.change('Thành Công ^.^' ,0);
+      toast.change('Mã Giảm Giá Đã Được Hiển Thị ^.^' ,0);
       var dataCoupon = data.data;
       var style = "";
       if (dataCoupon.length == 1) style = "style='margin:auto;'";
