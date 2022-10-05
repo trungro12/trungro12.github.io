@@ -63,7 +63,7 @@ function _mapUrlParams(queryString) {
     "touchend",
   ];
 
-  const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+  // const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
 
   eventList.forEach(function (event) {
     window.addEventListener(event, triggerScripts, { passive: true });
@@ -71,7 +71,7 @@ function _mapUrlParams(queryString) {
 
   function triggerScripts() {
     runScripts();
-    clearTimeout(autoLoadTimeout);
+    // clearTimeout(autoLoadTimeout);
     eventList.forEach(function (event) {
       window.removeEventListener(event, triggerScripts, { passive: true });
     });
