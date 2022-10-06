@@ -2,6 +2,7 @@
 function loading() {
   document.getElementById("loading").style.display = "block";
   document.getElementById("loading").style.animation = "fadeout 2s linear";
+  console.log("OK");
 }
 function waitForElementToDisplay(
   selector,
