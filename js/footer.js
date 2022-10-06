@@ -7,8 +7,14 @@ const buttonLoading = [
 waitForElementToDisplay(
   ".atEQPOIVFSDFSDG-modal",
   function () {
-    buttonLoading.forEach(function(el){
-      document.querySelector(el).onclick = function () { buttonLoadingToast() };
+    buttonLoading.forEach(function (el) {
+      var buttons = document.querySelectorAll(el);
+      for (var button of buttons) {
+        button.addEventListener('click', function (event) {
+          buttonLoadingToast();
+        })
+      }
+
     });
   },
   1000,
