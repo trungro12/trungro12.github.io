@@ -8,21 +8,18 @@ buttonLoading.forEach(function (value) {
   waitForElementToDisplay(
     value,
     function () {
-      var divs = document.querySelectorAll(value);
-
-      [].forEach.call(divs, function (div) {
-        // do whatever
-        div.addEventListener("click", function () {
-          var toast = $.niceToast.info(
-            "Đang Tải Dữ Liệu. Bạn chờ một chút nha !"
-          );
-        });
+      document.getElementsByClassName(value).forEach(function(){
+        this.setAttribute('onclick','buttonLoadingToast()');
       });
     },
     1000,
     9000
   );
 });
+
+function buttonLoadingToast(){
+  $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
+}
 
 function waitForElementToDisplay(
   selector,
