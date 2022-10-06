@@ -34,7 +34,7 @@ function buttonLoadingToast() {
       console.log(typeof niceToast);
     });
   // }
-  $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
+  // $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
 }
 
 function waitForElementToDisplay(
