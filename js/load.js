@@ -10,7 +10,7 @@ $(window).on('scroll', function () {
     loadedContent = true;
     if (urlParams['type'] == 'shopee') loadContent(loadContents, "shopee.html");
     else if (urlParams['type'] == 'tiki') loadContent(loadContents, "tiki.html");
-    else if (urlParams['type'] == 'game') {loading("toast", "Game HOT"); loadContent(loadContents, "game.html");}
+    else if (urlParams['type'] == 'game') loadContent(loadContents, "game.html");
     else loadContent(loadContents, "allvoucher.html");
   }
 });
