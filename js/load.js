@@ -1,3 +1,4 @@
+var loadContents = $("#loadContents");
 if (urlParams["type"] == "game") loadContent(loadContents, "game.html");
 else {
   // coupon
@@ -5,7 +6,6 @@ else {
   couponShow.addClass("row");
   loadContent(couponShow, "coupon.html");
 
-  var loadContents = $("#loadContents");
   var loadedContent = false;
   $(window).on("scroll", function () {
     if (
