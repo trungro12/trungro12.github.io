@@ -90,6 +90,18 @@ a {
   animation: textcolor 2s infinite alternate;
 }
 
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
 @keyframes textcolor {
   0% {
     color: #6ee4c8;
