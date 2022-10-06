@@ -22,9 +22,6 @@ loadscript.type = "text/javascript";
 
 if (urlParams["type"]) {
   $("#" + urlParams["type"] + "").addClass("btn-active");
-  if (urlParams["type"] == "game") {
-    $("#coupon-show-default").html("");
-  }
   // loadscript.src = "js/load.js";
 } else {
   $("#allvoucher").addClass("btn-active");
