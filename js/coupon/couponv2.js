@@ -2,8 +2,8 @@
 function coupon(element, merchant = "", limit = 4, sort = 0) {
     var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
 
-    var page = '';
-    var limit = '';
+    var page = 1;
+    // var limit = '';
     // var merchant = '';
     var category = '';
     var campaign = '';
@@ -25,7 +25,7 @@ function coupon(element, merchant = "", limit = 4, sort = 0) {
         "keyword": keyword,
         "url": url,
         "sort": sort,
-        "status": 1
+        "status": 1,
     }
 
     var api =
