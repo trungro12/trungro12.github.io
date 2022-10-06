@@ -91,11 +91,17 @@ function runScripts() {
   });
 }
 
-function loading() {
-  document.getElementById("loading").style.display = "block";
-  setTimeout(function () {
-    document.getElementById("loading").style.display = "none";
-  }, 700);
+function loading(type = null, textforToast = "") {
+  if (type == "toast") {
+    var text = "Đang Tải Dữ Liệu. Bạn chờ một chút nha !";
+    if (textforToast) text = textforToast;
+    var toast = $.niceToast.info(text);
+  } else {
+    document.getElementById("loading").style.display = "block";
+    setTimeout(function () {
+      document.getElementById("loading").style.display = "none";
+    }, 700);
+  }
 }
 function waitForElementToDisplay(
   selector,
