@@ -1,8 +1,9 @@
 // define
 function loading() {
   document.getElementById("loading").style.display = "block";
-  document.getElementById("loading").style.animation = "fadeout 2s linear";
-  console.log("OK");
+  setTimeout(function () {
+    document.getElementById("loading").style.display = "none";
+  }, 2000);
 }
 function waitForElementToDisplay(
   selector,
