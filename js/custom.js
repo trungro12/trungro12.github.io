@@ -108,10 +108,7 @@ function copyCoupon(coupon, text) {
   document
     .querySelectorAll(".coupon-copy")
     .forEach((node) => (node.innerHTML = couponCopy));
-  couponCopyBlock.innerHTML = couponCopyBlock.innerHTML.replace(
-    couponCopy,
-    couponCopied
-  );
+  couponCopyBlock.innerHTML = couponCopied;
   return result;
 }
 
