@@ -1,7 +1,7 @@
 // define
 function loading() {
-  document.getElementById("#loading").style.display = "block";
-  document.getElementById("#loading").style.animation = "fadeout 2s linear";
+  document.getElementById("loading").style.display = "block";
+  document.getElementById("loading").style.animation = "fadeout 2s linear";
 }
 function waitForElementToDisplay(
   selector,
