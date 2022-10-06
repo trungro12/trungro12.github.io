@@ -44,7 +44,7 @@ function coupon(element, merchant = "", limit = 4, sort = 0) {
         success: function (data) {
             var dataCoupon = data.data;
             var style = "";
-            if (dataCoupon.length == 1) style = "style='margin:auto;'";
+            if (limit == 1) style = "style='margin:auto;'";
             dataCoupon = dataCoupon.sort((a, b) => 0.5 - Math.random());
             try {
                 var loadImageDefault = false;
