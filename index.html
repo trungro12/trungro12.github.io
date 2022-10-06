@@ -118,6 +118,13 @@
         rel="stylesheet"
       />
       <script src="./plugins/toast/dist/js/nice-toast-js.min.js"></script>
+      <script>
+        // plugin toast
+        $.niceToast.setup({
+          position: "top-right",
+          timeout: 1500,
+        });
+      </script>
     </div>
     <div class="d-flex flex-column justify-content-center">
       <div class="d-flex flex-column justify-content-center align-items-center">
@@ -212,7 +219,10 @@
                   </div>
                 </div>
 
-                <div id="coupon-show" style="z-index: 9999"></div>
+                <div
+                  id="coupon-show"
+                  style="z-index: 9999; pointer-events: auto"
+                ></div>
                 <script>
                   // if (isMobile()) {
                   //   $("<div id='isMobile' onclick='removeHere(this)' class='text-center'><h3 class='btn btn-primary'>Hiện Mã Giảm Giá</h3></div>").insertBefore("#checkDevice");
@@ -222,7 +232,10 @@
                   // }
                 </script>
               </div>
-              <div id="loadContents" style="z-index: 1"></div>
+              <div
+                id="loadContents"
+                style="z-index: 1; pointer-events: auto"
+              ></div>
             </div>
           </div>
         </div>
@@ -296,5 +309,6 @@
 
       gtag("config", "UA-98174184-8");
     </script>
+    <script src="js/footer.js"></script>
   </body>
 </html>

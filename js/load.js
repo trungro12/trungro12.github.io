@@ -1,9 +1,3 @@
-// plugin toast 
-$.niceToast.setup({
-  position: "top-right",
-  timeout: 1500
-});
-
 // coupon 
 var couponShow = $("#coupon-show");
 couponShow.addClass("row");
