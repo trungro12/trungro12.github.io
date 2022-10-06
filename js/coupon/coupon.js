@@ -75,7 +75,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
             "<a onclick=\"copyCoupon(this,'" +
             voucher.coupons[0].coupon_code +
             "')\" href='" +
-            voucher.aff_link.replace(/%26ref%3D[a-z]+/,"") +
+            voucher.aff_link.replace(/%26ref%3D[a-z]+/,"").replace(/%3Fref%3D[a-z]+/,"") +
             "' target='_blank' rel='noopener noreferrer nofollow'>";
 
           contentHTML += "<div class='coupon-content'>";
