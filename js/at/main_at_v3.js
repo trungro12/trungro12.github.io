@@ -202,6 +202,7 @@
         await get_list_keyword()
         // filter coupon theo keyword
         jq11("ul.atEQPOIVFSDFSDG-tags > li").click(function(event) {
+			loading();
             restartFilter()
             if (jq11("body").width() > 767) {
                 jq11("div.atEQPOIVFSDFSDG-filters-and-delete-search button.atEQPOIVFSDFSDG-delete-search").show()
@@ -229,6 +230,7 @@
       await get_list_merchants()
         jq11("a.atEQPOIVFSDFSDG-dropdown-item").on('click', function (event){
             event.preventDefault();
+			loading();
             if (jq11("body").width() > 767) {
                 jq11("div.atEQPOIVFSDFSDG-filters-and-delete-search button.atEQPOIVFSDFSDG-delete-search").show()
             } else {
@@ -258,6 +260,7 @@
         });
       // action click search
         jq11(".atEQPOIVFSDFSDG-btn-search").click(function (){
+			loading();
             restartFilter()
             jq11("#dropdownMenuButton2 span")[0].innerText = 'Tất cả nhà cung cấp';
             jq11("#dropdownMenuMerchant a.atEQPOIVFSDFSDG-dropdown-item").map(function (item) {
@@ -289,6 +292,7 @@
         jq11('#atEQPOIVFSDFSDG-search').keypress(function(event){
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == '13'){
+			loading();
             restartFilter()
             jq11("#dropdownMenuButton2 span")[0].innerText = 'Tất cả nhà cung cấp';
             jq11("#dropdownMenuMerchant a.atEQPOIVFSDFSDG-dropdown-item").map(function (item) {
@@ -431,6 +435,7 @@
 
         // tab
         jq11("#record-tabs").click(function (event){
+			loading();
         event.preventDefault();
         if (jq11("#deal-soon")[0].className.includes("active")) {
             return 1
@@ -455,6 +460,7 @@
 		}
 	});
 	    jq11("#history-tabs").click(function (event){
+			loading();
         event.preventDefault();
         if (jq11("#deal-opening")[0].className.includes("active")) {
             return 1
@@ -479,6 +485,7 @@
 
         // last page
         jq11("ul[name='pagination'] > li:last-child").click(function(){
+			loading();
             next(event,roundUp(totalCoupon/limit))
             jq11("#prev-page-active")[0].innerText = page - 1
             if (page < totalCoupon/limit ) {
@@ -492,6 +499,7 @@
         });
 
         jq11("ul[name='pagination-soon'] > li:last-child").click(function(){
+			loading();
             next(event,roundUp(totalCouponNext/limit),true)
             jq11("#prev-soon-page-active")[0].innerText = page - 1
             if (page < totalCouponNext/limit ) {
@@ -718,6 +726,7 @@
 			pagination()
 
 			jq11("#deal-opening .dealpromo-item-cta").click(function() {
+				loading();
 				var dealObj = jq11(this).closest('.atEQPOIVFSDFSDG-coupon-grid');
 				if (jq11("body").width() > 767) {
 					jq11('#myModalDesktop img.atEQPOIVFSDFSDG-img-cover').attr("src", dealObj.find('img.atEQPOIVFSDFSDG-img-cover').attr("src"));
@@ -838,6 +847,7 @@
             }
 			pagination(true)
 			jq11("#deal-soon .dealpromo-item-cta").click(function() {
+				loading();
 				var dealObj = jq11(this).closest('.atEQPOIVFSDFSDG-coupon-grid');
 				if (jq11("body").width() > 767) {
 					jq11('#myModalNextCouponDesktop img.atEQPOIVFSDFSDG-img-cover').attr("src", dealObj.find('img.atEQPOIVFSDFSDG-img-cover').attr("src"));
