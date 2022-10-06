@@ -103,8 +103,8 @@ function copyCoupon(coupon, text) {
     .querySelector(".coupon-content")
     .querySelector(".coupon-label")
     .querySelector(".coupon-copy");
-  var couponCopy = "(Nhấn để copy mã)";
-  var couponCopied = "<span style='color:red'>(Đã Copy)</span>";
+  var couponCopy = "<i class='fa-solid fa-clipboard'></i> Copy mã giảm giá";
+  var couponCopied = "<i class='fa-solid fa-circle-check'></i> Đã Copy<style>.coupon-copy{color:blue}</style>";
   document
     .querySelectorAll(".coupon-copy")
     .forEach((node) => (node.innerHTML = couponCopy));

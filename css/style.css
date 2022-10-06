@@ -259,6 +259,10 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   color: #ffffff;
   padding: 10px;
 }
+.coupon-copy{
+  text-transform: uppercase;
+  color: red;
+}
 
 .coupon-section {
   padding: 15px;

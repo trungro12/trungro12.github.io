@@ -72,7 +72,7 @@ function coupon(element, limit = 4, sort = 0) {
                         "<p class='coupon-label'>" +
                         voucher.merchant +
                         voucher.coupons[0].coupon_code +
-                        "<br><span class='coupon-copy'>(Nhấn để copy mã)</span></p>";
+                        "<br><span class='coupon-copy'><i class='fa-solid fa-clipboard'></i> Copy mã giảm giá</span></p>";
                     contentHTML += "</div>";
                     contentHTML += "</div>";
 
