@@ -1,6 +1,6 @@
 // coupon
 function coupon(element, limit = 4, sort = 0) {
-    if (typeof $.niceToast !== "undefined") {
+    if ($.fn.niceToast) {
         var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
     }
 
@@ -89,7 +89,7 @@ function coupon(element, limit = 4, sort = 0) {
             }
             $(contentHTML).insertBefore(element);
             $("#coupon-show-default").hide();
-            if (typeof $.niceToast !== "undefined") {
+            if ($.fn.niceToast) {
                 toast.change('Mã Giảm Giá Hiển Thị Thành Công ^.^', 0);
             }
         },
