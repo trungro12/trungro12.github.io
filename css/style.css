@@ -352,6 +352,9 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   [class$="-btn-keyword"] a {
     font-size: 17px !important;
   }
+  .coupon-section{
+    min-height: 700px;
+  }
 
   .atEQPOIVFSDFSDG-voucher-main .atEQPOIVFSDFSDG-container {
     max-width: 1100px;
