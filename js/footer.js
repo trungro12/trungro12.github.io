@@ -8,8 +8,10 @@ buttonLoading.forEach(function (value) {
   waitForElementToDisplay(
     value,
     function () {
-      document.getElementsByClassName(value).forEach(function(){
-        this.setAttribute('onclick','buttonLoadingToast()');
+      var els = document.getElementsByClassName(value);
+      Array.from(els).forEach((el) => {
+        // Do stuff here
+        el.setAttribute("onclick", "buttonLoadingToast()");
       });
     },
     1000,
@@ -17,8 +19,8 @@ buttonLoading.forEach(function (value) {
   );
 });
 
-function buttonLoadingToast(){
-  $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
+function buttonLoadingToast() {
+  $.niceToast.info("Đang Tải Dữ Liệu. Bạn chờ một chút nha !");
 }
 
 function waitForElementToDisplay(
