@@ -2,17 +2,18 @@ const buttonLoading = [
   ".atEQPOIVFSDFSDG-nav-link",
   ".atEQPOIVFSDFSDG-page-link",
   ".atEQPOIVFSDFSDG-btn-search",
-  ".atEQPOIVFSDFSDG-btn-keyword a",
-];
-
-waitForElementToDisplay(
   ".atEQPOIVFSDFSDG-btn-keyword",
-  function () {
-    console.log("atEQPOIVFSDFSDG-btn-keyword OK");
-  },
-  1000,
-  9000
-);
+];
+buttonLoading.forEach(function (value) {
+  waitForElementToDisplay(
+    value,
+    function () {
+      console.log(value + "OK");
+    },
+    1000,
+    9000
+  );
+});
 
 function waitForElementToDisplay(
   selector,
