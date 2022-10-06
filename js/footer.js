@@ -2,16 +2,16 @@ const buttonLoading = [
   ".atEQPOIVFSDFSDG-nav-link",
   ".atEQPOIVFSDFSDG-page-link",
   ".atEQPOIVFSDFSDG-btn-search",
-  ".atEQPOIVFSDFSDG-btn-keyword a"
+  ".atEQPOIVFSDFSDG-btn-keyword a",
 ];
 
 buttonLoading.forEach(function (element) {
   waitForElementToDisplay(
     element,
     function () {
-      $(element).click(function () {
+      document.querySelectorAll(element).onclick = function () {
         console.log("Đang Tải Dữ Liệu. Bạn chờ một chút nha !");
-      });
+      };
     },
     1000,
     9000
