@@ -5,10 +5,11 @@ const buttonLoading = [
   ".atEQPOIVFSDFSDG-btn-keyword",
 ];
 waitForElementToDisplay(
-  ".atEQPOIVFSDFSDG-nav-link",
+  ".atEQPOIVFSDFSDG-modal",
   function () {
-    document.querySelector("#history-tabs").onclick = function () { buttonLoadingToast() };
-    document.querySelector("#record-tabs").onclick = function () { buttonLoadingToast() };
+    buttonLoading.forEach(function(el){
+      document.querySelector(el).onclick = function () { buttonLoadingToast() };
+    });
   },
   1000,
   9000
