@@ -1,7 +1,3 @@
-if (getUrlParams(location.search)["type"] == "game") {
-  $("#coupon-show-default").html("");
-}
-
 $(function () {
   $("#allvoucher").click(function () {
     location.href = currenturl;
@@ -26,6 +22,9 @@ loadscript.type = "text/javascript";
 
 if (urlParams["type"]) {
   $("#" + urlParams["type"] + "").addClass("btn-active");
+  if (urlParams["type"] == "game") {
+    $("#coupon-show-default").html("");
+  }
   // loadscript.src = "js/load.js";
 } else {
   $("#allvoucher").addClass("btn-active");
