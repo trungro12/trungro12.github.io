@@ -1,3 +1,12 @@
+$.getScript("/plugins/toast/dist/js/nice-toast-js.min.js", function(data, textStatus, jqxhr) {
+  console.log(data); // data returned
+  console.log(textStatus); // success
+  console.log(jqxhr.status); // 200
+  console.log('Load was performed.');
+  console.log(typeof $.niceToast);
+  console.log(typeof niceToast);
+});
+
 const buttonLoading = [
   ".atEQPOIVFSDFSDG-nav-link",
   ".atEQPOIVFSDFSDG-page-link",
@@ -22,19 +31,10 @@ waitForElementToDisplay(
 );
 
 function buttonLoadingToast() {
-  // console.log("OK");
+  console.log("OK");
   // if (typeof $.niceToast === 'undefined' || typeof niceToast === 'undefined') {
-
-    $.getScript("/plugins/toast/dist/js/nice-toast-js.min.js", function(data, textStatus, jqxhr) {
-      console.log(data); // data returned
-      console.log(textStatus); // success
-      console.log(jqxhr.status); // 200
-      console.log('Load was performed.');
-      console.log(typeof $.niceToast);
-      console.log(typeof niceToast);
-    });
   // }
-  // $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
+  $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
 }
 
 function waitForElementToDisplay(
