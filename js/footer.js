@@ -11,10 +11,10 @@ waitForElementToDisplay(
     buttonLoading.forEach(function (el) {
       var buttons = document.querySelectorAll(el);
       for (var button of buttons) {
-        button.setAttribute("onclick","loading();");
-        // button.addEventListener("click", function (event) {
-        //   loading();
-        // });
+        // button.setAttribute("onclick","loading();");
+        button.addEventListener("click", function (event) {
+          loading();
+        });
       }
     });
   },
