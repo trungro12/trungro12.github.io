@@ -10,8 +10,8 @@ buttonLoading.forEach(function (value) {
     function () {
       var els = document.getElementsByClassName(value);
       Array.from(els).forEach((el) => {
-        // Do stuff here
-        el.setAttribute("onclick", "buttonLoadingToast()");
+        el.onclick = function () { buttonLoadingToast() };
+        console.log(el.tagName);
       });
     },
     1000,
