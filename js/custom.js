@@ -1,18 +1,23 @@
 // load content with jquery
 function loadContent(element, url) {
+  // element
+  //   .html(
+  //     "<img alt='loading' style='max-width:70px' src='https://i.imgur.com/BsLJBhG.gif' />"
+  //   )
+  //   .load(url);
   element
     .html(
-      "<img alt='loading' style='max-width:70px' src='https://i.imgur.com/BsLJBhG.gif' />"
+      '<div class="spinner-border text-primary" style="scale: 2; margin: 50px" role="status"><span class="sr-only">Loading...</span></div>'
     )
     .load(url);
 }
 isMobile = function () {
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   return isMobile.matches ? true : false;
-}
+};
 randomBool = function () {
-  return (Math.random() < 0.5);
-}
+  return Math.random() < 0.5;
+};
 /**
  * Accepts either a URL or querystring and returns an object associating
  * each querystring parameter to its value.
@@ -52,36 +57,36 @@ function _mapUrlParams(queryString) {
     }, {});
 }
 // lazy
-  const autoLoadDuration = 5;
-  const eventList = [
-    "click",
-    "keydown",
-    "mousemove",
-    "wheel",
-    "touchmove",
-    "touchstart",
-    "touchend",
-  ];
+const autoLoadDuration = 5;
+const eventList = [
+  "click",
+  "keydown",
+  "mousemove",
+  "wheel",
+  "touchmove",
+  "touchstart",
+  "touchend",
+];
 
-  // const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
+// const autoLoadTimeout = setTimeout(runScripts, autoLoadDuration * 1000);
 
+eventList.forEach(function (event) {
+  window.addEventListener(event, triggerScripts, { passive: true });
+});
+
+function triggerScripts() {
+  runScripts();
+  // clearTimeout(autoLoadTimeout);
   eventList.forEach(function (event) {
-    window.addEventListener(event, triggerScripts, { passive: true });
+    window.removeEventListener(event, triggerScripts, { passive: true });
   });
+}
 
-  function triggerScripts() {
-    runScripts();
-    // clearTimeout(autoLoadTimeout);
-    eventList.forEach(function (event) {
-      window.removeEventListener(event, triggerScripts, { passive: true });
-    });
-  }
-
-  function runScripts() {
-    document.querySelectorAll("img[lazy]").forEach(function (scriptTag) {
-      scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
-    });
-    document.querySelectorAll("script[lazy]").forEach(function (scriptTag) {
-      scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
-    });
-  }
+function runScripts() {
+  document.querySelectorAll("img[lazy]").forEach(function (scriptTag) {
+    scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
+  });
+  document.querySelectorAll("script[lazy]").forEach(function (scriptTag) {
+    scriptTag.setAttribute("src", scriptTag.getAttribute("data-src"));
+  });
+}
