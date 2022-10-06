@@ -1,6 +1,8 @@
 // coupon
 function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
-  var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
+  if (typeof $.niceToast !== "undefined") {
+    var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
+  }
   if (limit > 20) limit = 20;
   limit -= 1;
   var merchant = "";
@@ -51,7 +53,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
             "<a onclick=\"copyCoupon(this,'" +
             voucher.coupons[0].coupon_code +
             "')\" href='" +
-            voucher.aff_link.replace(/%26ref%3D[a-z]+/,"").replace(/%3Fref%3D[a-z]+/,"") +
+            voucher.aff_link.replace(/%26ref%3D[a-z]+/, "").replace(/%3Fref%3D[a-z]+/, "") +
             "' target='_blank' rel='noopener noreferrer nofollow'>";
 
           contentHTML += "<div class='coupon-content'>";
@@ -80,8 +82,10 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         console.log("Loop has ended");
       }
       $(contentHTML).insertBefore(element);
-      toast.change('Mã Giảm Giá Hiển Thị Thành Công ^.^' ,0);
       $("#coupon-show-default").hide();
+      if (typeof $.niceToast !== "undefined") {
+        toast.change('Mã Giảm Giá Hiển Thị Thành Công ^.^', 0);
+      }
       // $("#isMobile").hide();
       // console.log(dataCoupon);
     },

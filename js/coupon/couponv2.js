@@ -1,6 +1,8 @@
 // coupon
 function coupon(element, limit = 4, sort = 0) {
-    var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
+    if (typeof $.niceToast !== "undefined") {
+        var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
+    }
 
     var page = 1;
     // var limit = '';
@@ -86,8 +88,10 @@ function coupon(element, limit = 4, sort = 0) {
                 console.log("Loop has ended");
             }
             $(contentHTML).insertBefore(element);
-            toast.change('Mã Giảm Giá Hiển Thị Thành Công ^.^', 0);
             $("#coupon-show-default").hide();
+            if (typeof $.niceToast !== "undefined") {
+                toast.change('Mã Giảm Giá Hiển Thị Thành Công ^.^', 0);
+            }
         },
         error: function (error) {
             console.log(error.statusText);
