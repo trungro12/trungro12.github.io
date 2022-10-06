@@ -4,7 +4,8 @@ else {
   // coupon
   var couponShow = $("#coupon-show");
   couponShow.addClass("row");
-  loadContent(couponShow, "coupon.html");
+  if (!urlParams["type"]) loadContent(couponShow, "coupon.html");
+  else loadContent(couponShow, "couponv1.html");
 
   // var loadedContent = false;
   // $(window).on("scroll", function () {

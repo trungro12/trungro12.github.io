@@ -1,11 +1,11 @@
 <div id="coupon"></div>
-<script src="js/coupon/couponv2.js"></script>
+<script src="js/coupon/coupon.js"></script>
 <script>
   if (getUrlParams(location.search)["type"] && getUrlParams(location.search)["type"] == "game") {
   }
   else {
-    if (isMobile()) coupon("#coupon", 8, 4);
-    else coupon("#coupon", 16, 4);
+    if (isMobile()) coupon("#coupon", null, 4, "origin");
+    else coupon("#coupon", null, 8, "origin");
   }
 </script>
 

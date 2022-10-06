@@ -1,20 +1,15 @@
 // coupon
-function coupon(element, merchant = "", limit = 4, sort = 0) {
+function coupon(element, limit = 4, sort = 0) {
     var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
 
     var page = 1;
     // var limit = '';
-    // var merchant = '';
+    var merchant = '';
     var category = '';
     var campaign = '';
     var keyword = '';
     var url = '';
     // var sort = '';// 0 moi nhat, 2 dung nhieu, 3 thoi gian con lai, 4 hot
-
-    if (!merchant && getUrlParams(location.search)["type"]) {
-        merchant = getUrlParams(location.search)["type"];
-    }
-    if (merchant == "tiki") merchant = "tikivn";
 
     const params = {
         "page": page,
