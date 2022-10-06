@@ -1,5 +1,4 @@
 const buttonLoading = [
-    "h1",
     "atEQPOIVFSDFSDG-btn-keyword a",
     "atEQPOIVFSDFSDG-nav-link",
     "atEQPOIVFSDFSDG-page-link",
