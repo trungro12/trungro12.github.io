@@ -1,5 +1,5 @@
 // define
-function buttonLoading() {
+function loading() {
   document.getElementById("#loading").style.display = "block";
   document.getElementById("#loading").style.animation = "fadeout 2s linear";
 }
@@ -36,7 +36,7 @@ waitForElementToDisplay(
       var buttons = document.querySelectorAll(el);
       for (var button of buttons) {
         button.addEventListener("click", function (event) {
-          buttonLoading();
+          loading();
         });
       }
     });
