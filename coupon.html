@@ -1,10 +1,25 @@
 <div id="coupon"></div>
-<script src="js/coupon/coupon.js"></script>
+<script src="js/coupon/couponv2.js"></script>
 <script>
   if (getUrlParams(location.search)["type"] && getUrlParams(location.search)["type"] == "game") {
   }
   else {
-    if (isMobile()) coupon("#coupon", null, 4, "originImage");
-    else coupon("#coupon", null, 8, "originImage");
+    if (isMobile()) coupon("#coupon", "", 4, 4);
+    else coupon("#coupon", "", 8, 4);
   }
 </script>
+
+<!-- <div class="coupon-section">
+  <h3>Coupon, Voucher, Mã Giảm Giá, Khuyến Mãi Mới Nhất</h3>
+  <div id="coupon-show" style="z-index: 9999; pointer-events: auto" class="row">
+    <div class="col-lg-3"><a onclick="copyCoupon(this,'111111')" href="" target="_blank"
+        rel="noopener noreferrer nofollow">
+        <div class="coupon-content"><img height="200" width="200"
+            alt="Free Shipping Giảm 50,000 cho đơn hàng từ 300,000" src="1664511408_avatar_1664511408.gif">
+          <p class="coupon-text">Free Shipping Giảm 50,000 cho đơn hàng từ 300,000</p>
+          <p class="coupon-label">111111<br><span class="coupon-copy">(Nhấn để copy mã)</span></p>
+        </div>
+      </a></div>
+    <div id="coupon"></div>
+  </div>
+</div> -->

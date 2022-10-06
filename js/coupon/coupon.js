@@ -1,28 +1,4 @@
 // coupon
-function copyCoupon(coupon, text) {
-  var input = document.createElement("textarea");
-  input.innerHTML = text;
-  document.body.appendChild(input);
-  input.select();
-  var result = document.execCommand("copy");
-  document.body.removeChild(input);
-
-  var couponCopyBlock = coupon
-    .querySelector(".coupon-content")
-    .querySelector(".coupon-label")
-    .querySelector(".coupon-copy");
-  var couponCopy = "(Nhấn để copy mã)";
-  var couponCopied = "<span style='color:red'>(Đã Copy)</span>";
-  document
-    .querySelectorAll(".coupon-copy")
-    .forEach((node) => (node.innerHTML = couponCopy));
-  couponCopyBlock.innerHTML = couponCopyBlock.innerHTML.replace(
-    couponCopy,
-    couponCopied
-  );
-  return result;
-}
-
 function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
   var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
   if (limit > 20) limit = 20;

@@ -91,6 +91,30 @@ function runScripts() {
   });
 }
 
+function copyCoupon(coupon, text) {
+  var input = document.createElement("textarea");
+  input.innerHTML = text;
+  document.body.appendChild(input);
+  input.select();
+  var result = document.execCommand("copy");
+  document.body.removeChild(input);
+
+  var couponCopyBlock = coupon
+    .querySelector(".coupon-content")
+    .querySelector(".coupon-label")
+    .querySelector(".coupon-copy");
+  var couponCopy = "(Nhấn để copy mã)";
+  var couponCopied = "<span style='color:red'>(Đã Copy)</span>";
+  document
+    .querySelectorAll(".coupon-copy")
+    .forEach((node) => (node.innerHTML = couponCopy));
+  couponCopyBlock.innerHTML = couponCopyBlock.innerHTML.replace(
+    couponCopy,
+    couponCopied
+  );
+  return result;
+}
+
 function loading() {
   document.getElementById("loading").style.display = "block";
   setTimeout(function () {
