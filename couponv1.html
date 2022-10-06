@@ -1,11 +1,15 @@
 <div id="coupon"></div>
 <script src="js/coupon/coupon.js"></script>
 <script>
+  var limitCoupon = 12;
+  var limitCouponMobile = 4;
   if (getUrlParams(location.search)["type"] && getUrlParams(location.search)["type"] == "game") {
+    limitCoupon = 4;
+    limitCouponMobile = 2;
   }
   else {
-    if (isMobile()) coupon("#coupon", null, 4, "origin");
-    else coupon("#coupon", null, 8, "origin");
+    if (isMobile()) coupon("#coupon", null, limitCouponMobile, "origin");
+    else coupon("#coupon", null, limitCoupon, "origin");
   }
 </script>
 
