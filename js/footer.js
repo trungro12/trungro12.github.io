@@ -1,8 +1,8 @@
 const buttonLoading = [
-  ".atEQPOIVFSDFSDG-btn-keyword a",
   ".atEQPOIVFSDFSDG-nav-link",
   ".atEQPOIVFSDFSDG-page-link",
   ".atEQPOIVFSDFSDG-btn-search",
+  ".atEQPOIVFSDFSDG-btn-keyword a"
 ];
 
 buttonLoading.forEach(function (element) {
