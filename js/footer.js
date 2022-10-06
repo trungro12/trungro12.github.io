@@ -8,8 +8,10 @@ buttonLoading.forEach(function (value) {
   waitForElementToDisplay(
     value,
     function () {
-      $(value).click(function(){
-        var toast = $.niceToast.info('Đang Tải Dữ Liệu. Bạn chờ một chút nha !');
+      $("" + value + "").click(function () {
+        var toast = $.niceToast.info(
+          "Đang Tải Dữ Liệu. Bạn chờ một chút nha !"
+        );
       });
     },
     1000,
