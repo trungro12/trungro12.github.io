@@ -62,7 +62,7 @@
 	var category = ''
 	var campaign = ''
 	var keyword = ''
-	var sort = 0
+	var sort = 4 // 0 moi nhat, 2 dung nhieu, 3 thoi gian con lai, 4 hot
 	var limit = data_limit
 	var is_next_day_coupon = 'True'
 	var url = ''
