@@ -16,7 +16,8 @@ else {
       if (urlParams["type"] == "shopee")
         loadContent(loadContents, "shopee.html");
       else if (urlParams["type"] == "tiki")
-        loadContent(loadContents, "tiki.html");
+        // loadContent(loadContents, "tiki.html");
+        loadContents.html('<iframe src="tiki-iframe.html" frameborder="0"></iframe>');
       else loadContent(loadContents, "allvoucher.html");
     }
   });
