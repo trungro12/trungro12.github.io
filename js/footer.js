@@ -4,20 +4,15 @@ const buttonLoading = [
   ".atEQPOIVFSDFSDG-btn-search",
   ".atEQPOIVFSDFSDG-btn-keyword",
 ];
-buttonLoading.forEach(function (value) {
-  waitForElementToDisplay(
-    value,
-    function () {
-      var els = document.getElementsByClassName(value);
-      Array.from(els).forEach((el) => {
-        el.onclick = function () { buttonLoadingToast() };
-        console.log(el.tagName);
-      });
-    },
-    1000,
-    9000
-  );
-});
+waitForElementToDisplay(
+  ".atEQPOIVFSDFSDG-nav-link",
+  function () {
+    document.querySelector("#history-tabs").onclick = function () { buttonLoadingToast() };
+    document.querySelector("#record-tabs").onclick = function () { buttonLoadingToast() };
+  },
+  1000,
+  9000
+);
 
 function buttonLoadingToast() {
   $.niceToast.info("Đang Tải Dữ Liệu. Bạn chờ một chút nha !");
