@@ -1,9 +1,9 @@
 
 const buttonLoading = [
-  ".atEQPOIVFSDFSDG-nav-link",
-  ".atEQPOIVFSDFSDG-page-link",
+  ".atEQPOIVFSDFSDG-nav-item",
+  ".atEQPOIVFSDFSDG-page-item",
   ".atEQPOIVFSDFSDG-btn-search",
-  ".atEQPOIVFSDFSDG-btn-keyword",
+  ".atEQPOIVFSDFSDG-btn-keyword a",
 ];
 waitForElementToDisplay(
   ".atEQPOIVFSDFSDG-modal",
