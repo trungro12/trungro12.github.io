@@ -23,10 +23,8 @@ waitForElementToDisplay(
 
 function buttonLoadingToast() {
   // console.log("OK");
-  if (typeof $.niceToast !== 'undefined' && typeof $.niceToast === 'function') {
-    
-  }
-  else{
+  if (typeof $.niceToast === 'undefined' || typeof niceToast === 'undefined') {
+
     $.getScript("/plugins/toast/dist/js/nice-toast-js.min.js", function(data, textStatus, jqxhr) {
       console.log(data); // data returned
       console.log(textStatus); // success
