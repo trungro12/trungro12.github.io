@@ -8,8 +8,11 @@ buttonLoading.forEach(function (value) {
   waitForElementToDisplay(
     value,
     function () {
-      $(value).each(function () {
-        $(this).click(function () {
+      var divs = document.querySelectorAll(value);
+
+      [].forEach.call(divs, function (div) {
+        // do whatever
+        div.addEventListener("click", function () {
           var toast = $.niceToast.info(
             "Đang Tải Dữ Liệu. Bạn chờ một chút nha !"
           );
