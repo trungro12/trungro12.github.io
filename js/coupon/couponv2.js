@@ -51,7 +51,7 @@ function coupon(element, limit = 4, sort = 0) {
                     voucher.merchant = voucher.merchant.toLowerCase();
                     if (voucher.merchant.includes("shopee")){
                         voucher.merchant = "[Shopee] ";
-                        var voucherlink = getUrlParams(voucher.aff_link)["url"];
+                        var voucherlink = encodeURIComponent(voucher.link);
                         if(voucherlink)
                         {
                             voucher.aff_link = sp_aff_link + voucherlink;
