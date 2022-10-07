@@ -1,15 +1,17 @@
 <div id="coupon"></div>
 <script src="js/coupon/couponv2.js"></script>
 <script>
-  var sort = parseInt(urlParams["sort"]) ? parseInt(urlParams["sort"]) : 0;
-  if (urlParams["type"] && urlParams["type"] == "game") {
-    limitCoupon = 4;
-    limitCouponMobile = 2;
-  }
-  if (isMobile()) coupon("#coupon", limitCouponMobile, sort);
-  else coupon("#coupon", limitCoupon, sort);
+  $(function () {
+    var sort = parseInt(urlParams["sort"]) ? parseInt(urlParams["sort"]) : 0;
+    if (urlParams["type"] && urlParams["type"] == "game") {
+      limitCoupon = 4;
+      limitCouponMobile = 2;
+    }
+    if (isMobile()) coupon("#coupon", limitCouponMobile, sort);
+    else coupon("#coupon", limitCoupon, sort);
 
-  document.getElementById("sortCouponSelect").value = sort;
+    document.getElementById("sortCouponSelect").value = sort;
+  });
 </script>
 
 <!-- <div class="coupon-section">
