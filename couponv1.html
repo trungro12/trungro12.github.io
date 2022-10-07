@@ -1,15 +1,13 @@
 <div id="coupon"></div>
 <script src="js/coupon/coupon.js"></script>
 <script>
-  $(function () {
-    if (urlParams["type"] && urlParams["type"] == "game") {
-      limitCoupon = 4;
-      limitCouponMobile = 2;
-    } else {
-      if (isMobile()) coupon("#coupon", null, limitCouponMobile, "origin");
-      else coupon("#coupon", null, limitCoupon, "origin");
-    }
-  });
+  if (urlParams["type"] && urlParams["type"] == "game") {
+    limitCoupon = 4;
+    limitCouponMobile = 2;
+  } else {
+    if (isMobile()) coupon("#coupon", null, limitCouponMobile, "origin");
+    else coupon("#coupon", null, limitCoupon, "origin");
+  }
 </script>
 
 <!-- <div class="coupon-section">
