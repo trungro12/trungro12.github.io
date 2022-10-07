@@ -4,8 +4,10 @@ if (urlParams["type"] == "game" || !urlParams["type"])
   loadContent(couponShow, "coupon.html");
 else loadContent(couponShow, "couponv1.html");
 
-var loadContents = $("#loadContents");
-if (urlParams["type"] == "shopee") loadContent(loadContents, "shopee.html");
-else if (urlParams["type"] == "tiki") loadContent(loadContents, "tiki.html");
-else if (urlParams["type"] == "game") loadContent(loadContents, "game.html");
-else loadContent(loadContents, "allvoucher.html");
+setTimeout(function () {
+  var loadContents = $("#loadContents");
+  if (urlParams["type"] == "shopee") loadContent(loadContents, "shopee.html");
+  else if (urlParams["type"] == "tiki") loadContent(loadContents, "tiki.html");
+  else if (urlParams["type"] == "game") loadContent(loadContents, "game.html");
+  else loadContent(loadContents, "allvoucher.html");
+}, 3000)
