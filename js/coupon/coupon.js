@@ -67,7 +67,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
             "<p class='coupon-label'>" +
             voucher.merchant +
             voucher.coupons[0].coupon_code +
-            "<br><span class='coupon-copy'><i class='fa-solid fa-clipboard'></i> Copy mã giảm giá</span></p>";
+            "</p><span class='coupon-copy'><i class='fa-solid fa-clipboard'></i> Copy mã giảm giá</span>";
           contentHTML += "</div>";
           contentHTML += "</div>";
 

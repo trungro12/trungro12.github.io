@@ -48,7 +48,11 @@ function coupon(element, limit = 4, sort = 0) {
                             voucher.image = "/image/tiki.png";
                         else voucher.image = "/image/shopee.png";
                     }
-                    voucher.merchant = "";
+                    voucher.merchant = voucher.merchant.toLowerCase();
+                    if (voucher.merchant.includes("shopee")) voucher.merchant = "[Shopee] ";
+                    else if (voucher.merchant.includes("tiki")) voucher.merchant = "[Tiki] ";
+                    else if (voucher.merchant.includes("lazada")) voucher.merchant = "[Lazada] ";
+                    else voucher.merchant = "[" + voucher.merchant + "] ";
                     contentHTML += "<div " + style + " class='col-lg-3'>";
 
                     contentHTML +=
@@ -72,7 +76,7 @@ function coupon(element, limit = 4, sort = 0) {
                         "<p class='coupon-label'>" +
                         voucher.merchant +
                         voucher.coupons[0].coupon_code +
-                        "<br><span class='coupon-copy'><i class='fa-solid fa-clipboard'></i> Copy mã giảm giá</span></p>";
+                        "</p><span class='coupon-copy'><i class='fa-solid fa-clipboard'></i> Copy mã giảm giá</span>";
                     contentHTML += "</div>";
                     contentHTML += "</div>";
 
@@ -85,7 +89,7 @@ function coupon(element, limit = 4, sort = 0) {
             }
             $(contentHTML).insertBefore(element);
             $("#coupon-show-default").hide();
-            
+
             var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
         },
         error: function (error) {

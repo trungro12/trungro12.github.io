@@ -255,13 +255,18 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
 }
 
 .coupon-label {
-  background: #b3b3b35f;
-  color: #ffffff;
   padding: 10px;
+  color: #fff!important;
+  background: rgb(107 56 180 / 86%);
+  box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
+  border-radius: 30px;
 }
 .coupon-copy{
   text-transform: uppercase;
   color: red;
+}
+.coupon-copy .copy-active{
+  color: rgb(107 56 180 / 86%);
 }
 
 .coupon-section {
