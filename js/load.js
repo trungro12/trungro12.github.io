@@ -10,4 +10,4 @@ setTimeout(function () {
   else if (urlParams["type"] == "tiki") loadContent(loadContents, "tiki.html");
   else if (urlParams["type"] == "game") loadContent(loadContents, "game.html");
   else loadContent(loadContents, "allvoucher.html");
-}, 3000)
+}, 3000);
