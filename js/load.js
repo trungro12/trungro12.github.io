@@ -13,7 +13,7 @@ else loadContent(loadContents, "allvoucher.html");
 
 $("#sortCouponSelect").change(function () {
   if (!urlParams["type"]) {
-    var sort = $("#sortCouponSelect").val();
+    var sort = document.getElementById("sortCouponSelect").value;
     loadContent(couponShow, "coupon.html");
   } else {
     $.niceToast.error("Tính năng này chỉ hoạt động ở trang chủ :(");
