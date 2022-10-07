@@ -344,7 +344,6 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   color: #fff !important;
   background: rgb(107 56 180 / 86%);
   border-radius: 30px;
-  font-weight: 700;
   text-align: center;
   padding: 0 20px;
   margin: 17px;
@@ -352,6 +351,8 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   -moz-appearance: none;
   -webkit-appearance: none;
   padding: 5px;
+  font-family: "Quicksand", "Font Awesome 5 Free";
+  font-weight: 900;
 }
 #sortCouponSelect:focus,
 #sortCouponSelect {
