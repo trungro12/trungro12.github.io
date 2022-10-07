@@ -348,13 +348,18 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   text-align: center;
   padding: 0 20px;
   margin: 17px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding: 15px;
 }
-#sortCouponSelect::-ms-expand {
-  padding: 10px;
+#sortCouponSelect::after {
+  content: "\f063";
+  font: var(--fa-font-solid);
 }
 #sortCouponSelect:focus,
 #sortCouponSelect {
-  border: 1px solid rgb(107 56 180 / 86%);
+  border: 1px solid rgb(107 56 180 / 86%) !important;
 }
 #sortCouponSelect option {
   font-weight: 700;
