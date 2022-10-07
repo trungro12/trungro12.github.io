@@ -1,14 +1,13 @@
 <div id="coupon"></div>
 <script src="js/coupon/couponv2.js"></script>
 <script>
-  var sort = (urlParams["sort"]) ? urlParams["sort"] : 0;
+  if (!sort) var sort = 0;
   if (urlParams["type"] && urlParams["type"] == "game") {
     limitCoupon = 4;
     limitCouponMobile = 2;
   }
   if (isMobile()) coupon("#coupon", limitCouponMobile, sort);
   else coupon("#coupon", limitCoupon, sort);
-
 </script>
 
 <!-- <div class="coupon-section">
