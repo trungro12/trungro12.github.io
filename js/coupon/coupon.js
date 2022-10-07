@@ -3,8 +3,8 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
   if (limit > 20) limit = 20;
   limit -= 1;
   var merchant = "";
-  if (!merchantID && getUrlParams(location.search)["type"]) {
-    merchantID = getUrlParams(location.search)["type"];
+  if (!merchantID && urlParams["type"]) {
+    merchantID = urlParams["type"];
   }
   if (merchantID) {
     if (merchantID == "tiki") merchantID = "tikivn";

@@ -3,7 +3,7 @@
 <script>
   var limitCoupon = 12;
   var limitCouponMobile = 4;
-  if (getUrlParams(location.search)["type"] && getUrlParams(location.search)["type"] == "game") {
+  if (urlParams["type"] && urlParams["type"] == "game") {
     limitCoupon = 4;
     limitCouponMobile = 2;
   }
