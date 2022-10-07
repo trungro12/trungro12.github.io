@@ -28,3 +28,12 @@ if (urlParams["type"]) {
 loadscript.setAttribute("lazy", "");
 loadscript.setAttribute("data-src", "js/load.js");
 $("#loadScripts").append(loadscript);
+
+$("#sortCouponSelect").change(function () {
+  if (!urlParams["type"]) {
+    var sort = document.getElementById("sortCouponSelect").value;
+    window.location.href = currenturl + "?sort=" + sort;
+  } else {
+    $.niceToast.error("Tính năng này chỉ hoạt động ở trang chủ :(");
+  }
+});
