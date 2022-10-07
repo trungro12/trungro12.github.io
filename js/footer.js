@@ -37,7 +37,3 @@ $("#sortCouponSelect").change(function () {
     $.niceToast.error("Tính năng này chỉ hoạt động ở trang chủ :(");
   }
 });
-if(urlParams["sort"])
-{
-  document.getElementById("sortCouponSelect").value = parseInt(urlParams["sort"]);
-}
