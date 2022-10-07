@@ -13,10 +13,6 @@ $(function () {
   });
 });
 
-var currenturl = location.href.replace("#", "");
-currenturl = currenturl.split("?")[0];
-let urlParams = getUrlParams(location.search);
-
 var loadscript = document.createElement("script");
 loadscript.type = "text/javascript";
 
