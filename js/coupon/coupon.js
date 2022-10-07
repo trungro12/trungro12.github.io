@@ -42,7 +42,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
               voucher.image = "/image/tiki.png";
             else voucher.image = "/image/shopee.png";
           }
-          if (voucher.merchant.includes("shopee")) {
+          if (voucher.merchant.toLowerCase().includes("shopee")) {
             var voucherlink = getUrlParams(voucher.aff_link)["url"];
             if (voucherlink) {
               voucher.aff_link = sp_aff_link + voucherlink;
