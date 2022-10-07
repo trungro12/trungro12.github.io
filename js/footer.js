@@ -21,9 +21,19 @@ if (urlParams["type"]) {
   // loadscript.src = "js/load.js";
 } else {
   $("#allvoucher").addClass("btn-active");
+  $("#sortCoupon").show();
   // loadscript.setAttribute("lazy", "");
   // loadscript.setAttribute("data-src", "js/load.js");
 }
 loadscript.setAttribute("lazy", "");
 loadscript.setAttribute("data-src", "js/load.js");
 $("#loadScripts").append(loadscript);
+
+$("#sortCouponSelect").change(function () {
+  if (!urlParams["type"]) {
+    window.location.href = currenturl + "?sort=" + $("#sortCouponSelect").val();
+  }
+  else {
+    $.niceToast.error('Tính năng này chỉ hoạt động ở trang chủ :(');
+  }
+});

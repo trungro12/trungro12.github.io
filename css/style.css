@@ -8,7 +8,7 @@ body {
   font-family: "Quicksand", sans-serif;
   min-height: 500px;
   width: 100%;
-  background-size: 120% 120%!important;
+  background-size: 120% 120% !important;
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #5e2392, #23d5ab); */
   /* animation: gradient 15s ease infinite; */
   background: linear-gradient(-45deg, #19274c, #672e99);
@@ -34,6 +34,9 @@ a {
 
 .entry-title h1 {
   padding: 18px;
+}
+.entry-title h1 a {
+  color: #fff !important;
 }
 
 .item h1,
@@ -246,7 +249,11 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   background: rgb(255 255 255);
 }
 
-.atEQPOIVFSDFSDG-coupon-pagination nav ul.atEQPOIVFSDFSDG-pagination li.active a {
+.atEQPOIVFSDFSDG-coupon-pagination
+  nav
+  ul.atEQPOIVFSDFSDG-pagination
+  li.active
+  a {
   background-color: red;
 }
 
@@ -256,16 +263,16 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
 
 .coupon-label {
   padding: 10px;
-  color: #fff!important;
+  color: #fff !important;
   background: rgb(107 56 180 / 86%);
   box-shadow: 3px 3px 9px 1px rgb(0 0 0 / 37%);
   border-radius: 30px;
 }
-.coupon-copy{
+.coupon-copy {
   text-transform: uppercase;
   color: red;
 }
-.coupon-copy .copy-active{
+.coupon-copy .copy-active {
   color: rgb(107 56 180 / 86%);
 }
 
@@ -328,8 +335,34 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   color: #fff;
 }
 
-@media only screen and (max-width: 650px) {
+#sortCoupon {
+  text-align: center;
+}
+#sortCouponSelect {
+  height: 50px;
+  box-shadow: 1px 3px 12px 0.1px rgb(0 0 0 / 37%);
+  color: #fff !important;
+  background: rgb(107 56 180 / 86%);
+  border-radius: 30px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 20px;
+  margin: 17px;
+}
+#sortCouponSelect::-ms-expand {
+  padding: 10px;
+}
+#sortCouponSelect:focus,
+#sortCouponSelect {
+  border: 1px solid rgb(107 56 180 / 86%);
+}
+#sortCouponSelect option {
+  font-weight: 700;
+  background: #fff;
+  color: #000;
+}
 
+@media only screen and (max-width: 650px) {
   .atEQPOIVFSDFSDG-close {
     padding: 30px 50px;
     width: 100%;
@@ -337,7 +370,6 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
 }
 
 @media only screen and (min-width: 650px) {
-
   .atEQPOIVFSDFSDG-title a,
   [class$="-heading--title"] p {
     font-size: 17px !important;
@@ -345,7 +377,6 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
 }
 
 @media only screen and (min-width: 1100px) {
-
   .atEQPOIVFSDFSDG-btn,
   [class$="-btn-search"],
   .btn-copy,
