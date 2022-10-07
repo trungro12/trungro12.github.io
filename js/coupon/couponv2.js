@@ -32,7 +32,7 @@ function coupon(element, limit = 4, sort = 0) {
         async: false,
         contentType: "application/json",
         headers: {
-            Authorization: "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro",
+            Authorization: at_token,
         },
         success: function (data) {
             var dataCoupon = data.data;
@@ -49,7 +49,14 @@ function coupon(element, limit = 4, sort = 0) {
                         else voucher.image = "/image/shopee.png";
                     }
                     voucher.merchant = voucher.merchant.toLowerCase();
-                    if (voucher.merchant.includes("shopee")) voucher.merchant = "[Shopee] ";
+                    if (voucher.merchant.includes("shopee")){
+                        voucher.merchant = "[Shopee] ";
+                        var voucherlink = getUrlParams(voucher.aff_link)["url"];
+                        if(voucherlink)
+                        {
+                            voucher.aff_link = sp_aff_link + voucherlink;
+                        }
+                    }
                     else if (voucher.merchant.includes("tiki")) voucher.merchant = "[Tiki] ";
                     else if (voucher.merchant.includes("lazada")) voucher.merchant = "[Lazada] ";
                     else voucher.merchant = "[" + voucher.merchant + "] ";

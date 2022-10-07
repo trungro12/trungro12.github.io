@@ -24,7 +24,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
     async: false,
     contentType: "application/json",
     headers: {
-      Authorization: "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro",
+      Authorization: at_token,
     },
     success: function (data) {
       var dataCoupon = data.data;
@@ -34,7 +34,6 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
       try {
         var loadImageDefault = false;
         dataCoupon.forEach(function (voucher, index) {
-          voucher.merchant += " - ";
           if (defaultImage == "auto") loadImageDefault = randomBool();
           else if (defaultImage == "default") loadImageDefault = true;
           else loadImageDefault = false;
@@ -43,6 +42,12 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
               voucher.image = "/image/tiki.png";
             else voucher.image = "/image/shopee.png";
           }
+          if (voucher.merchant.includes("shopee")) {
+            var voucherlink = getUrlParams(voucher.aff_link)["url"];
+            if (voucherlink) {
+              voucher.aff_link = sp_aff_link + voucherlink;
+            }
+          }
           voucher.merchant = "";
           contentHTML += "<div " + style + " class='col-lg-3'>";
 
@@ -50,7 +55,9 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
             "<a onclick=\"copyCoupon(this,'" +
             voucher.coupons[0].coupon_code +
             "')\" href='" +
-            voucher.aff_link.replace(/%26ref%3D[a-z]+/, "").replace(/%3Fref%3D[a-z]+/, "") +
+            voucher.aff_link
+              .replace(/%26ref%3D[a-z]+/, "")
+              .replace(/%3Fref%3D[a-z]+/, "") +
             "' target='_blank' rel='noopener noreferrer nofollow'>";
 
           contentHTML += "<div class='coupon-content'>";
@@ -80,7 +87,8 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
       }
       $(contentHTML).insertBefore(element);
       $("#coupon-show-default").hide();
-      if(!isMobile()) var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
+      if (!isMobile())
+        var toast = $.niceToast.success("Mã Giảm Giá Hiển Thị Thành Công ^.^");
       // $("#isMobile").hide();
       // console.log(dataCoupon);
     },
