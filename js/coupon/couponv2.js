@@ -90,7 +90,7 @@ function coupon(element, limit = 4, sort = 0) {
             $(contentHTML).insertBefore(element);
             $("#coupon-show-default").hide();
 
-            var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
+            if(!isMobile()) var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
         },
         error: function (error) {
             console.log(error.statusText);
