@@ -12,8 +12,8 @@ $(function () {
     location.href = currenturl + "?type=game";
   });
 });
-var loadscript = document.createElement("script");
-loadscript.type = "text/javascript";
+// var loadscript = document.createElement("script");
+// loadscript.type = "text/javascript";
 
 if (urlParams["type"]) {
   $("#" + urlParams["type"] + "").addClass("btn-active");
@@ -24,9 +24,9 @@ if (urlParams["type"]) {
   // loadscript.setAttribute("lazy", "");
   // loadscript.setAttribute("data-src", "js/load.js");
 }
-loadscript.setAttribute("lazy", "");
-loadscript.setAttribute("data-src", "js/load.js");
-$("#loadScripts").append(loadscript);
+// loadscript.setAttribute("lazy", "");
+// loadscript.setAttribute("data-src", "js/load.js");
+// $("#loadScripts").append(loadscript);
 
 $("#sortCouponSelect").change(function () {
   if (!urlParams["type"]) {
