@@ -31,7 +31,7 @@ function coupon(element, limit = 4, sort = 0) {
             url: api,
             dataType: "json",
             data: params,
-            async: true,
+            async: false,
             contentType: "application/json",
             headers: {
                 Authorization: at_token,
