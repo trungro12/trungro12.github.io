@@ -24,6 +24,14 @@ function coupon(element, limit = 4, sort = 0) {
     var api =
         "https://api.accesstrade.vn/v1/offers_informations/coupon";
     var contentHTML = "";
+    if (getCookie("couponAll")) {
+        contentHTML = decodeURIComponent(getCookie("couponAll"));
+        $(contentHTML).insertBefore(element);
+        $("#coupon-show-default").hide();
+        if (!isMobile()) var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
+        return true;
+    }
+
     try {
         $.ajax({
             type: "GET",
@@ -93,6 +101,9 @@ function coupon(element, limit = 4, sort = 0) {
                     console.log("Loop has ended");
                 }
                 $(contentHTML).insertBefore(element);
+                // cache 
+                setCookie("couponAll", encodeURIComponent(contentHTML), 1);
+                // end cache
                 $("#coupon-show-default").hide();
                 if (!isMobile()) var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
             },

@@ -17,6 +17,15 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
     merchant +
     "";
   var contentHTML = "";
+  if (getCookie("couponShopee") || getCookie("couponTiki")) {
+
+    if (getCookie("couponShopee")) contentHTML = decodeURIComponent(getCookie("couponShopee"));
+    else if (getCookie("couponTiki")) contentHTML = decodeURIComponent(getCookie("couponTiki"));
+    $(contentHTML).insertBefore(element);
+    $("#coupon-show-default").hide();
+    if (!isMobile()) var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
+    return true;
+  }
   try {
     $.ajax({
       type: "GET",
@@ -85,6 +94,10 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
           console.log("Loop has ended");
         }
         $(contentHTML).insertBefore(element);
+        // cache 
+        if (urlParams["type"].includes("shopee")) setCookie("couponShopee", encodeURIComponent(contentHTML), 1);
+        else if (urlParams["type"].includes("tiki")) setCookie("couponTiki", encodeURIComponent(contentHTML), 1);
+        // end cache
         $("#coupon-show-default").hide();
         if (!isMobile())
           var toast = $.niceToast.success("Mã Giảm Giá Hiển Thị Thành Công ^.^");
