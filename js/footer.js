@@ -20,7 +20,7 @@ if (urlParams["type"]) {
   if (urlParams["type"] == "game") {
     $("#more-coupon").hide();
   }
-  $("#sortCoupon").hide();
+  // $("#sortCoupon").hide();
   // loadscript.src = "js/load.js";
 } else {
   $("#allvoucher").addClass("btn-active");
