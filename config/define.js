@@ -15,7 +15,6 @@ $.niceToast.setup({
   position: "top-right",
   timeout: 1000,
 });
-$.ajaxSetup(
-  {
-    timeout: timeoutAjaxCall
-  });
+$.ajaxSetup({
+  timeout: timeoutAjaxCall
+});
