@@ -13,5 +13,8 @@ if (urlParams["type"] == "game") {
 var couponShow = $("#coupon-show");
 couponShow.addClass("row");
 if (urlParams["type"] == "game" || !urlParams["type"])
-  loadContent(couponShow, "coupon.html");
+  {
+    loadContent(couponShow, "coupon.html");
+    $("#sortCoupon").show();
+}
 else loadContent(couponShow, "couponv1.html");
