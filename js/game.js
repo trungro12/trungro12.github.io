@@ -43,7 +43,7 @@ function gameloader() {
     } else {
       contentHTML += imageContent;
     }
-    contentHTML += '<a onclick="gameLink(this)" href="https://shope.ee/1VODdwm1EO" target="_blank" rel="noopener" data-href="' + url[index] + '"><p class="coupon-text">' + content + "</p></a></div>";
+    contentHTML += '<a onclick="gameLink(this)" href="https://shope.ee/1VODdwm1EO" target="_blank" rel="noopener noreferrer nofollow" data-href="' + url[index] + '"><p class="coupon-text">' + content + "</p></a></div>";
     contentHTML += "</div>";
   });
   contentHTML += "</div>";
