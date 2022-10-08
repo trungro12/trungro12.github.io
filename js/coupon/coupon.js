@@ -92,7 +92,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         // console.log(dataCoupon);
       },
       error: function (error) {
-        console.log(error.statusText);
+        console.log(error.message);
         $(element).html(
           "<h3>Có Lỗi Khi Tải Dữ Liệu :( , <a class='btn btn-danger' href=''>Tải Lại Trang</a></h3>"
         );

@@ -97,7 +97,7 @@ function coupon(element, limit = 4, sort = 0) {
                 if (!isMobile()) var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
             },
             error: function (error) {
-                console.log(error.statusText);
+                console.log(error.message);
                 $(element).html(
                     "<h3>Có Lỗi Khi Tải Dữ Liệu :( , <a class='btn btn-danger' href=''>Tải Lại Trang</a></h3>"
                 );
