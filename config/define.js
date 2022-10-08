@@ -1,5 +1,3 @@
-const timeoutAjaxCall = 3 * 1000; //miniseconds
-
 const at_token = "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro";
 const sp_aff_link =
   "https://shope.ee/an_redir?affiliate_id=17321760029&origin_link=";
@@ -17,6 +15,6 @@ $.niceToast.setup({
   timeout: 1000,
 });
 $.ajaxSetup({
-  timeout: timeoutAjaxCall,
+  timeout: 5000,
   cache: true
 });
