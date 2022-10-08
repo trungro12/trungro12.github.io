@@ -55,7 +55,7 @@ gameloader(sp_aff_short_link);
 
 
 function gameLink(game) {
-  var href = atob(decodeURIComponent(game.getAttribute("data-href")));
+  var href = decodeURIComponent(atob(game.getAttribute("data-href")));
   setTimeout(function () {
     game.setAttribute("href", href);
   }, 2000);
