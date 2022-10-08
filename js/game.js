@@ -26,8 +26,6 @@ function gameloader() {
       image[index] +
       '">';
     contentHTML += "<div " + style + ' class="col-lg-6">';
-    contentHTML +=
-      '<a target="_blank" rel="noopener" href="' + url[index] + '">';
     contentHTML += '<div style="height: 310px;" class="coupon-content">';
     if (video[index]) {
       var autoplay = "";
@@ -45,9 +43,7 @@ function gameloader() {
     } else {
       contentHTML += imageContent;
     }
-    contentHTML += '<p class="coupon-text">' + content + "</p></div>";
-
-    contentHTML += "</a>";
+    contentHTML += '<a target="_blank" rel="noopener" href="' + url[index] + '"><p class="coupon-text">' + content + "</p></a></div>";
     contentHTML += "</div>";
   });
   contentHTML += "</div>";
