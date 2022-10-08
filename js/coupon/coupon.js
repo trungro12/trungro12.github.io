@@ -22,7 +22,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
       type: "GET",
       url: api,
       dataType: "json",
-      async: false,
+      async: true,
       contentType: "application/json",
       headers: {
         Authorization: at_token,
