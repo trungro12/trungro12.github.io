@@ -6,7 +6,7 @@ const sortCouponDefault = 4;
 var currenturl = location.href.replace("#", "").split("?")[0];
 let urlParams = getUrlParams(location.search);
 
-var limitCoupon = 12;
+var limitCoupon = 20;
 var limitCouponMobile = 8;
 
 // define toast
