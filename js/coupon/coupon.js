@@ -86,6 +86,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         }
         $(contentHTML).insertBefore(element);
         $("#coupon-show-default").hide();
+        loadContents();
         if (!isMobile())
           var toast = $.niceToast.success("Mã Giảm Giá Hiển Thị Thành Công ^.^");
         // $("#isMobile").hide();
