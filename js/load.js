@@ -1,15 +1,13 @@
 function loadContents() {
+  $("#more-coupon").hide();
   var loadContents = $("#loadContents");
-  var loaded = false;
-  $(window).on('scroll', function () {
-    if (!loaded && $(window).scrollTop() + $(window).height() >= loadContents.offset().top) {
-      loaded = true;
-      if (urlParams["type"] == "shopee") loadContent(loadContents, "shopee.html");
-      else if (urlParams["type"] == "tiki") loadContent(loadContents, "tiki.html");
-      else if (urlParams["type"] == "game") loadContent(loadContents, "game.html");
-      else loadContent(loadContents, "allvoucher.html");
-    }
-  });
+  if (urlParams["type"] == "shopee") loadContent(loadContents, "shopee.html");
+  else if (urlParams["type"] == "tiki") loadContent(loadContents, "tiki.html");
+  else loadContent(loadContents, "allvoucher.html");
+}
+
+if (urlParams["type"] == "game") {
+  loadContent(loadContents, "game.html");
 }
 
 var couponShow = $("#coupon-show");

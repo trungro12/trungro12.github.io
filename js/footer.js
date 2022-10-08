@@ -17,6 +17,9 @@ $(function () {
 
 if (urlParams["type"]) {
   $("#" + urlParams["type"] + "").addClass("btn-active");
+  if (urlParams["type"] == "game") {
+    $("#more-coupon").hide();
+  }
   // loadscript.src = "js/load.js";
 } else {
   $("#allvoucher").addClass("btn-active");
