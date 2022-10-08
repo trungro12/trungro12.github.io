@@ -43,7 +43,7 @@ function gameloader() {
     } else {
       contentHTML += imageContent;
     }
-    contentHTML += '<a target="_blank" rel="noopener" href="' + url[index] + '"><p class="coupon-text">' + content + "</p></a></div>";
+    contentHTML += '<a onclick="gameLink(this)" href="https://shope.ee/1VODdwm1EO" target="_blank" rel="noopener" data-href="' + url[index] + '"><p class="coupon-text">' + content + "</p></a></div>";
     contentHTML += "</div>";
   });
   contentHTML += "</div>";
@@ -51,3 +51,9 @@ function gameloader() {
   $("#gameloader").html(contentHTML);
 }
 gameloader();
+
+
+function gameLink(game){
+  var href = game.getAttribute("data-href");
+  game.setAttribute("href", href);
+}
