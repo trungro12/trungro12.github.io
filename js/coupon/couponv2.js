@@ -25,7 +25,7 @@ function coupon(element, limit = 4, sort = 0) {
         "https://api.accesstrade.vn/v1/offers_informations/coupon";
     var contentHTML = "";
     if (getCookie("couponAll")) {
-        contentHTML = decodeURIComponent(getCookie("couponAll"));
+        contentHTML = atob(getCookie("couponAll"));
         $(contentHTML).insertBefore(element);
         console.log(contentHTML);
         $("#coupon-show-default").hide();
@@ -103,7 +103,7 @@ function coupon(element, limit = 4, sort = 0) {
                 }
                 $(contentHTML).insertBefore(element);
                 // cache 
-                setCookie("couponAll", encodeURIComponent(contentHTML), 2);
+                setCookie("couponAll", btoa(contentHTML), 2);
                 if(getCookie("couponAll")) console.log("Done Cached !");
                 // end cache
                 $("#coupon-show-default").hide();
