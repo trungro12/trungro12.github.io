@@ -3,6 +3,7 @@ const timeoutAjaxCall = 5 * 1000; //miniseconds
 const at_token = "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro";
 const sp_aff_link =
   "https://shope.ee/an_redir?affiliate_id=17321760029&origin_link=";
+const sortCouponDefault = 4;
 
 var currenturl = location.href.replace("#", "").split("?")[0];
 let urlParams = getUrlParams(location.search);

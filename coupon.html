@@ -1,7 +1,7 @@
 <div id="coupon"></div>
 <script src="js/coupon/couponv2.js"></script>
 <script>
-  var sort = urlParams["sort"] ? parseInt(urlParams["sort"]) : 0;
+  var sort = urlParams["sort"] ? parseInt(urlParams["sort"]) : sortCouponDefault;
   if (urlParams["type"] && urlParams["type"] == "game") {
     limitCoupon = 4;
     limitCouponMobile = 2;
