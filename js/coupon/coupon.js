@@ -21,7 +21,6 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
     $.ajax({
       type: "GET",
       url: api,
-      timeout: timeoutAjaxCall,
       dataType: "json",
       async: false,
       contentType: "application/json",

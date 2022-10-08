@@ -28,7 +28,6 @@ function coupon(element, limit = 4, sort = 0) {
         $.ajax({
             type: "GET",
             url: api,
-            timeout: timeoutAjaxCall,
             dataType: "json",
             data: params,
             async: false,

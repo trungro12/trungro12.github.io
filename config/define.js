@@ -1,10 +1,4 @@
-// define toast
-$.niceToast.setup({
-  position: "top-right",
-  timeout: 1000,
-});
-
-const timeoutAjaxCall = 5 * 1000; //seconds
+const timeoutAjaxCall = 5 * 1000; //miniseconds
 
 const at_token = "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro";
 const sp_aff_link =
@@ -15,3 +9,13 @@ let urlParams = getUrlParams(location.search);
 
 var limitCoupon = 12;
 var limitCouponMobile = 8;
+
+// define toast
+$.niceToast.setup({
+  position: "top-right",
+  timeout: 1000,
+});
+$.ajaxSetup(
+  {
+    timeout: timeoutAjaxCall
+  });
