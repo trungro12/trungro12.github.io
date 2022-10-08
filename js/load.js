@@ -14,7 +14,6 @@ var couponShow = $("#coupon-show");
 couponShow.addClass("row");
 if (urlParams["type"] == "game" || !urlParams["type"])
   {
-    loadContent(couponShow, "coupon.html");
     var shortCouponHTML = '';
     shortCouponHTML += '<label for="sortCouponSelect" style="color: #fff;margin-bottom: -10px;">Sắp xếp coupon theo</label><br>';
     shortCouponHTML += '<select name="sortCouponSelect" id="sortCouponSelect">';
@@ -24,5 +23,6 @@ if (urlParams["type"] == "game" || !urlParams["type"])
     shortCouponHTML += '<option value="3">&#xf017; Coupon Sắp Hết Hạn</option>';
     shortCouponHTML += '</select>';        
     $("#sortCoupon").html(shortCouponHTML);
+    loadContent(couponShow, "coupon.html");
 }
 else loadContent(couponShow, "couponv1.html");
