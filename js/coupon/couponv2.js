@@ -103,8 +103,8 @@ function coupon(element, limit = 4, sort = 0) {
                 }
                 $(contentHTML).insertBefore(element);
                 // cache 
-                setCookie("couponAll", encodeURIComponent(contentHTML), 1);
-                console.log("Done Cached !");
+                setCookie("couponAll", encodeURIComponent(contentHTML), 2);
+                if(getCookie("couponAll")) console.log("Done Cached !");
                 // end cache
                 $("#coupon-show-default").hide();
                 if (!isMobile()) var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
