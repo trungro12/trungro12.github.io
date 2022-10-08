@@ -7,7 +7,7 @@ var currenturl = location.href.replace("#", "").split("?")[0];
 let urlParams = getUrlParams(location.search);
 
 var limitCoupon = 20;
-var limitCouponMobile = 8;
+var limitCouponMobile = 12;
 
 // define toast
 $.niceToast.setup({
