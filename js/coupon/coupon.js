@@ -22,6 +22,7 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
     if (getCookie("couponShopee")) contentHTML = decodeURIComponent(getCookie("couponShopee"));
     else if (getCookie("couponTiki")) contentHTML = decodeURIComponent(getCookie("couponTiki"));
     $(contentHTML).insertBefore(element);
+    console.log(contentHTML);
     $("#coupon-show-default").hide();
     if (!isMobile()) var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
     return true;

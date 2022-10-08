@@ -27,6 +27,7 @@ function coupon(element, limit = 4, sort = 0) {
     if (getCookie("couponAll")) {
         contentHTML = decodeURIComponent(getCookie("couponAll"));
         $(contentHTML).insertBefore(element);
+        console.log(contentHTML);
         $("#coupon-show-default").hide();
         if (!isMobile()) var toast = $.niceToast.success('Mã Giảm Giá Hiển Thị Thành Công ^.^');
         return true;
