@@ -69,12 +69,10 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
               voucher.image +
               "'>";
             contentHTML +=
-              "<p class='coupon-text'>" + voucher.coupons[0].coupon_desc + "</p>";
+              "<p class='coupon-text'>" + voucher.merchant + voucher.coupons[0].coupon_desc + "</p>";
             // contentHTML += "<p class='coupon-text'>" + voucher.content + "</p>";
             contentHTML +=
-              "<p class='coupon-label'>" +
-              voucher.merchant +
-              voucher.coupons[0].coupon_code +
+              "<p class='coupon-label'>" + voucher.coupons[0].coupon_code +
               "</p><span class='coupon-copy'><i class='fa-solid fa-clipboard'></i> Nhấn để Copy mã giảm giá</span>";
             contentHTML += "</div>";
             contentHTML += "</div>";
