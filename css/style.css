@@ -354,6 +354,7 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
   font-family: "Quicksand", "Font Awesome 5 Free";
   font-weight: 900;
   text-transform: uppercase !important;
+  cursor: pointer;
 }
 
 #sortCouponSelect:focus,
