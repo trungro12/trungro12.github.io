@@ -101,6 +101,7 @@ function coupon(element, limit = 4, sort = 0) {
                 console.log(error.message);
                 $("#coupon-show-default").hide();
                 loadCouponCache();
+                return false;
                 // $(element).html(
                 //     "<h3>Có Lỗi Khi Tải Dữ Liệu :( , <a class='btn btn-danger' href=''>Tải Lại Trang</a></h3>"
                 // );
