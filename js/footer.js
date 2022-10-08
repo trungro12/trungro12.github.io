@@ -36,6 +36,7 @@ $("#sortCouponSelect").change(function () {
     var sort = document.getElementById("sortCouponSelect").value;
     window.location.href = currenturl + "?sort=" + sort;
   } else {
+    document.getElementById("sortCouponSelect").value = sortCouponDefault;
     $.niceToast.error("Tính năng này chỉ hoạt động ở trang chủ :(");
   }
 });
