@@ -27,7 +27,7 @@ function gameloader(affLink = "/") {
       image[index] +
       '">';
     contentHTML += "<div " + style + ' class="col-lg-6">';
-    contentHTML += '<div style="height: unset;" class="coupon-content">';
+    contentHTML += '<div style="height: 310px;" class="coupon-content">';
     if (video[index]) {
       var autoplay = "";
       if (gameNumber == 1) autoplay = "autoplay";
