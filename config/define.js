@@ -15,6 +15,6 @@ $.niceToast.setup({
   timeout: 1000,
 });
 $.ajaxSetup({
-  timeout: 5000,
+  timeout: 10000,
   cache: true
 });
