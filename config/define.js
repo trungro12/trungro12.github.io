@@ -4,7 +4,7 @@ $.niceToast.setup({
   timeout: 1000,
 });
 
-const timeoutAjaxCall = 5; //seconds
+const timeoutAjaxCall = 5 * 1000; //seconds
 
 const at_token = "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro";
 const sp_aff_link =

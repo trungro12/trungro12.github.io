@@ -25,11 +25,10 @@ function coupon(element, limit = 4, sort = 0) {
         "https://api.accesstrade.vn/v1/offers_informations/coupon";
     var contentHTML = "";
     try {
-
         $.ajax({
             type: "GET",
             url: api,
-            timeout: timeoutAjaxCall * 1000,
+            timeout: timeoutAjaxCall,
             dataType: "json",
             data: params,
             async: false,
