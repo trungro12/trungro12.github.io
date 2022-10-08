@@ -19,8 +19,8 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
   var contentHTML = "";
   if (getCookie("couponShopee") || getCookie("couponTiki")) {
 
-    if (getCookie("couponShopee")) contentHTML = decodeURIComponent(getCookie("couponShopee"));
-    else if (getCookie("couponTiki")) contentHTML = decodeURIComponent(getCookie("couponTiki"));
+    if (getCookie("couponShopee")) contentHTML = atob(getCookie("couponShopee"));
+    else if (getCookie("couponTiki")) contentHTML = atob(getCookie("couponTiki"));
     $(contentHTML).insertBefore(element);
     console.log(contentHTML);
     $("#coupon-show-default").hide();
@@ -96,8 +96,8 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         }
         $(contentHTML).insertBefore(element);
         // cache 
-        if (urlParams["type"].includes("shopee")) setCookie("couponShopee", encodeURIComponent(contentHTML), 1);
-        else if (urlParams["type"].includes("tiki")) setCookie("couponTiki", encodeURIComponent(contentHTML), 1);
+        if (urlParams["type"].includes("shopee")) setCookie("couponShopee", btoa(contentHTML), 1);
+        else if (urlParams["type"].includes("tiki")) setCookie("couponTiki", btoa(contentHTML), 1);
         // end cache
         $("#coupon-show-default").hide();
         if (!isMobile())
