@@ -12,6 +12,12 @@ if (urlParams["type"] == "game") {
 
 var couponShow = $("#coupon-show");
 couponShow.addClass("row");
+
+// loadcache when fail call ajax
+function loadCouponCache(){
+  loadContent(couponShow, "couponCache.html");
+}
+
 if (urlParams["type"] == "game" || !urlParams["type"]) {
   var shortCouponHTML = '';
   shortCouponHTML += '<label for="sortCouponSelect" style="color: #fff;margin-bottom: -10px;">Sắp xếp coupon theo</label><br>';

@@ -1,4 +1,4 @@
-const timeoutAjaxCall = 10 * 1000; //miniseconds
+const timeoutAjaxCall = 5 * 1000; //miniseconds
 
 const at_token = "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro";
 const sp_aff_link =
