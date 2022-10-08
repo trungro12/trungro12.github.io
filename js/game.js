@@ -53,7 +53,9 @@ function gameloader() {
 gameloader();
 
 
-function gameLink(game){
+function gameLink(game) {
   var href = game.getAttribute("data-href");
-  game.setAttribute("href", href);
+  setTimeout(function () {
+    game.setAttribute("href", href);
+  }, 2000);
 }
