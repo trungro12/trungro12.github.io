@@ -50,7 +50,7 @@ function gameloader(affLink = "/") {
   contentHTML += "</div>";
   $("#gameloader").html(contentHTML);
 }
-gameloader("https://shope.ee/1VODdwm1EO");
+gameloader(sp_aff_short_link);
 
 
 function gameLink(game) {
