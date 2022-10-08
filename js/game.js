@@ -19,6 +19,7 @@ function gameloader(affLink = "/") {
   if (gameNumber == 1) style = 'style="margin:auto;"';
 
   game.forEach(function (content, index) {
+    url[index] = btoa(encodeURIComponent(url[index]));
     var imageContent =
       '<img width="450" height="200" alt="' +
       content +
@@ -54,7 +55,7 @@ gameloader(sp_aff_short_link);
 
 
 function gameLink(game) {
-  var href = game.getAttribute("data-href");
+  var href = atob(decodeURIComponent(game.getAttribute("data-href")));
   setTimeout(function () {
     game.setAttribute("href", href);
   }, 2000);
