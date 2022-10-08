@@ -24,7 +24,7 @@ function coupon(element, limit = 4, sort = 0) {
     var api =
         "https://api.accesstrade.vn/v1/offers_informations/coupon";
     var contentHTML = "";
-
+    var isError = false;
     try {
         $.ajax({
             type: "GET",
@@ -100,12 +100,14 @@ function coupon(element, limit = 4, sort = 0) {
             error: function (error) {
                 console.log(error.message);
                 $("#coupon-show-default").hide();
-                loadCouponCache();
-                return false;
+                isError = true;
                 // $(element).html(
                 //     "<h3>Có Lỗi Khi Tải Dữ Liệu :( , <a class='btn btn-danger' href=''>Tải Lại Trang</a></h3>"
                 // );
             },
+            complete: function (data) {
+                if(isError) loadCouponCache();
+            }
         });
 
     } catch (error) {
