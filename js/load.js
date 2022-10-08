@@ -1,13 +1,13 @@
-var loadContents = $("#loadContents");
+var loadContentsElement = $("#loadContents");
 function loadContents() {
   $("#more-coupon").hide();
-  if (urlParams["type"] == "shopee") loadContent(loadContents, "shopee.html");
-  else if (urlParams["type"] == "tiki") loadContent(loadContents, "tiki.html");
-  else loadContent(loadContents, "allvoucher.html");
+  if (urlParams["type"] == "shopee") loadContent(loadContentsElement, "shopee.html");
+  else if (urlParams["type"] == "tiki") loadContent(loadContentsElement, "tiki.html");
+  else loadContent(loadContentsElement, "allvoucher.html");
 }
 
 if (urlParams["type"] == "game") {
-  loadContent(loadContents, "game.html");
+  loadContent(loadContentsElement, "game.html");
 }
 
 var couponShow = $("#coupon-show");
