@@ -12,4 +12,4 @@ var currenturl = location.href.replace("#", "").split("?")[0];
 let urlParams = getUrlParams(location.search);
 
 var limitCoupon = 12;
-var limitCouponMobile = 4;
+var limitCouponMobile = 8;
