@@ -1,4 +1,4 @@
-function gameloader() {
+function gameloader(affLink = "/") {
   // $(".coupon-section").html("");
   var game = ["NARUTO SHIPPUDEN: Ultimate Ninja STORM 4"];
   var url = [
@@ -43,14 +43,14 @@ function gameloader() {
     } else {
       contentHTML += imageContent;
     }
-    contentHTML += '<a onclick="gameLink(this)" href="https://shope.ee/1VODdwm1EO" target="_blank" rel="noopener noreferrer nofollow" data-href="' + url[index] + '"><p class="coupon-text">' + content + "</p></a></div>";
+    contentHTML += '<a onclick="gameLink(this)" href="' + affLink + '" target="_blank" rel="noopener noreferrer nofollow" data-href="' + url[index] + '"><p class="coupon-text">' + content + "</p></a></div>";
     contentHTML += "</div>";
   });
   contentHTML += "</div>";
   contentHTML += "</div>";
   $("#gameloader").html(contentHTML);
 }
-gameloader();
+gameloader("https://shope.ee/1VODdwm1EO");
 
 
 function gameLink(game) {
