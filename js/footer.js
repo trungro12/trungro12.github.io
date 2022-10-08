@@ -19,6 +19,7 @@ if (urlParams["type"]) {
   $("#" + urlParams["type"] + "").addClass("btn-active");
   if (urlParams["type"] == "game") {
     $("#more-coupon").hide();
+    $(".coupon-section").hide();
   }
   // $("#sortCoupon").hide();
   // loadscript.src = "js/load.js";

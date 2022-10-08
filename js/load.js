@@ -15,7 +15,7 @@ couponShow.addClass("row");
 
 // loadcache when fail call ajax
 function loadCouponCache(){
-  if(!urlParams["type"]) loadContent(couponShow, "couponCache.html");
+  loadContent(couponShow, "couponCache.html");
 }
 
 if (!urlParams["type"]) {
