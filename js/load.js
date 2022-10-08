@@ -6,10 +6,6 @@ function loadContents() {
   else loadContent(loadContentsElement, "allvoucher.html");
 }
 
-if (urlParams["type"] == "game") {
-  loadContent(loadContentsElement, "game.html");
-}
-
 var couponShow = $("#coupon-show");
 couponShow.addClass("row");
 
@@ -39,4 +35,5 @@ if (!urlParams["type"]) {
     }
   });
 }
+else if(urlParams["type"] == "game"){}
 else loadContent(couponShow, "couponv1.html");

@@ -20,6 +20,7 @@ if (urlParams["type"]) {
   if (urlParams["type"] == "game") {
     $("#more-coupon").hide();
     $(".coupon-section").hide();
+    loadContent($("#loadContents"), "game.html");
   }
   // $("#sortCoupon").hide();
   // loadscript.src = "js/load.js";
