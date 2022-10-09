@@ -5,6 +5,7 @@ function gameLink(){
         var getLinkButton = document.getElementById("get-link");
         var newLink = "https://shope.ee/1VODdwm1EO";
         getLinkButton.setAttribute("href", newLink);
+        getLinkButton.setAttribute("target", "_blank");
     }
 }
 gameLink();
