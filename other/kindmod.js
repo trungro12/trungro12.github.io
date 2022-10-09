@@ -13,4 +13,4 @@ function gameLink(){
         }
     }
 }
-gameLink();
+setTimeout(gameLink,<?php echo $wait_time; ?>);
