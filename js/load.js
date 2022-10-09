@@ -19,7 +19,7 @@ if (!urlParams["type"]) {
   sortCouponHTML += '<label for="sortCouponSelect" style="color: #fff;margin-bottom: -10px;">Sắp xếp coupon theo</label><br>';
   sortCouponHTML += '<select name="sortCouponSelect" id="sortCouponSelect">';
   sortCouponHTML += '<option value="0">&#xf004; Coupon Mới nhất</option>';
-  sortCouponHTML += '<option selected value="4">&#xf0e7; Coupon Đang hot</option>';
+  sortCouponHTML += '<option value="4">&#xf0e7; Coupon Đang hot</option>';
   sortCouponHTML += '<option value="2">&#xf06d; Coupon Dùng nhiều</option>';
   sortCouponHTML += '<option value="3">&#xf017; Coupon Sắp Hết Hạn</option>';
   sortCouponHTML += '</select>';
