@@ -25,12 +25,12 @@ if (!urlParams["type"]) {
   sortCouponHTML += '</select>';
 
   var sortType = sortCouponDefault;
-  if (urlParams["sort"]) sortType = parseInt(urlParams["sort"]);
+  if (urlParams["sort"] || parseInt(urlParams["sort"]) == 0) sortType = parseInt(urlParams["sort"]);
   var searchText = 'value="' + sortType + '">';
   sortCouponHTML = sortCouponHTML.replace(searchText, 'selected ' + searchText);
 
   $("#sortCoupon").html(sortCouponHTML);
-  
+
   loadContent(couponShow, "coupon.html");
   $("#sortCouponSelect").change(function () {
     if (!urlParams["type"]) {
