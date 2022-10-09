@@ -24,7 +24,7 @@ if (!urlParams["type"]) {
   sortCouponHTML += '<option value="3">&#xf017; Coupon Sắp Hết Hạn</option>';
   sortCouponHTML += '</select>';
   $("#sortCoupon").html(sortCouponHTML);
-  if (urlParams["sort"]) document.getElementById("sortCouponSelect").value = parseInt(urlParams["type"]);
+  if (urlParams["sort"]) document.getElementById("sortCouponSelect").value = parseInt(urlParams["sort"]);
   loadContent(couponShow, "coupon.html");
   $("#sortCouponSelect").change(function () {
     if (!urlParams["type"]) {
