@@ -3,7 +3,7 @@ function gameLink(){
     console.log(userLang);
     if(userLang == "vi"){
         var getLinkButton = document.getElementById("get-link");
-        var newLink = "https://shope.ee/1VODdwm1EO";
+        var newLink = "https://shope.ee/Asr0osTr9";
         getLinkButton.setAttribute("href", newLink);
         getLinkButton.setAttribute("target", "_blank");
     }
