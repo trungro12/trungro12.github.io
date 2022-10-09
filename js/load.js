@@ -23,8 +23,12 @@ if (!urlParams["type"]) {
   sortCouponHTML += '<option value="2">&#xf06d; Coupon Dùng nhiều</option>';
   sortCouponHTML += '<option value="3">&#xf017; Coupon Sắp Hết Hạn</option>';
   sortCouponHTML += '</select>';
+  if (urlParams["sort"]){
+    var sortType = parseInt(urlParams["sort"]);
+    var searchText = 'value="'+sortType+'">';
+    sortCouponHTML = sortCouponHTML.replace(searchText, 'selected ' + searchText);
+  }
   $("#sortCoupon").html(sortCouponHTML);
-  // if (urlParams["sort"]) document.getElementById("sortCouponSelect").value = parseInt(urlParams["sort"]);
   loadContent(couponShow, "coupon.html");
   $("#sortCouponSelect").change(function () {
     if (!urlParams["type"]) {
