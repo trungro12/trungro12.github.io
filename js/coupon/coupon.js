@@ -96,9 +96,9 @@ function coupon(element, merchantID = null, limit = 4, defaultImage = "auto") {
         console.log(error.message);
         $("#coupon-show-default").hide();
         isError = true;
-        $("#alert").html(
-          "<h3 class='alert alert-info' style='color:unset'>Có Lỗi Khi Tải Dữ Liệu :(, Hệ Thống sẽ lấy dữ liệu dự phòng, bạn có thể <a class='btn btn-danger' href=''>Tải Lại Trang</a> để khắc phục. Cảm ơn bạn rất nhiều !!!</h3>"
-        );
+        // $("#alert").html(
+        //   "<h3 class='alert alert-info' style='color:unset'>Có Lỗi Khi Tải Dữ Liệu :(, Hệ Thống sẽ lấy dữ liệu dự phòng, bạn có thể <a class='btn btn-danger' href=''>Tải Lại Trang</a> để khắc phục. Cảm ơn bạn rất nhiều !!!</h3>"
+        // );
       },
       complete: function (data) {
         if (isError) loadCouponCache();
