@@ -61,8 +61,13 @@ function couponBefore(element) {
   // convert to sp link
   waitCouponElement("#cps-vouchers-blocks");
   $("#cps-btn-search-voucher").click(function () {
-    while ($("#cps-wrap").hasClass("cps-loading")) {}
-    waitCouponElement("#cps-vouchers-blocks");
+    var checkLink = setTimeout(function () {
+      if ($("#cps-wrap").hasClass("cps-loading")) {
+      } else {
+        waitCouponElement("#cps-vouchers-blocks");
+        clearTimeout(checkLink);
+      }
+    }, 50);
   });
 }
 
