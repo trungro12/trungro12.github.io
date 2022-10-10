@@ -11,7 +11,7 @@ function loadContents() {
 var couponShow = $("#coupon-show");
 couponShow.addClass("row");
 
-couponWidget("#sortCoupon");
+if(urlParams["type"] != "game") couponWidget("#sortCoupon");
 
 if (!urlParams["type"]) {
   var sortCouponHTML = "";
