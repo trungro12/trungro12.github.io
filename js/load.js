@@ -53,9 +53,8 @@ function loadCouponCache() {
 function couponWidget(element) {
   var contentHTML =
     '<div id="mo-recommend-widget-9999" class="coupon-content" style="height: unset;"></div>';
-  // contentHTML +=
-  //   '<script src="https://promotion-api.masoffer.net/v1/promotion/generate-component?publisher_token=%2F1sPEclbNOO621k2zZO2vQ%3D%3D&domain=rutgon.me&priority=fixed&order_type=desc&offer=shopee-kols&widget_id=9999&v=9999"></script>';
-  contentHTML += '<script src="js/coupon/couponwidget.js"></script>';
+  contentHTML +=
+    '<script src="https://promotion-api.masoffer.net/v1/promotion/generate-component?publisher_token=%2F1sPEclbNOO621k2zZO2vQ%3D%3D&domain=rutgon.me&priority=fixed&order_type=desc&offer=shopee-kols&widget_id=9999&v=9999"></script>';
   $(element).html(contentHTML);
   $("#coupon-show-default").hide();
   // convert to sp link
