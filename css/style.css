@@ -402,3 +402,6 @@ li.atEQPOIVFSDFSDG-btn-keyword.active a {
     max-width: 1100px;
   }
 }
+#cps-vouchers-blocks .cps-voucher-note .cps-tooltip{
+  float: left;
+}
