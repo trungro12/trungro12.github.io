@@ -59,25 +59,27 @@ function couponBefore(element) {
   $(contentHTML).insertBefore(element);
   $("#coupon-show-default").hide();
   // convert to sp link
-  waitCouponElement("#cps-vouchers-blocks");
-  $("#cps-btn-search-voucher").click(function () {
-    console.log("Search Coupon !!!");
-    var wait = 50;
-    var maxWait = 19000;
-    var count = 0;
-    var checkLink = setTimeout(function () {
-      if ($("#cps-wrap").hasClass("cps-loading")) {
-        if (count >= maxWait) clearTimeout(checkLink);
-        count += wait;
-      } else {
-        waitCouponElement("#cps-vouchers-blocks");
-        clearTimeout(checkLink);
-      }
-    }, wait);
+  waitCouponElement("#cps-vouchers-blocks", function () {
+    $("#cps-btn-search-voucher").click(function () {
+      console.log("Search Coupon !!!");
+      var wait = 50;
+      var maxWait = 19000;
+      var count = 0;
+      var checkLink = setTimeout(function () {
+        if ($("#cps-wrap").hasClass("cps-loading")) {
+          if (count >= maxWait) clearTimeout(checkLink);
+          count += wait;
+        } else {
+          waitCouponElement("#cps-vouchers-blocks");
+          clearTimeout(checkLink);
+        }
+      }, wait);
+    });
   });
+
 }
 
-function waitCouponElement(element) {
+function waitCouponElement(element, callbackfn) {
   waitForElementToDisplay(
     element,
     function () {
@@ -95,6 +97,7 @@ function waitCouponElement(element) {
           $(this).attr("href", href);
         }
       });
+      callbackfn();
     },
     100,
     9000
