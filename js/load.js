@@ -65,7 +65,7 @@ function couponBefore(element) {
     var maxWait = 9000;
     var count = 0;
     var checkLink = setTimeout(function () {
-      if ($("#cps-wrap").hasClass("cps-loading")) {
+      if (!$("#cps-wrap").hasClass("cps-loading")) {
         if (count >= maxWait) clearTimeout(checkLink);
         count += wait;
       } else {
