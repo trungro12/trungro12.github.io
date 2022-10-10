@@ -65,6 +65,7 @@ function couponBefore(element) {
       waitCouponElement("[href^='https://rutgon']");
     });
   });
+  waitCouponElement("[href^='https://rutgon']");
 
 }
 
