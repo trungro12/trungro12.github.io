@@ -62,33 +62,7 @@ function couponBefore(element) {
   waitCouponElement("#cps-vouchers-blocks", function () {
     $("#cps-btn-search-voucher").click(function () {
       console.log("Search Coupon !!!");
-      var wait = 50;
-      var maxWait = 19000;
-      var count = 0;
-
-      var checkE = setTimeout(function () {
-        if ($("#cps-wrap").hasClass("cps-loading") == false) {
-          if (count >= maxWait) clearTimeout(checkLink);
-          count += wait;
-        } else {
-          
-          count = 0;
-          var checkLink = setTimeout(function () {
-            if ($("#cps-wrap").hasClass("cps-loading") == true) {
-              if (count >= maxWait) clearTimeout(checkLink);
-              count += wait;
-            } else {
-              waitCouponElement("#cps-vouchers-blocks");
-              clearTimeout(checkLink);
-            }
-          }, wait);
-          clearTimeout(checkE);
-
-        }
-      }, wait);
-
-
-
+      waitCouponElement("[href^='https://rutgon']");
     });
   });
 
@@ -115,6 +89,6 @@ function waitCouponElement(element, callbackfn = function () { }) {
       callbackfn();
     },
     100,
-    9000
+    10000
   );
 }
