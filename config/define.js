@@ -1,6 +1,6 @@
 const at_token = "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro";
 
-const sub_publisher_id = "trungro12";
+const sub_publisher_id = "trungpham99";
 const network_click_id = "";
 const referral_source = "trungpham99";
 const custom_value1 = "";
@@ -33,6 +33,6 @@ $.niceToast.setup({
   timeout: 1000,
 });
 $.ajaxSetup({
-  timeout: 10000,
+  timeout: 15000,
   cache: true,
 });

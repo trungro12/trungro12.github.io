@@ -88,6 +88,6 @@ function waitCouponElement(element, callbackfn = function () {}) {
       callbackfn();
     },
     100,
-    10000
+    15000
   );
 }
