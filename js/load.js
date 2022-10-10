@@ -62,10 +62,10 @@ function couponBefore(element) {
   waitCouponElement("#cps-vouchers-blocks");
   $("#cps-btn-search-voucher").click(function () {
     var wait = 50;
-    var maxWait = 9000;
+    var maxWait = 19000;
     var count = 0;
     var checkLink = setTimeout(function () {
-      if (!$("#cps-wrap").hasClass("cps-loading")) {
+      if ($("#cps-wrap").hasClass("cps-loading")) {
         if (count >= maxWait) clearTimeout(checkLink);
         count += wait;
       } else {
