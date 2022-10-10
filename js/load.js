@@ -65,6 +65,27 @@ function couponWidget(element) {
       console.log("Search Coupon !!!");
       waitCouponElement("[href^='https://rutgon']");
     });
+
+    if (!isMobile("1100")) {
+      var contentCouponHTML = "";
+      $(".cps-vouchers-page").each(function (p) {
+        if (p == 0)
+          contentCouponHTML =
+            "<style>.cps-vouchers-page.active{display:flex}#cps-vouchers-blocks{max-width:unset}</style>";
+        else contentCouponHTML = "";
+        var size = $(this).children().length;
+        $(this)
+          .children()
+          .each(function (index, element) {
+            if (index == 0) contentCouponHTML += '<div class="col-lg-6">';
+            contentCouponHTML += element.outerHTML;
+            if (index == Math.round(size / 2) - 1)
+              contentCouponHTML += '</div><div class="col-lg-6">';
+            if (index == size - 1) contentCouponHTML += "</div>";
+          });
+        $(this).html(contentCouponHTML);
+      });
+    }
   });
 }
 
