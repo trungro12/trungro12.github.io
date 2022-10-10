@@ -79,7 +79,7 @@ function couponBefore(element) {
 
 }
 
-function waitCouponElement(element, callbackfn) {
+function waitCouponElement(element, callbackfn = function(){}) {
   waitForElementToDisplay(
     element,
     function () {
