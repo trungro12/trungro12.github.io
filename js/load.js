@@ -61,13 +61,18 @@ function couponBefore(element) {
   // convert to sp link
   waitCouponElement("#cps-vouchers-blocks");
   $("#cps-btn-search-voucher").click(function () {
+    var wait = 90;
+    var maxWait = 9000;
+    var count = 0;
     var checkLink = setTimeout(function () {
       if ($("#cps-wrap").hasClass("cps-loading")) {
+        if (count >= maxWait) clearTimeout(checkLink);
+        count += wait;
       } else {
         waitCouponElement("#cps-vouchers-blocks");
         clearTimeout(checkLink);
       }
-    }, 50);
+    }, wait);
   });
 }
 
