@@ -1,5 +1,23 @@
 const at_token = "Token BSlThjyssppl-1bbVJDKRiOBxK9rakro";
-const sp_aff_link = "https://shope.ee/an_redir?affiliate_id=17321760029&origin_link=";
+
+const sub_publisher_id = "trungro12";
+const network_click_id = "";
+const referral_source = "trungpham99";
+const custom_value1 = "";
+const custom_value2 = "";
+const sp_aff_link =
+  "https://shope.ee/an_redir?sub_id=" +
+  sub_publisher_id +
+  "-" +
+  network_click_id +
+  "-" +
+  referral_source +
+  "-" +
+  custom_value1 +
+  "-" +
+  custom_value2 +
+  "&affiliate_id=17321760029&origin_link=";
+
 const sp_aff_short_link = "https://shope.ee/1VODdwm1EO";
 const sortCouponDefault = 4;
 
@@ -16,5 +34,5 @@ $.niceToast.setup({
 });
 $.ajaxSetup({
   timeout: 10000,
-  cache: true
+  cache: true,
 });
