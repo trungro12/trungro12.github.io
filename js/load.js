@@ -59,6 +59,7 @@ function couponBefore(element) {
     '<script src="https://promotion-api.masoffer.net/v1/promotion/generate-component?publisher_token=%2F1sPEclbNOO621k2zZO2vQ%3D%3D&domain=rutgon.me&priority=fixed&order_type=desc&offer=shopee-kols&aff_sub1=trungpham99&widget_id=9999&v=9999"></script>';
   // element.html(contentHTML);
   $(contentHTML).insertBefore(element);
+  $("#coupon-show-default").hide();
   // convert to sp link
   waitForElementToDisplay(
     "#cps-vouchers-blocks",
