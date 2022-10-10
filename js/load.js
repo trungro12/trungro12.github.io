@@ -19,8 +19,10 @@ function loadCouponCache() {
   waitForElementToDisplay("#cps-vouchers-blocks",function(){
     $("a").each(function(){
       var href = $(this).attr("href");
+      if(href.includes("?url=")) {
         href = sp_aff_link + href.split("?url=")[1];
         $(this).attr("href",href);
+      }
     });
   },100,9000);
 }
