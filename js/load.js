@@ -61,7 +61,7 @@ function couponBefore(element) {
   // convert to sp link
   waitCouponElement("#cps-vouchers-blocks");
   $("#cps-btn-search-voucher").click(function () {
-    var wait = 90;
+    var wait = 50;
     var maxWait = 9000;
     var count = 0;
     var checkLink = setTimeout(function () {
