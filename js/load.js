@@ -6,6 +6,7 @@ function loadContents() {
   else if (urlParams["type"] == "tiki")
     loadContent(loadContentsElement, "tiki.html");
   else loadContent(loadContentsElement, "allvoucher.html");
+  waitCouponElement("[href^='https://go.isclix']");
 }
 
 var couponShow = $("#coupon-show");
