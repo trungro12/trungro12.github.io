@@ -30,7 +30,7 @@ if (!urlParams["type"]) {
   var searchText = 'value="' + sortType + '">';
   sortCouponHTML = sortCouponHTML.replace(searchText, "selected " + searchText);
 
-  $("#sortCoupon").html(sortCouponHTML);
+  $("#sortCoupon").html(sortCouponHTML).hide();
 
   loadContent(couponShow, "coupon.html");
   $("#sortCouponSelect").change(function () {
