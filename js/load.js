@@ -20,7 +20,9 @@ function loadCouponCache() {
     $("a").each(function(){
       var href = $(this).attr("href");
       if(href.includes("?url=") || href.includes("shopee.vn")) {
-        href = sp_aff_link + href.split("?url=")[1];
+        if(href.split("?url=")[1]) href = sp_aff_link + href.split("?url=")[1];
+        else href = sp_aff_link + "https%3A%2F%2Fshopee.vn" + href.split("shopee.vn")[1];
+        
         $(this).attr("href",href);
       }
     });
