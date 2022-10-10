@@ -48,6 +48,7 @@ if (!urlParams["type"]) {
 // loadcache when fail call ajax
 function loadCouponCache() {
   loadContent(couponShow, "couponCache.html");
+  $("#sortCoupon").hide();
 }
 
 function couponWidget(element) {
