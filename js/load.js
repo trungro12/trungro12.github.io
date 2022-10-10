@@ -45,8 +45,6 @@ if (!urlParams["type"]) {
 } else if (urlParams["type"] == "game") {
 } else loadContent(couponShow, "couponv1.html");
 
-
-
 // loadcache when fail call ajax
 function loadCouponCache() {
   loadContent(couponShow, "couponCache.html");
@@ -61,8 +59,16 @@ function couponBefore(element) {
   $(contentHTML).insertBefore(element);
   $("#coupon-show-default").hide();
   // convert to sp link
+  waitCouponElement("#cps-vouchers-blocks");
+  $("#cps-btn-search-voucher").click(function () {
+    while ($("#cps-wrap").hasClass("cps-loading")) {}
+    waitCouponElement("#cps-vouchers-blocks");
+  });
+}
+
+function waitCouponElement(element) {
   waitForElementToDisplay(
-    "#cps-vouchers-blocks",
+    element,
     function () {
       $("a").each(function () {
         var href = $(this).attr("href");
