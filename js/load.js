@@ -67,14 +67,14 @@ function couponBefore(element) {
       var count = 0;
 
       var checkE = setTimeout(function () {
-        if (!$("#cps-wrap").hasClass("cps-loading")) {
+        if ($("#cps-wrap").hasClass("cps-loading") == false) {
           if (count >= maxWait) clearTimeout(checkLink);
           count += wait;
         } else {
           
           count = 0;
           var checkLink = setTimeout(function () {
-            if ($("#cps-wrap").hasClass("cps-loading")) {
+            if ($("#cps-wrap").hasClass("cps-loading") == true) {
               if (count >= maxWait) clearTimeout(checkLink);
               count += wait;
             } else {
@@ -83,7 +83,7 @@ function couponBefore(element) {
             }
           }, wait);
           clearTimeout(checkE);
-          
+
         }
       }, wait);
 
