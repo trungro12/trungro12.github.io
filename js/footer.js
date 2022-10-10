@@ -2,7 +2,7 @@ $(function () {
   $("#allvoucher").click(function () {
     location.href = currenturl;
   });
-  $("#shopee").click(function () {
+  $("#shopeeTitle").click(function () {
     location.href = currenturl + "?type=shopee";
   });
   $("#tiki").click(function () {
@@ -16,7 +16,9 @@ $(function () {
 // loadscript.type = "text/javascript";
 
 if (urlParams["type"]) {
-  $("#" + urlParams["type"] + "").addClass("btn-active");
+  var typeTitle = urlParams["type"];
+  if (typeTitle == "shopee") typeTitle = "shopeeTitle";
+  $("#" + typeTitle + "").addClass("btn-active");
   if (urlParams["type"] == "game") {
     $("#more-coupon").hide();
     $(".coupon-section").hide();
