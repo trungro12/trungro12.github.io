@@ -65,21 +65,36 @@ function couponBefore(element) {
       var wait = 50;
       var maxWait = 19000;
       var count = 0;
-      var checkLink = setTimeout(function () {
-        if ($("#cps-wrap").hasClass("cps-loading")) {
+
+      var checkE = setTimeout(function () {
+        if (!$("#cps-wrap").hasClass("cps-loading")) {
           if (count >= maxWait) clearTimeout(checkLink);
           count += wait;
         } else {
-          waitCouponElement("#cps-vouchers-blocks");
-          clearTimeout(checkLink);
+          
+          count = 0;
+          var checkLink = setTimeout(function () {
+            if ($("#cps-wrap").hasClass("cps-loading")) {
+              if (count >= maxWait) clearTimeout(checkLink);
+              count += wait;
+            } else {
+              waitCouponElement("#cps-vouchers-blocks");
+              clearTimeout(checkLink);
+            }
+          }, wait);
+          clearTimeout(checkE);
+          
         }
       }, wait);
+
+
+
     });
   });
 
 }
 
-function waitCouponElement(element, callbackfn = function(){}) {
+function waitCouponElement(element, callbackfn = function () { }) {
   waitForElementToDisplay(
     element,
     function () {
