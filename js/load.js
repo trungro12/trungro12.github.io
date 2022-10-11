@@ -7,9 +7,6 @@ function loadContents() {
     else if (urlParams["type"] == "tiki")
       loadContent(loadContentsElement, "tiki.html");
     else loadContent(loadContentsElement, "allvoucher.html");
-    setTimeout(function(){
-      convertToAffLink("a[href$='sansandeals']");
-    },1000);
   });
 }
 
