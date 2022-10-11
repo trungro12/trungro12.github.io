@@ -6,7 +6,10 @@ function loadContents() {
   else if (urlParams["type"] == "tiki")
     loadContent(loadContentsElement, "tiki.html");
   else loadContent(loadContentsElement, "allvoucher.html");
-  checkAffLink();
+  waitCouponElement("#tabsdeal--content", function () {
+    checkAffLink("shopee.vn", 100);
+  });
+
 }
 
 var couponShow = $("#coupon-show");
