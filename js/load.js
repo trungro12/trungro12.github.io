@@ -11,42 +11,42 @@ function loadContents() {
   });
 }
 
-  var couponShow = $("#coupon-show");
-  couponShow.addClass("row");
+var couponShow = $("#coupon-show");
+couponShow.addClass("row");
 
-  if (urlParams["type"] != "game") couponWidget("#sortCoupon");
+if (urlParams["type"] != "game") couponWidget("#sortCoupon");
 
-  if (!urlParams["type"]) {
-    var sortCouponHTML = "";
-    sortCouponHTML +=
-      '<label for="sortCouponSelect" style="color: #fff;margin-bottom: -10px;">Sắp xếp coupon theo</label><br>';
-    sortCouponHTML += '<select name="sortCouponSelect" id="sortCouponSelect">';
-    sortCouponHTML += '<option value="0">&#xf004; Coupon Mới nhất</option>';
-    sortCouponHTML += '<option value="4">&#xf0e7; Coupon Đang hot</option>';
-    sortCouponHTML += '<option value="2">&#xf06d; Coupon Dùng nhiều</option>';
-    sortCouponHTML += '<option value="3">&#xf017; Coupon Sắp Hết Hạn</option>';
-    sortCouponHTML += "</select>";
+if (!urlParams["type"]) {
+  var sortCouponHTML = "";
+  sortCouponHTML +=
+    '<label for="sortCouponSelect" style="color: #fff;margin-bottom: -10px;">Sắp xếp coupon theo</label><br>';
+  sortCouponHTML += '<select name="sortCouponSelect" id="sortCouponSelect">';
+  sortCouponHTML += '<option value="0">&#xf004; Coupon Mới nhất</option>';
+  sortCouponHTML += '<option value="4">&#xf0e7; Coupon Đang hot</option>';
+  sortCouponHTML += '<option value="2">&#xf06d; Coupon Dùng nhiều</option>';
+  sortCouponHTML += '<option value="3">&#xf017; Coupon Sắp Hết Hạn</option>';
+  sortCouponHTML += "</select>";
 
-    var sortType = sortCouponDefault;
-    if (urlParams["sort"] || parseInt(urlParams["sort"]) == 0)
-      sortType = parseInt(urlParams["sort"]);
-    var searchText = 'value="' + sortType + '">';
-    sortCouponHTML = sortCouponHTML.replace(searchText, "selected " + searchText);
+  var sortType = sortCouponDefault;
+  if (urlParams["sort"] || parseInt(urlParams["sort"]) == 0)
+    sortType = parseInt(urlParams["sort"]);
+  var searchText = 'value="' + sortType + '">';
+  sortCouponHTML = sortCouponHTML.replace(searchText, "selected " + searchText);
 
-    $("#sortCoupon").html(sortCouponHTML).hide();
+  $("#sortCoupon").html(sortCouponHTML).hide();
 
-    loadContent(couponShow, "coupon.html");
-    $("#sortCouponSelect").change(function () {
-      if (!urlParams["type"]) {
-        var sort = document.getElementById("sortCouponSelect").value;
-        window.location.href = currenturl + "?sort=" + sort;
-      } else {
-        document.getElementById("sortCouponSelect").value = sortCouponDefault;
-        $.niceToast.error("Tính năng này chỉ hoạt động ở trang chủ :(");
-      }
-    });
-  } else if (urlParams["type"] == "game") {
-  } else loadContent(couponShow, "couponv1.html");
+  loadContent(couponShow, "coupon.html");
+  $("#sortCouponSelect").change(function () {
+    if (!urlParams["type"]) {
+      var sort = document.getElementById("sortCouponSelect").value;
+      window.location.href = currenturl + "?sort=" + sort;
+    } else {
+      document.getElementById("sortCouponSelect").value = sortCouponDefault;
+      $.niceToast.error("Tính năng này chỉ hoạt động ở trang chủ :(");
+    }
+  });
+} else if (urlParams["type"] == "game") {
+} else loadContent(couponShow, "couponv1.html");
 
 
 // function
@@ -128,23 +128,27 @@ function waitCouponElement(element, callbackfn = function () { }) {
   waitForElementToDisplay(
     element,
     function () {
-      var a = document.querySelectorAll('a'), i;
-      for (i = 0; i < a.length; ++i) {
-        var href = a[i].getAttribute("href");
-        if (href.includes("?url=") || href.includes("shopee.vn")) {
-          if (href.split("?url=")[1])
-            href = sp_aff_link + href.split("?url=")[1];
-          else
-            href =
-              sp_aff_link +
-              "https%3A%2F%2Fshopee.vn" +
-              href.split("shopee.vn")[1];
-          a[i].setAttribute("href", href);
-        }
-      }
+      convertToAffLink();
       callbackfn();
     },
     100,
-    15000
+    60000
   );
+}
+
+function convertToAffLink(element = "a") {
+  var a = document.querySelectorAll(element), i;
+  for (i = 0; i < a.length; ++i) {
+    var href = a[i].getAttribute("href");
+    if (href.includes("?url=") || href.includes("shopee.vn")) {
+      if (href.split("?url=")[1])
+        href = sp_aff_link + href.split("?url=")[1];
+      else
+        href =
+          sp_aff_link +
+          "https%3A%2F%2Fshopee.vn" +
+          href.split("shopee.vn")[1];
+      a[i].setAttribute("href", href);
+    }
+  }
 }
