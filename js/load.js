@@ -6,12 +6,13 @@ function loadContents() {
   else if (urlParams["type"] == "tiki")
     loadContent(loadContentsElement, "tiki.html");
   else loadContent(loadContentsElement, "allvoucher.html");
+  checkAffLink();
 }
 
 var couponShow = $("#coupon-show");
 couponShow.addClass("row");
 
-if(urlParams["type"] != "game") couponWidget("#sortCoupon");
+if (urlParams["type"] != "game") couponWidget("#sortCoupon");
 
 if (!urlParams["type"]) {
   var sortCouponHTML = "";
@@ -94,7 +95,7 @@ function couponWidget(element) {
   });
 }
 
-function waitCouponElement(element, callbackfn = function () {}) {
+function waitCouponElement(element, callbackfn = function () { }) {
   waitForElementToDisplay(
     element,
     function () {
@@ -117,4 +118,26 @@ function waitCouponElement(element, callbackfn = function () {}) {
     100,
     15000
   );
+}
+
+function checkAffLink(link = "shopee.vn", max = 20) {
+  var run = 0;
+  var timeoutCheck = setTimeout(function () {
+    run++;
+    $("a").each(function () {
+      var href = $(this).attr("href");
+      if (href.includes(link)) {
+        run = 0;
+        if (href.split("?url=")[1])
+          href = sp_aff_link + href.split("?url=")[1];
+        else
+          href =
+            sp_aff_link +
+            "https%3A%2F%2Fshopee.vn" +
+            href.split("shopee.vn")[1];
+        $(this).attr("href", href);
+      }
+      if (run == max) clearTimeout(timeoutCheck);
+    });
+  }, 1000);
 }
