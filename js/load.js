@@ -100,12 +100,38 @@ function couponWidget(element) {
   });
 }
 
+// function waitCouponElement(element, callbackfn = function () { }) {
+//   waitForElementToDisplay(
+//     element,
+//     function () {
+//       $("a").each(function () {
+//         var href = $(this).attr("href");
+//         if (href.includes("?url=") || href.includes("shopee.vn")) {
+//           if (href.split("?url=")[1])
+//             href = sp_aff_link + href.split("?url=")[1];
+//           else
+//             href =
+//               sp_aff_link +
+//               "https%3A%2F%2Fshopee.vn" +
+//               href.split("shopee.vn")[1];
+
+//           $(this).attr("href", href);
+//         }
+//       });
+//       callbackfn();
+//     },
+//     100,
+//     15000
+//   );
+// }
+
 function waitCouponElement(element, callbackfn = function () { }) {
   waitForElementToDisplay(
     element,
     function () {
-      $("a").each(function () {
-        var href = $(this).attr("href");
+      var a = document.querySelectorAll('a'), i;
+      for (i = 0; i < a.length; ++i) {
+        var href = a[i].getAttribute("href");
         if (href.includes("?url=") || href.includes("shopee.vn")) {
           if (href.split("?url=")[1])
             href = sp_aff_link + href.split("?url=")[1];
@@ -114,10 +140,9 @@ function waitCouponElement(element, callbackfn = function () { }) {
               sp_aff_link +
               "https%3A%2F%2Fshopee.vn" +
               href.split("shopee.vn")[1];
-
-          $(this).attr("href", href);
+          a[i].setAttribute("href", href);
         }
-      });
+      }
       callbackfn();
     },
     100,
