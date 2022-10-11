@@ -1,6 +1,6 @@
-$(function () {
-  var loadContentsElement = $("#loadContents");
-  function loadContents() {
+var loadContentsElement = $("#loadContents");
+function loadContents() {
+  $(function () {
     $("#more-coupon").hide();
     if (urlParams["type"] == "shopee")
       loadContent(loadContentsElement, "shopee.html");
@@ -8,14 +8,14 @@ $(function () {
       loadContent(loadContentsElement, "tiki.html");
     else loadContent(loadContentsElement, "allvoucher.html");
     waitCouponElement("#tabsdeal--content");
-  }
+  });
+}
 
+$(function () {
   var couponShow = $("#coupon-show");
   couponShow.addClass("row");
 
-
   if (urlParams["type"] != "game") couponWidget("#sortCoupon");
-
 
   if (!urlParams["type"]) {
     var sortCouponHTML = "";
@@ -50,7 +50,7 @@ $(function () {
   } else loadContent(couponShow, "couponv1.html");
 
 });
-
+// function
 // loadcache when fail call ajax
 function loadCouponCache() {
   loadContent(couponShow, "couponCache.html");
