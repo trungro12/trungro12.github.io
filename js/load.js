@@ -118,25 +118,3 @@ function waitCouponElement(element, callbackfn = function () { }) {
     15000
   );
 }
-
-function checkAffLink(link = "shopee.vn", max = 20) {
-  var run = 0;
-  var timeoutCheck = setTimeout(function () {
-    run++;
-    $("a").each(function () {
-      var href = $(this).attr("href");
-      if (href.includes(link)) {
-        run = 0;
-        if (href.split("?url=")[1])
-          href = sp_aff_link + href.split("?url=")[1];
-        else
-          href =
-            sp_aff_link +
-            "https%3A%2F%2Fshopee.vn" +
-            href.split("shopee.vn")[1];
-        $(this).attr("href", href);
-      }
-      if (run == max) clearTimeout(timeoutCheck);
-    });
-  }, 1000);
-}
