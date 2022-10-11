@@ -11,7 +11,6 @@ function loadContents() {
   });
 }
 
-$(function () {
   var couponShow = $("#coupon-show");
   couponShow.addClass("row");
 
@@ -49,7 +48,7 @@ $(function () {
   } else if (urlParams["type"] == "game") {
   } else loadContent(couponShow, "couponv1.html");
 
-});
+
 // function
 // loadcache when fail call ajax
 function loadCouponCache() {
