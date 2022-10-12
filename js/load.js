@@ -1,7 +1,7 @@
 var loadContentsElement = $("#loadContents");
 var convertAff = setInterval(function () {
   convertToAffLink();
-}, 500);
+}, 200);
 function loadContents() {
   $("#more-coupon").hide();
   if (urlParams["type"] == "shopee")
