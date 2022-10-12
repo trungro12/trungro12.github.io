@@ -122,12 +122,12 @@ function convertToAffLink(
     i;
   for (i = 0; i < a.length; ++i) {
     var href = a[i].getAttribute("href");
-    if (href.includes(includesUrlQuery) || href.includes("shopee.vn")) {
-      if (href.split(includesUrlQuery)[1])
-        href = sp_aff_link + href.split(includesUrlQuery)[1];
-      else if (href.includes("shopee.vn"))
-        href =
-          sp_aff_link + "https%3A%2F%2Fshopee.vn" + href.split("shopee.vn")[1];
+    if (href.split(includesUrlQuery)[1]) {
+      href = sp_aff_link + href.split(includesUrlQuery)[1];
+      a[i].setAttribute("href", href);
+    } else if (href.includes("shopee.vn")) {
+      href =
+        sp_aff_link + "https%3A%2F%2Fshopee.vn" + href.split("shopee.vn")[1];
       a[i].setAttribute("href", href);
     }
   }
