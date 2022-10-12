@@ -3,9 +3,9 @@ $(function () {
   var beginTime = new Date("10/1/2022");
   var todayTime = new Date();
   var liveTime = (todayTime - beginTime) / 1000;
-  liveTime = "<h3>Live Time : " + liveTime + " Days </h3>";
+  liveTime = "<h3>Live Time : " + pretyDate(liveTime) + " Days </h3>";
 
-  $("#liveTime").html(pretyDate(liveTime));
+  $("#liveTime").html(liveTime);
 });
 
 var loadContentsElement = $("#loadContents");
