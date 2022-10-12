@@ -8,7 +8,7 @@ function loadContents() {
   else loadContent(loadContentsElement, "allvoucher.html");
   setInterval(function () {
     convertToAffLink("a[href^='https://go.isclix.com/deep_link/4623985471069886807/4751584435713464237?url=https%3A%2F%2Fshopee.vn']");
-  }, 1000);
+  }, 500);
 }
 
 var couponShow = $("#coupon-show");
