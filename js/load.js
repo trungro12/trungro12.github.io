@@ -1,7 +1,7 @@
 var loadContentsElement = $("#loadContents");
 var convertAff = setInterval(function () {
-  convertToAffLink("a[href*='?url=https%3A%2F%2Fshopee.vn']");
-}, 1000);
+  convertToAffLink();
+}, 500);
 function loadContents() {
   $("#more-coupon").hide();
   if (urlParams["type"] == "shopee")
@@ -9,10 +9,6 @@ function loadContents() {
   else if (urlParams["type"] == "tiki")
     loadContent(loadContentsElement, "tiki.html");
   else loadContent(loadContentsElement, "allvoucher.html");
-  clearInterval(convertAff);
-  setInterval(function () {
-    convertToAffLink();
-  }, 500);
 }
 
 var couponShow = $("#coupon-show");
@@ -69,14 +65,14 @@ function couponWidget(element) {
   $("#coupon-show-default").hide();
   // convert to sp link
   waitCouponElement("#cps-vouchers-blocks", function () {
-    $("#cps-btn-search-voucher").click(function () {
-      console.log("Search Coupon !!!");
-      waitCouponElement("a[href*='rutgon']");
-    });
+    // $("#cps-btn-search-voucher").click(function () {
+    //   console.log("Search Coupon !!!");
+    //   waitCouponElement("a[href*='rutgon']");
+    // });
 
-    $("#cps-back-btn").click(function () {
-      waitCouponElement("a[href*='rutgon']");
-    });
+    // $("#cps-back-btn").click(function () {
+    //   waitCouponElement("a[href*='rutgon']");
+    // });
     modCouponWidget();
   });
 }
@@ -119,7 +115,7 @@ function waitCouponElement(element, callbackfn = function () {}) {
 }
 
 function convertToAffLink(
-  element = "a[href*='shopee.vn']",
+  element = "a[href*='?url=https%3A%2F%2Fshopee.vn']",
   includesUrlQuery = "?url="
 ) {
   var a = document.querySelectorAll(element),
