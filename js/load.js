@@ -1,4 +1,7 @@
 var loadContentsElement = $("#loadContents");
+var convertAff = setInterval(function () {
+  convertToAffLink();
+}, 1000);
 function loadContents() {
   $("#more-coupon").hide();
   if (urlParams["type"] == "shopee")
@@ -6,6 +9,7 @@ function loadContents() {
   else if (urlParams["type"] == "tiki")
     loadContent(loadContentsElement, "tiki.html");
   else loadContent(loadContentsElement, "allvoucher.html");
+  clearInterval(convertAff);
   setInterval(function () {
     convertToAffLink();
   }, 500);
@@ -67,17 +71,12 @@ function couponWidget(element) {
   waitCouponElement("#cps-vouchers-blocks", function () {
     $("#cps-btn-search-voucher").click(function () {
       console.log("Search Coupon !!!");
-      waitCouponElement("a[href*='rutgon']", function () {
-        modCouponWidget();
-      });
+      waitCouponElement("a[href*='rutgon']");
     });
 
     $("#cps-back-btn").click(function () {
-      waitCouponElement("a[href*='rutgon']", function () {
-        modCouponWidget();
-      });
+      waitCouponElement("a[href*='rutgon']");
     });
-
     modCouponWidget();
   });
 }
