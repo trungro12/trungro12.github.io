@@ -6,6 +6,9 @@ function loadContents() {
   else if (urlParams["type"] == "tiki")
     loadContent(loadContentsElement, "tiki.html");
   else loadContent(loadContentsElement, "allvoucher.html");
+  setInterval(function () {
+    convertToAffLink("a[href^='https://go.isclix.com/deep_link/4623985471069886807/4751584435713464237?url=https%3A%2F%2Fshopee.vn']");
+  }, 1000);
 }
 
 var couponShow = $("#coupon-show");
@@ -44,10 +47,6 @@ if (!urlParams["type"]) {
   });
 } else if (urlParams["type"] == "game") {
 } else loadContent(couponShow, "couponv1.html");
-
-setTimeout(function () {
-  convertToAffLink();
-}, 1000);
 
 // function
 // loadcache when fail call ajax
