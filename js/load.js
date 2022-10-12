@@ -67,13 +67,13 @@ function couponWidget(element) {
   waitCouponElement("#cps-vouchers-blocks", function () {
     $("#cps-btn-search-voucher").click(function () {
       console.log("Search Coupon !!!");
-      waitCouponElement("a[href*='shopee.vn']", function () {
+      waitCouponElement("a[href*='rutgon']", function () {
         modCouponWidget();
       });
     });
 
     $("#cps-back-btn").click(function () {
-      waitCouponElement("a[href*='shopee.vn']", function () {
+      waitCouponElement("a[href*='rutgon']", function () {
         modCouponWidget();
       });
     });
