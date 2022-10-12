@@ -1,6 +1,6 @@
 var loadContentsElement = $("#loadContents");
 var convertAff = setInterval(function () {
-  convertToAffLink();
+  convertToAffLink("a[href*='?url=https%3A%2F%2Fshopee.vn']");
 }, 1000);
 function loadContents() {
   $("#more-coupon").hide();
@@ -129,7 +129,7 @@ function convertToAffLink(
     if (href.includes(includesUrlQuery) || href.includes("shopee.vn")) {
       if (href.split(includesUrlQuery)[1])
         href = sp_aff_link + href.split(includesUrlQuery)[1];
-      else
+      else if (href.includes("shopee.vn"))
         href =
           sp_aff_link + "https%3A%2F%2Fshopee.vn" + href.split("shopee.vn")[1];
       a[i].setAttribute("href", href);
