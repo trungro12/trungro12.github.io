@@ -106,7 +106,7 @@ function waitCouponElement(element, callbackfn = function () {}) {
   waitForElementToDisplay(
     element,
     function () {
-      convertToAffLink();
+      // convertToAffLink();
       callbackfn();
     },
     100,
