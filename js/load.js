@@ -1,13 +1,3 @@
-// show live time
-$(function () {
-  var beginTime = new Date("10/1/2022");
-  var todayTime = new Date();
-  var liveTime = (todayTime - beginTime) / 1000;
-  liveTime = "<h3>Live Time : " + pretyDate(liveTime) + " Days </h3>";
-
-  $("#liveTime").html(liveTime);
-});
-
 var loadContentsElement = $("#loadContents");
 var convertAff = setInterval(function () {
   convertToAffLink();
@@ -165,12 +155,4 @@ function modCouponWidget() {
       $(this).html(contentCouponHTML);
     });
   }
-}
-
-function pretyDate(dateNumber) {
-  var dayNumber = 60 * 60 * 24;
-  if (dateNumber > dayNumber) {
-    dateNumber = Math.round(dateNumber / dayNumber);
-  }
-  return dateNumber;
 }
