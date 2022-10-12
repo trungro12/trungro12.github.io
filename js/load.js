@@ -1,14 +1,14 @@
 var loadContentsElement = $("#loadContents");
 function loadContents() {
+  setTimeout(function () {
+    convertToAffLink();
+  }, 1000);
   $("#more-coupon").hide();
   if (urlParams["type"] == "shopee")
     loadContent(loadContentsElement, "shopee.html");
   else if (urlParams["type"] == "tiki")
     loadContent(loadContentsElement, "tiki.html");
   else loadContent(loadContentsElement, "allvoucher.html");
-  setTimeout(function(){
-    convertToAffLink("a.atEQPOIVFSDFSDG-btn");
-  },1000);
 }
 
 var couponShow = $("#coupon-show");
