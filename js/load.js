@@ -6,6 +6,7 @@ function loadContents() {
   else if (urlParams["type"] == "tiki")
     loadContent(loadContentsElement, "tiki.html");
   else loadContent(loadContentsElement, "allvoucher.html");
+  convertToAffLink();
   setInterval(function () {
     convertToAffLink("a[href^='https://go.isclix.com/deep_link/4623985471069886807/4751584435713464237?url=https%3A%2F%2Fshopee.vn']");
   }, 500);
