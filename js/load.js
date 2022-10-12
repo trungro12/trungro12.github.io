@@ -135,13 +135,13 @@ function waitCouponElement(element, callbackfn = function () { }) {
   );
 }
 
-function convertToAffLink(element = "[href^='https://rutgon']") {
+function convertToAffLink(element = "a[href*='shopee.vn']", includesUrlQuery = "?url=") {
   var a = document.querySelectorAll(element), i;
   for (i = 0; i < a.length; ++i) {
     var href = a[i].getAttribute("href");
-    if (href.includes("?url=") || href.includes("shopee.vn")) {
-      if (href.split("?url=")[1])
-        href = sp_aff_link + href.split("?url=")[1];
+    if (href.includes(includesUrlQuery) || href.includes("shopee.vn")) {
+      if (href.split(includesUrlQuery)[1])
+        href = sp_aff_link + href.split(includesUrlQuery)[1];
       else
         href =
           sp_aff_link +
