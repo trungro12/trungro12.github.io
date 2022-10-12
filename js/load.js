@@ -1,8 +1,5 @@
 var loadContentsElement = $("#loadContents");
 function loadContents() {
-  setTimeout(function () {
-    convertToAffLink();
-  }, 1000);
   $("#more-coupon").hide();
   if (urlParams["type"] == "shopee")
     loadContent(loadContentsElement, "shopee.html");
@@ -48,6 +45,9 @@ if (!urlParams["type"]) {
 } else if (urlParams["type"] == "game") {
 } else loadContent(couponShow, "couponv1.html");
 
+setTimeout(function () {
+  convertToAffLink();
+}, 1000);
 
 // function
 // loadcache when fail call ajax
