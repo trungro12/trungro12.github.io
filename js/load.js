@@ -120,7 +120,8 @@ function convertToAffLink(
 ) {
   var a = document.querySelectorAll(element),
     i;
-  for (i = 0; i < a.length; ++i) {
+  var aL = a.length;
+  for (i = 0; i < aL; ++i) {
     var href = a[i].getAttribute("href");
     if (href.split(includesUrlQuery)[1]) {
       href = sp_aff_link + href.split(includesUrlQuery)[1];
