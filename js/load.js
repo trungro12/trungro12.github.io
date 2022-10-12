@@ -6,7 +6,9 @@ function loadContents() {
   else if (urlParams["type"] == "tiki")
     loadContent(loadContentsElement, "tiki.html");
   else loadContent(loadContentsElement, "allvoucher.html");
-  setTimeout(convertToAffLink,1000);
+  setTimeout(function(){
+    convertToAffLink("a.atEQPOIVFSDFSDG-btn");
+  },1000);
 }
 
 var couponShow = $("#coupon-show");
