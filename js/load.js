@@ -102,7 +102,7 @@ function couponWidget(element) {
 //   );
 // }
 
-function waitCouponElement(element, callbackfn = function () {}) {
+function waitCouponElement(element, callbackfn = function () { }) {
   waitForElementToDisplay(
     element,
     function () {
